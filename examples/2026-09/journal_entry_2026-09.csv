@@ -1,0 +1,73 @@
+Journal No,Journal Date,Account,Debits,Credits,Description,Location,Class
+REV-202609,09/30/2026,1200 Patient Accounts Receivable - Gross,47700.00,,"Gross charges, Sep 2026 services",Glendale,IOP
+REV-202609,09/30/2026,4000 Patient Service Revenue - Gross Charges,,47700.00,"Gross charges, Sep 2026 services",Glendale,IOP
+REV-202609,09/30/2026,4050 Implicit Price Concessions,37638.81,,"Implicit price concession, Sep 2026 services",Glendale,IOP
+REV-202609,09/30/2026,1210 Allowance for Implicit Price Concessions,,37638.81,"Implicit price concession, Sep 2026 services",Glendale,IOP
+REV-202609,09/30/2026,1210 Allowance for Implicit Price Concessions,,11299.81,"Change in estimate, prior-period services",Glendale,IOP
+REV-202609,09/30/2026,4060 Change in Estimate - Prior Period Services,11299.81,,"Change in estimate, prior-period services",Glendale,IOP
+REV-202609,09/30/2026,1210 Allowance for Implicit Price Concessions,68940.38,,Write off finalized claims to allowance,Glendale,IOP
+REV-202609,09/30/2026,1200 Patient Accounts Receivable - Gross,,68940.38,Write off finalized claims to allowance,Glendale,IOP
+REV-202609,09/30/2026,1200 Patient Accounts Receivable - Gross,356400.00,,"Gross charges, Sep 2026 services",Phoenix,IOP
+REV-202609,09/30/2026,4000 Patient Service Revenue - Gross Charges,,356400.00,"Gross charges, Sep 2026 services",Phoenix,IOP
+REV-202609,09/30/2026,4050 Implicit Price Concessions,275018.47,,"Implicit price concession, Sep 2026 services",Phoenix,IOP
+REV-202609,09/30/2026,1210 Allowance for Implicit Price Concessions,,275018.47,"Implicit price concession, Sep 2026 services",Phoenix,IOP
+REV-202609,09/30/2026,1210 Allowance for Implicit Price Concessions,,146.41,"Change in estimate, prior-period services",Phoenix,IOP
+REV-202609,09/30/2026,4060 Change in Estimate - Prior Period Services,146.41,,"Change in estimate, prior-period services",Phoenix,IOP
+REV-202609,09/30/2026,1210 Allowance for Implicit Price Concessions,269397.27,,Write off finalized claims to allowance,Phoenix,IOP
+REV-202609,09/30/2026,1200 Patient Accounts Receivable - Gross,,269397.27,Write off finalized claims to allowance,Phoenix,IOP
+REV-202609,09/30/2026,1200 Patient Accounts Receivable - Gross,258300.00,,"Gross charges, Sep 2026 services",Scottsdale,IOP
+REV-202609,09/30/2026,4000 Patient Service Revenue - Gross Charges,,258300.00,"Gross charges, Sep 2026 services",Scottsdale,IOP
+REV-202609,09/30/2026,4050 Implicit Price Concessions,199261.29,,"Implicit price concession, Sep 2026 services",Scottsdale,IOP
+REV-202609,09/30/2026,1210 Allowance for Implicit Price Concessions,,199261.29,"Implicit price concession, Sep 2026 services",Scottsdale,IOP
+REV-202609,09/30/2026,1210 Allowance for Implicit Price Concessions,,408.49,"Change in estimate, prior-period services",Scottsdale,IOP
+REV-202609,09/30/2026,4060 Change in Estimate - Prior Period Services,408.49,,"Change in estimate, prior-period services",Scottsdale,IOP
+REV-202609,09/30/2026,1210 Allowance for Implicit Price Concessions,297146.48,,Write off finalized claims to allowance,Scottsdale,IOP
+REV-202609,09/30/2026,1200 Patient Accounts Receivable - Gross,,297146.48,Write off finalized claims to allowance,Scottsdale,IOP
+REV-202609,09/30/2026,1200 Patient Accounts Receivable - Gross,67900.00,,"Gross charges, Sep 2026 services",Phoenix,OP
+REV-202609,09/30/2026,4000 Patient Service Revenue - Gross Charges,,67900.00,"Gross charges, Sep 2026 services",Phoenix,OP
+REV-202609,09/30/2026,4050 Implicit Price Concessions,56474.49,,"Implicit price concession, Sep 2026 services",Phoenix,OP
+REV-202609,09/30/2026,1210 Allowance for Implicit Price Concessions,,56474.49,"Implicit price concession, Sep 2026 services",Phoenix,OP
+REV-202609,09/30/2026,1210 Allowance for Implicit Price Concessions,,2010.35,"Change in estimate, prior-period services",Phoenix,OP
+REV-202609,09/30/2026,4060 Change in Estimate - Prior Period Services,2010.35,,"Change in estimate, prior-period services",Phoenix,OP
+REV-202609,09/30/2026,1210 Allowance for Implicit Price Concessions,58034.14,,Write off finalized claims to allowance,Phoenix,OP
+REV-202609,09/30/2026,1200 Patient Accounts Receivable - Gross,,58034.14,Write off finalized claims to allowance,Phoenix,OP
+REV-202609,09/30/2026,1200 Patient Accounts Receivable - Gross,743400.00,,"Gross charges, Sep 2026 services",Phoenix,PHP
+REV-202609,09/30/2026,4000 Patient Service Revenue - Gross Charges,,743400.00,"Gross charges, Sep 2026 services",Phoenix,PHP
+REV-202609,09/30/2026,4050 Implicit Price Concessions,579614.98,,"Implicit price concession, Sep 2026 services",Phoenix,PHP
+REV-202609,09/30/2026,1210 Allowance for Implicit Price Concessions,,579614.98,"Implicit price concession, Sep 2026 services",Phoenix,PHP
+REV-202609,09/30/2026,1210 Allowance for Implicit Price Concessions,,15882.89,"Change in estimate, prior-period services",Phoenix,PHP
+REV-202609,09/30/2026,4060 Change in Estimate - Prior Period Services,15882.89,,"Change in estimate, prior-period services",Phoenix,PHP
+REV-202609,09/30/2026,1210 Allowance for Implicit Price Concessions,390114.57,,Write off finalized claims to allowance,Phoenix,PHP
+REV-202609,09/30/2026,1200 Patient Accounts Receivable - Gross,,390114.57,Write off finalized claims to allowance,Phoenix,PHP
+REV-202609,09/30/2026,1200 Patient Accounts Receivable - Gross,594000.00,,"Gross charges, Sep 2026 services",Scottsdale,PHP
+REV-202609,09/30/2026,4000 Patient Service Revenue - Gross Charges,,594000.00,"Gross charges, Sep 2026 services",Scottsdale,PHP
+REV-202609,09/30/2026,4050 Implicit Price Concessions,461999.17,,"Implicit price concession, Sep 2026 services",Scottsdale,PHP
+REV-202609,09/30/2026,1210 Allowance for Implicit Price Concessions,,461999.17,"Implicit price concession, Sep 2026 services",Scottsdale,PHP
+REV-202609,09/30/2026,1210 Allowance for Implicit Price Concessions,2157.53,,"Change in estimate, prior-period services",Scottsdale,PHP
+REV-202609,09/30/2026,4060 Change in Estimate - Prior Period Services,,2157.53,"Change in estimate, prior-period services",Scottsdale,PHP
+REV-202609,09/30/2026,1210 Allowance for Implicit Price Concessions,407441.89,,Write off finalized claims to allowance,Scottsdale,PHP
+REV-202609,09/30/2026,1200 Patient Accounts Receivable - Gross,,407441.89,Write off finalized claims to allowance,Scottsdale,PHP
+REV-202609,09/30/2026,1200 Patient Accounts Receivable - Gross,2807000.00,,"Gross charges, Sep 2026 services",Glendale,RTC
+REV-202609,09/30/2026,4000 Patient Service Revenue - Gross Charges,,2807000.00,"Gross charges, Sep 2026 services",Glendale,RTC
+REV-202609,09/30/2026,4050 Implicit Price Concessions,2134331.56,,"Implicit price concession, Sep 2026 services",Glendale,RTC
+REV-202609,09/30/2026,1210 Allowance for Implicit Price Concessions,,2134331.56,"Implicit price concession, Sep 2026 services",Glendale,RTC
+REV-202609,09/30/2026,1210 Allowance for Implicit Price Concessions,,6822.98,"Change in estimate, prior-period services",Glendale,RTC
+REV-202609,09/30/2026,4060 Change in Estimate - Prior Period Services,6822.98,,"Change in estimate, prior-period services",Glendale,RTC
+REV-202609,09/30/2026,1210 Allowance for Implicit Price Concessions,1255741.62,,Write off finalized claims to allowance,Glendale,RTC
+REV-202609,09/30/2026,1200 Patient Accounts Receivable - Gross,,1255741.62,Write off finalized claims to allowance,Glendale,RTC
+REV-202609,09/30/2026,1200 Patient Accounts Receivable - Gross,2184000.00,,"Gross charges, Sep 2026 services",Scottsdale,RTC
+REV-202609,09/30/2026,4000 Patient Service Revenue - Gross Charges,,2184000.00,"Gross charges, Sep 2026 services",Scottsdale,RTC
+REV-202609,09/30/2026,4050 Implicit Price Concessions,1681167.44,,"Implicit price concession, Sep 2026 services",Scottsdale,RTC
+REV-202609,09/30/2026,1210 Allowance for Implicit Price Concessions,,1681167.44,"Implicit price concession, Sep 2026 services",Scottsdale,RTC
+REV-202609,09/30/2026,1210 Allowance for Implicit Price Concessions,,50905.20,"Change in estimate, prior-period services",Scottsdale,RTC
+REV-202609,09/30/2026,4060 Change in Estimate - Prior Period Services,50905.20,,"Change in estimate, prior-period services",Scottsdale,RTC
+REV-202609,09/30/2026,1210 Allowance for Implicit Price Concessions,1344660.81,,Write off finalized claims to allowance,Scottsdale,RTC
+REV-202609,09/30/2026,1200 Patient Accounts Receivable - Gross,,1344660.81,Write off finalized claims to allowance,Scottsdale,RTC
+REV-202609,09/30/2026,1200 Patient Accounts Receivable - Gross,66600.00,,"Gross charges, Sep 2026 services",Phoenix,TMS
+REV-202609,09/30/2026,4000 Patient Service Revenue - Gross Charges,,66600.00,"Gross charges, Sep 2026 services",Phoenix,TMS
+REV-202609,09/30/2026,4050 Implicit Price Concessions,56803.46,,"Implicit price concession, Sep 2026 services",Phoenix,TMS
+REV-202609,09/30/2026,1210 Allowance for Implicit Price Concessions,,56803.46,"Implicit price concession, Sep 2026 services",Phoenix,TMS
+REV-202609,09/30/2026,1210 Allowance for Implicit Price Concessions,2144.12,,"Change in estimate, prior-period services",Phoenix,TMS
+REV-202609,09/30/2026,4060 Change in Estimate - Prior Period Services,,2144.12,"Change in estimate, prior-period services",Phoenix,TMS
+REV-202609,09/30/2026,1210 Allowance for Implicit Price Concessions,96648.77,,Write off finalized claims to allowance,Phoenix,TMS
+REV-202609,09/30/2026,1200 Patient Accounts Receivable - Gross,,96648.77,Write off finalized claims to allowance,Phoenix,TMS

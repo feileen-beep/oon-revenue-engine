@@ -1,0 +1,127 @@
+remit_claim_number,matched_to,method,payer,payment_date,paid
+1000446,DRC1000446,normalized claim number,BCBS of Arizona,2024-03-08,12820.5
+1000588,DRC1000588,normalized claim number,BCBS of Arizona,2024-03-22,1078.54
+1019990,DRC1019990,normalized claim number,Anthem,2024-03-29,527.21
+1020017,DRC1020017,normalized claim number,Anthem,2024-03-29,0.0
+1000447,DRC1000447,normalized claim number,BCBS of Arizona,2024-03-29,0.0
+1000358,DRC1000358,normalized claim number,Anthem,2024-04-26,1107.83
+1000739,DRC1000739,normalized claim number,BCBS of Arizona,2024-05-03,11655.0
+1001509,DRC1001509,normalized claim number,BCBS of Arizona,2024-05-03,161.09
+1020084,DRC1020084,normalized claim number,BCBS of Arizona,2024-05-10,0.0
+1001780,DRC1001780,normalized claim number,BCBS of Arizona,2024-05-24,0.0
+1002199,DRC1002199,normalized claim number,Cigna,2024-05-31,0.0
+1002604,DRC1002604,normalized claim number,Anthem,2024-06-14,0.0
+1000253,DRC1000253,normalized claim number,BCBS of Arizona,2024-06-21,945.76
+1001380,DRC1001380,normalized claim number,Cigna,2024-06-21,3691.18
+1001997,DRC1001997,normalized claim number,Aetna,2024-07-05,931.02
+1002389,DRC1002389,normalized claim number,UnitedHealthcare,2024-07-05,7168.37
+1002640,DRC1002640,normalized claim number,UnitedHealthcare,2024-07-19,5415.87
+1003203,DRC1003203,normalized claim number,Other commercial,2024-08-09,1268.89
+1003862,DRC1003862,normalized claim number,Aetna,2024-08-16,3473.37
+1003557,DRC1003557,normalized claim number,UnitedHealthcare,2024-08-30,2325.62
+1003829,DRC1003829,normalized claim number,Aetna,2024-09-13,0.0
+1003616,DRC1003616,normalized claim number,Aetna,2024-09-13,442.46
+1003357,DRC1003357,normalized claim number,Anthem,2024-09-20,672.71
+1003436,DRC1003436,normalized claim number,Anthem,2024-09-20,341.59
+1002127,DRC1002127,normalized claim number,Anthem,2024-09-27,0.0
+1004458,DRC1004458,normalized claim number,Aetna,2024-10-11,778.27
+1005314,DRC1005314,normalized claim number,Aetna,2024-10-25,2678.35
+1004294,DRC1004294,normalized claim number,Cigna,2024-10-25,948.4
+1004946,DRC1004946,normalized claim number,Cigna,2024-11-01,8034.41
+1005582,DRC1005582,normalized claim number,Aetna,2024-12-06,3720.49
+1003236,DRC1003236,normalized claim number,BCBS of Arizona,2024-12-06,651.88
+1004470,DRC1004470,normalized claim number,UnitedHealthcare,2024-12-06,553.45
+1005474,DRC1005474,normalized claim number,Aetna,2024-12-13,3160.71
+1005776,DRC1005776,normalized claim number,Aetna,2024-12-13,497.58
+1005890,DRC1005890,normalized claim number,BCBS of Arizona,2024-12-20,1028.68
+1006624,DRC1006624,normalized claim number,UnitedHealthcare,2025-01-10,0.0
+1007297,DRC1007297,normalized claim number,Anthem,2025-01-17,0.0
+1007193,DRC1007193,normalized claim number,BCBS of Arizona,2025-02-14,2527.74
+1006602,DRC1006602,normalized claim number,BCBS of Arizona,2025-02-21,2277.31
+1008361,DRC1008361,normalized claim number,Aetna,2025-03-07,9096.13
+1007409,DRC1007409,normalized claim number,Cigna,2025-03-07,5930.63
+1008240,DRC1008240,normalized claim number,BCBS of Arizona,2025-03-14,0.0
+1008066,DRC1008066,normalized claim number,UnitedHealthcare,2025-03-14,1781.96
+1006496,DRC1006496,normalized claim number,Anthem,2025-03-28,1471.31
+1004608,DRC1004608,normalized claim number,Aetna,2025-04-04,805.27
+1007177,DRC1007177,normalized claim number,Other commercial,2025-04-04,508.58
+1008910,DRC1008910,normalized claim number,Aetna,2025-04-18,1912.88
+1020689,DRC1020689,normalized claim number,BCBS of Arizona,2025-04-18,0.0
+1020642,DRC1020642,normalized claim number,Other commercial,2025-04-25,396.47
+1008326,DRC1008326,normalized claim number,Other commercial,2025-04-25,839.15
+1008968,DRC1008968,normalized claim number,Aetna,2025-05-02,953.41
+1008478,DRC1008478,normalized claim number,Anthem,2025-05-02,563.72
+1009158,DRC1009158,normalized claim number,Cigna,2025-05-02,0.0
+1008229,DRC1008229,normalized claim number,UnitedHealthcare,2025-05-02,0.0
+1020719,DRC1020719,normalized claim number,Aetna,2025-05-09,594.67
+1008518,DRC1008518,normalized claim number,Cigna,2025-05-23,0.0
+1008129,DRC1008129,normalized claim number,UnitedHealthcare,2025-05-23,489.97
+1008202,DRC1008202,normalized claim number,Anthem,2025-06-06,5154.62
+1010600,DRC1010600,normalized claim number,Aetna,2025-06-20,5204.83
+1010932,DRC1010932,normalized claim number,Aetna,2025-08-01,719.94
+1009753,DRC1009753,normalized claim number,Other commercial,2025-08-01,968.52
+1008502,DRC1008502,normalized claim number,UnitedHealthcare,2025-08-01,745.66
+1010923,DRC1010923,normalized claim number,Cigna,2025-08-08,767.47
+1008757,DRC1008757,normalized claim number,Other commercial,2025-08-08,830.3
+1011121,DRC1011121,normalized claim number,Anthem,2025-08-15,8089.82
+1008222,DRC1008222,normalized claim number,Anthem,2025-08-22,1261.11
+1011296,DRC1011296,normalized claim number,UnitedHealthcare,2025-08-29,4790.93
+1011539,DRC1011539,normalized claim number,BCBS of Arizona,2025-09-05,0.0
+1011258,DRC1011258,normalized claim number,BCBS of Arizona,2025-09-05,0.0
+1010935,DRC1010935,normalized claim number,Aetna,2025-09-12,821.03
+1011680,DRC1011680,normalized claim number,Anthem,2025-09-19,857.4
+1012121,DRC1012121,normalized claim number,Cigna,2025-09-19,8726.76
+1011719,DRC1011719,normalized claim number,Cigna,2025-09-26,2750.67
+1012591,DRC1012591,normalized claim number,BCBS of Arizona,2025-10-17,6256.47
+1012103,DRC1012103,normalized claim number,UnitedHealthcare,2025-10-17,6082.78
+1012404,DRC1012404,normalized claim number,Aetna,2025-10-24,510.96
+1012099,DRC1012099,normalized claim number,BCBS of Arizona,2025-10-24,640.76
+1012463,DRC1012463,normalized claim number,Aetna,2025-10-31,0.0
+1012289,DRC1012289,normalized claim number,Anthem,2025-11-07,5347.95
+1011021,DRC1011021,normalized claim number,Anthem,2025-11-07,308.11
+1021024,DRC1021024,normalized claim number,Cigna,2025-11-14,404.83
+1009583,DRC1009583,normalized claim number,Other commercial,2025-11-28,913.58
+1012780,DRC1012780,normalized claim number,Cigna,2025-12-05,1567.7
+1013713,DRC1013713,normalized claim number,Aetna,2025-12-19,6151.68
+1013656,DRC1013656,normalized claim number,Aetna,2025-12-19,2222.7
+1013192,DRC1013192,normalized claim number,Other commercial,2025-12-26,7398.6
+1014087,DRC1014087,normalized claim number,BCBS of Arizona,2026-01-09,7142.63
+1013565,DRC1013565,normalized claim number,Cigna,2026-01-09,0.0
+1013735,DRC1013735,normalized claim number,BCBS of Arizona,2026-01-16,0.0
+1014479,DRC1014479,normalized claim number,Anthem,2026-01-30,3023.17
+1013080,DRC1013080,normalized claim number,UnitedHealthcare,2026-02-06,0.0
+1014624,DRC1014624,normalized claim number,UnitedHealthcare,2026-02-06,7158.05
+1015067,DRC1015067,normalized claim number,Aetna,2026-02-20,1041.77
+1013483,DRC1013483,normalized claim number,Cigna,2026-02-27,0.0
+1013556,DRC1013556,normalized claim number,UnitedHealthcare,2026-02-27,605.94
+1015290,DRC1015290,normalized claim number,Aetna,2026-03-20,1876.02
+1021271,DRC1021271,normalized claim number,Anthem,2026-03-20,361.85
+1015428,DRC1015428,normalized claim number,Aetna,2026-03-27,1529.69
+1014173,DRC1014173,normalized claim number,Other commercial,2026-03-27,841.87
+1015972,DRC1015972,normalized claim number,Aetna,2026-04-10,3360.23
+1014171,DRC1014171,normalized claim number,Other commercial,2026-04-10,965.02
+1014993,DRC1014993,normalized claim number,UnitedHealthcare,2026-04-10,506.91
+1014592,DRC1014592,normalized claim number,BCBS of Arizona,2026-04-17,5853.19
+1015374,DRC1015374,normalized claim number,Aetna,2026-04-24,0.0
+1016250,DRC1016250,normalized claim number,Anthem,2026-04-24,3372.12
+1015123,DRC1015123,normalized claim number,Aetna,2026-05-01,1133.16
+1015283,DRC1015283,normalized claim number,BCBS of Arizona,2026-05-01,0.0
+1016095,DRC1016095,normalized claim number,Cigna,2026-05-01,2321.56
+1015995,DRC1015995,normalized claim number,Aetna,2026-05-08,1377.25
+1015626,DRC1015626,normalized claim number,BCBS of Arizona,2026-05-08,1368.56
+1021370,DRC1021370,normalized claim number,BCBS of Arizona,2026-05-15,0.0
+1015902,DRC1015902,normalized claim number,Cigna,2026-05-22,823.51
+1015649,DRC1015649,normalized claim number,Anthem,2026-05-29,2503.42
+1016756,DRC1016756,normalized claim number,Aetna,2026-06-05,1509.32
+1016907,DRC1016907,normalized claim number,Anthem,2026-06-05,0.0
+1016841,DRC1016841,normalized claim number,BCBS of Arizona,2026-06-05,9336.91
+1016636,DRC1016636,normalized claim number,Anthem,2026-06-19,1149.17
+1017985,DRC1017985,normalized claim number,BCBS of Arizona,2026-06-26,8223.98
+1018019,DRC1018019,normalized claim number,UnitedHealthcare,2026-06-26,0.0
+1021508,DRC1021508,normalized claim number,Aetna,2026-07-24,0.0
+1017570,DRC1017570,normalized claim number,Aetna,2026-08-07,1403.62
+1018064,DRC1018064,normalized claim number,UnitedHealthcare,2026-08-21,465.34
+1019219,DRC1019219,normalized claim number,Other commercial,2026-09-04,5750.42
+1021575,DRC1021575,normalized claim number,UnitedHealthcare,2026-09-04,452.89
+1018235,DRC1018235,normalized claim number,UnitedHealthcare,2026-09-11,0.0
+1019303,DRC1019303,normalized claim number,Cigna,2026-09-25,0.0

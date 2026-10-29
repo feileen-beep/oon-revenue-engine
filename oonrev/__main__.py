@@ -1,0 +1,46 @@
+"""Command line: python -m oonrev <generate|close> ..."""
+
+from __future__ import annotations
+
+import argparse
+from datetime import date
+from pathlib import Path
+
+from . import dashboard, pipeline, synth
+
+
+def main(argv=None):
+    p = argparse.ArgumentParser(prog="oonrev", description="Out-of-network revenue and collections engine")
+    sub = p.add_subparsers(dest="cmd", required=True)
+
+    g = sub.add_parser("generate", help="create synthetic claims, 835 remits and patient payments")
+    g.add_argument("--out", default="data")
+    g.add_argument("--seed", type=int, default=7)
+    g.add_argument("--as-of", default=synth.AS_OF.isoformat())
+
+    c = sub.add_parser("close", help="run a month-end close and write the outputs")
+    c.add_argument("--data", default="data")
+    c.add_argument("--as-of", default=synth.AS_OF.isoformat(), help="month-end date, YYYY-MM-DD")
+    c.add_argument("--out", default="out")
+    c.add_argument("--dashboard", default="docs/index.html")
+    c.add_argument("--no-claude", action="store_true", help="use the template memo even if an API key is set")
+    c.add_argument("--backtest-months", type=int, default=15)
+
+    a = p.parse_args(argv)
+    if a.cmd == "generate":
+        stats = synth.generate(Path(a.out), seed=a.seed, as_of=date.fromisoformat(a.as_of))
+        print(f"{stats['claims']:,} claims, {stats['remits']:,} remits, {stats['patient_payments']:,} patient payments, "
+              f"${stats['billed']:,.0f} billed -> {a.out}/")
+    else:
+        report = pipeline.run(Path(a.data), date.fromisoformat(a.as_of), Path(a.out),
+                              use_claude=not a.no_claude, backtest_months=a.backtest_months)
+        dashboard.write(report, Path(a.dashboard))
+        f = report["facts"]
+        print(f"{report['month']}: net revenue ${f['net_revenue']:,.0f} on ${f['gross_charges']:,.0f} charges "
+              f"({f['accrual_rate']:.1%}), true-up ${f['true_up']:,.0f}, net AR ${f['net_ar']:,.0f}")
+        print(f"Memo: {report['memo_note']}")
+        print(f"Outputs in {a.out}/, dashboard at {a.dashboard}")
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,475 @@
+<title>OON Revenue Close</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a month-end close binder. Summary figures first, then the memo, then cash, rates, worklists and the entry. */
+:root {
+  --bg: #f5f6f4;
+  --surface: #ffffff;
+  --ink: #18222b;
+  --muted: #5b6770;
+  --line: #dde1dc;
+  --accent: #2e6b5e;       /* saguaro green: expected / booked */
+  --accent-soft: #dcebe6;
+  --sand: #b0723a;         /* sandstone: actual / collected */
+  --sand-soft: #f3e4d4;
+  --good: #2f7a4a;
+  --warn: #a8660b;
+  --bad: #b2392f;
+  --bad-soft: #f6dedb;
+  --warn-soft: #f6e8cf;
+  --font-display: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-body: "Public Sans", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-data: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #12181d; --surface: #1a2228; --ink: #e5e9e6; --muted: #9aa6ad; --line: #2c373e;
+    --accent: #6fb5a3; --accent-soft: #1f3632; --sand: #d79a5f; --sand-soft: #3a2b1d;
+    --good: #6cc08a; --warn: #e0a64a; --bad: #ec7a6e; --bad-soft: #3d2420; --warn-soft: #3a2f1a;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #12181d; --surface: #1a2228; --ink: #e5e9e6; --muted: #9aa6ad; --line: #2c373e;
+  --accent: #6fb5a3; --accent-soft: #1f3632; --sand: #d79a5f; --sand-soft: #3a2b1d;
+  --good: #6cc08a; --warn: #e0a64a; --bad: #ec7a6e; --bad-soft: #3d2420; --warn-soft: #3a2f1a;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 15px; line-height: 1.5; }
+.wrap { max-width: 1180px; margin: 0 auto; padding-block: 28px 64px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 28px; }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 600; margin: 0; text-wrap: balance; line-height: 1.2; }
+h1 { font-size: clamp(1.7rem, 3.5vw, 2.3rem); }
+h2 { font-size: 1.35rem; }
+h3 { font-size: 1.05rem; }
+.eyebrow { font-size: .74rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+.num, td.n, th.n { font-family: var(--font-data); font-variant-numeric: tabular-nums; }
+.muted { color: var(--muted); }
+header.top { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 12px 24px; }
+header.top p { margin: 6px 0 0; max-width: 62ch; color: var(--muted); }
+.chip { display: inline-flex; align-items: center; gap: 6px; border-radius: 999px; padding: 3px 10px; font-size: .78rem; font-weight: 600; border: 1px solid var(--line); background: var(--surface); white-space: nowrap; }
+.chip.warn { background: var(--warn-soft); color: var(--warn); border-color: transparent; }
+.chip.bad { background: var(--bad-soft); color: var(--bad); border-color: transparent; }
+.chip.ok { background: var(--accent-soft); color: var(--accent); border-color: transparent; }
+
+.kpis { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); border: 1px solid var(--line); background: var(--surface); border-radius: 10px; }
+.kpi { padding: 14px 16px; display: grid; gap: 4px; border-left: 1px solid var(--line); min-width: 0; }
+.kpi:first-child { border-left: 0; }
+.kpi .v { font-family: var(--font-data); font-size: 1.35rem; font-weight: 500; font-variant-numeric: tabular-nums; }
+.kpi .d { font-size: .8rem; color: var(--muted); }
+.d.down { color: var(--bad); } .d.up { color: var(--good); }
+@media (max-width: 900px) { .kpis { grid-template-columns: repeat(3, minmax(0, 1fr)); } .kpi:nth-child(4) { border-left: 0; } .kpi:nth-child(n+4) { border-top: 1px solid var(--line); } }
+@media (max-width: 520px) { .kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); } .kpi { border-left: 0; border-top: 1px solid var(--line); } .kpi:nth-child(2n) { border-left: 1px solid var(--line); } .kpi:nth-child(-n+2) { border-top: 0; } }
+
+section { display: grid; gap: 14px; }
+.sec-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 6px 16px; }
+.sec-head p { margin: 0; color: var(--muted); max-width: 70ch; font-size: .92rem; }
+.grid2 { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 20px; align-items: start; }
+@media (max-width: 900px) { .grid2 { grid-template-columns: minmax(0, 1fr); } }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 18px 20px; min-width: 0; }
+
+.memo { font-size: .98rem; }
+.memo h1 { display: none; }
+.memo h2 { font-size: 1rem; font-family: var(--font-body); font-weight: 700; margin: 18px 0 6px; }
+.memo p { margin: 0 0 10px; max-width: 68ch; }
+.memo ul { margin: 0; padding-left: 20px; display: grid; gap: 6px; max-width: 70ch; }
+.memo-note { margin-top: 14px; font-size: .8rem; color: var(--muted); border-top: 1px dashed var(--line); padding-top: 10px; }
+
+.scroll { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: .86rem; }
+th, td { padding: 7px 10px; text-align: left; border-bottom: 1px solid var(--line); white-space: nowrap; }
+th { font-size: .72rem; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+td.n, th.n { text-align: right; }
+tr.total td { font-weight: 600; border-top: 2px solid var(--ink); border-bottom: 0; }
+td.txt { white-space: normal; }
+td.txt div { min-width: 220px; max-width: 340px; }
+
+.rf { display: grid; gap: 18px; }
+.rf table td:first-child { color: var(--muted); }
+
+.legend { display: flex; flex-wrap: wrap; gap: 14px; font-size: .8rem; color: var(--muted); }
+.legend i { display: inline-block; width: 12px; height: 12px; border-radius: 3px; vertical-align: -2px; margin-right: 6px; }
+svg text { fill: var(--muted); font-family: var(--font-body); font-size: 11px; }
+svg .lbl { fill: var(--ink); }
+
+.heat td.cell { text-align: right; font-family: var(--font-data); position: relative; }
+.heat td.cell .adj { font-size: .7rem; margin-left: 4px; }
+.heat td.cell.lo { background: var(--bad-soft); }
+.heat td.cell.hi { background: var(--accent-soft); }
+
+.tabs { display: flex; flex-wrap: wrap; gap: 6px; }
+.tabs button { font: inherit; font-size: .88rem; padding: 7px 14px; border-radius: 8px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; }
+.tabs button[aria-selected="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.tabs button:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.tab-note { font-size: .88rem; color: var(--muted); margin: 0; max-width: 80ch; }
+
+details summary { cursor: pointer; font-weight: 600; }
+.method { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.method div { min-width: 0; }
+.method p { margin: 6px 0 0; font-size: .9rem; color: var(--muted); }
+@media (max-width: 900px) { .method { grid-template-columns: minmax(0, 1fr); } }
+footer { font-size: .8rem; color: var(--muted); border-top: 1px solid var(--line); padding-top: 14px; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <div>
+      <div class="eyebrow">Out-of-network revenue close · behavioral health demo</div>
+      <h1 id="title">Month-end revenue close</h1>
+      <p>Revenue booked at the amount expected to be collected, built from claims and 835 remits. Every figure below comes from code; Claude only writes the summary, and its numbers are checked.</p>
+    </div>
+    <span class="chip warn" title="No real patient data is used">Synthetic demo data</span>
+  </header>
+
+  <div class="kpis" id="kpis"></div>
+
+  <section>
+    <div class="grid2">
+      <div class="panel">
+        <div class="eyebrow" style="margin-bottom:8px">Owner summary</div>
+        <div class="memo" id="memo"></div>
+        <div class="memo-note" id="memo-note"></div>
+      </div>
+      <div class="panel rf">
+        <div class="eyebrow">AR roll-forward</div>
+        <div class="scroll" id="rollforward"></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <h2>Cash: expected vs. actual by payer</h2>
+      <p>What open claims at last month-end were expected to pay this month, against what came in. This is the collections target for the revenue cycle team.</p>
+    </div>
+    <div class="grid2">
+      <div class="panel">
+        <div class="legend"><span><i style="background:var(--accent)"></i>Expected</span><span><i style="background:var(--sand)"></i>Actual</span></div>
+        <div id="cash-chart"></div>
+      </div>
+      <div class="panel">
+        <div class="eyebrow" style="margin-bottom:8px">Net AR by payer and age (days since service)</div>
+        <div class="scroll" id="aging"></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <h2>Collection rates by payer and level of care</h2>
+      <p>The accrual rate is the share of billed charges expected for new services. A shaded cell means recent claims are paying differently from history and the model has moved the rate.</p>
+    </div>
+    <div class="panel scroll"><table class="heat" id="rates"></table></div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <h2>How good were past estimates?</h2>
+      <p>For each service month: the rate booked at that month's close, today's estimate, and cash collected so far. Older months have nearly finished paying, so the gap between booked and today's estimate is the model's error.</p>
+    </div>
+    <div class="panel">
+      <div class="legend"><span><i style="background:var(--accent)"></i>Booked at close</span><span><i style="background:var(--ink)"></i>Current estimate</span><span><i style="background:var(--sand)"></i>Collected to date</span></div>
+      <div id="backtest"></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <h2>Denial rate by payer</h2>
+      <p>Share of claims denied on first response, by month the payer responded. Shading flags months well above the payer's usual rate.</p>
+    </div>
+    <div class="panel scroll"><table id="denial-trend"></table></div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <h2>Worklists</h2>
+      <p>Ranked queues for the revenue cycle team, from the same data as the close.</p>
+    </div>
+    <div class="tabs" role="tablist" id="tabs"></div>
+    <p class="tab-note" id="tab-note"></p>
+    <div class="panel scroll"><table id="worklist"></table></div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <h2>Journal entry for QuickBooks Online</h2>
+      <p>One entry per month, with class set to level of care and location set to site. The CSV in the repo imports directly.</p>
+    </div>
+    <div class="panel">
+      <div class="scroll" id="je-summary"></div>
+      <details style="margin-top:14px"><summary id="je-toggle">Show every line</summary><div class="scroll" id="je-lines" style="margin-top:10px"></div></details>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><h2>How the numbers are built</h2></div>
+    <div class="panel method">
+      <div><h3>Rates from claim history</h3><p>For claims old enough that the outcome is known, the model measures what share of billed charges was eventually collected, split by payer, level of care and how long a claim has gone unpaid. Recent months count more, and thin cells borrow from the level-of-care average.</p></div>
+      <div><h3>Recent-experience check</h3><p>History is a year old by definition. The model compares cash on recent claims with what history says should have arrived by the same age, and scales the rate when a payer changes behavior, such as more MultiPlan repricing or authorization denials.</p></div>
+      <div><h3>Revenue and true-up</h3><p>Each claim carries an expected value: cash so far plus cash still expected. Revenue for the month is the change in that total, split into new services (charges less the implicit price concession) and the change in estimate on prior months. Gross AR, the allowance and net AR all roll forward exactly.</p></div>
+    </div>
+  </section>
+
+  <footer id="footer"></footer>
+</div>
+
+<script id="report-data" type="application/json">/*__DATA__*/</script>
+<script>
+(function () {
+  const R = JSON.parse(document.getElementById("report-data").textContent);
+  const LOC = { RTC: "Residential", PHP: "PHP", IOP: "IOP", OP: "Outpatient", TMS: "TMS" };
+  const LOCS = ["RTC", "PHP", "IOP", "OP", "TMS"];
+  const $ = (id) => document.getElementById(id);
+  const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  const money = (x, dp) => {
+    const s = x < 0 ? "-" : "", a = Math.abs(x);
+    if (dp === undefined) {
+      if (a >= 1e6) return s + "$" + (a / 1e6).toFixed(2) + "M";
+      if (a >= 1e3) return s + "$" + (a / 1e3).toFixed(0) + "K";
+      return s + "$" + a.toFixed(0);
+    }
+    return s + "$" + a.toLocaleString("en-US", { minimumFractionDigits: dp, maximumFractionDigits: dp });
+  };
+  const pct = (x, dp = 1) => (x * 100).toFixed(dp) + "%";
+  const monthName = (ym) => { const [y, m] = ym.split("-").map(Number); return new Date(y, m - 1, 1).toLocaleString("en-US", { month: "short", year: "2-digit" }); };
+
+  const F = R.facts;
+  $("title").textContent = R.month + " revenue close";
+  document.title = "OON Revenue Close";
+
+  // ---- KPIs
+  const kpis = [
+    ["Net revenue", money(F.net_revenue), F.prior_net_revenue !== undefined ? delta(F.net_revenue - F.prior_net_revenue, "vs. prior month", money) : ""],
+    ["Gross charges", money(F.gross_charges), `<span class="d">${R.counts.claims.toLocaleString()} claims to date</span>`],
+    ["Accrual rate", pct(F.accrual_rate), F.prior_accrual_rate !== undefined ? delta(F.accrual_rate - F.prior_accrual_rate, "pts vs. prior", (x) => (x * 100).toFixed(1)) : ""],
+    ["Prior-period true-up", money(F.true_up), `<span class="d">change in estimate</span>`],
+    ["Cash collected", money(F.cash_collected), delta(F.cash_vs_expected, "vs. expected", money)],
+    ["Net AR", money(F.net_ar), delta(F.net_ar_change, "for the month", money)],
+  ];
+  function delta(x, label, f) {
+    const cls = x < 0 ? "down" : "up";
+    return `<span class="d ${cls}">${x >= 0 ? "+" : ""}${f(x)} ${label}</span>`;
+  }
+  $("kpis").innerHTML = kpis.map(([k, v, d]) => `<div class="kpi"><span class="eyebrow">${k}</span><span class="v">${v}</span>${d}</div>`).join("");
+
+  // ---- Memo (small Markdown subset: headings, bullets, paragraphs, bold)
+  function md(text) {
+    const out = []; let list = false;
+    const inline = (s) => esc(s).replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+    for (const raw of text.split("\n")) {
+      const line = raw.trim();
+      if (line.startsWith("- ")) { if (!list) { out.push("<ul>"); list = true; } out.push(`<li>${inline(line.slice(2))}</li>`); continue; }
+      if (list) { out.push("</ul>"); list = false; }
+      if (!line) continue;
+      const h = line.match(/^(#{1,3})\s+(.*)$/);
+      if (h) out.push(`<h${h[1].length}>${inline(h[2])}</h${h[1].length}>`);
+      else out.push(`<p>${inline(line)}</p>`);
+    }
+    if (list) out.push("</ul>");
+    return out.join("");
+  }
+  $("memo").innerHTML = md(R.memo);
+  $("memo-note").textContent = "Source: " + R.memo_note + ".";
+
+  // ---- Roll-forward
+  const rf = R.rollforward;
+  const rfRows = (title, obj, labels) => {
+    let h = `<table><thead><tr><th>${title}</th><th class="n"></th></tr></thead><tbody>`;
+    for (const [k, lab] of labels) {
+      const cls = k === "closing" ? ' class="total"' : "";
+      h += `<tr${cls}><td>${lab}</td><td class="n">${money(obj[k], 0)}</td></tr>`;
+    }
+    return h + "</tbody></table>";
+  };
+  $("rollforward").innerHTML =
+    rfRows("Net AR", rf.net_ar, [["opening", "Opening"], ["net_revenue", "Net revenue"], ["cash", "Cash received"], ["closing", "Closing"]]) +
+    rfRows("Gross AR", rf.gross_ar, [["opening", "Opening"], ["charges", "Gross charges"], ["cash", "Cash received"], ["write_offs", "Write-offs to allowance"], ["closing", "Closing"]]) +
+    rfRows("Allowance for price concessions", rf.allowance, [["opening", "Opening"], ["concession", "Concession on new services"], ["true_up", "Change in estimate"], ["write_offs", "Write-offs"], ["closing", "Closing"]]);
+
+  // ---- Cash chart (horizontal paired bars)
+  (function () {
+    const rows = R.by_payer.slice().sort((a, b) => b.expected_cash - a.expected_cash);
+    const W = 560, rowH = 46, top = 8, left = 128, right = 70, H = top + rows.length * rowH + 24;
+    const max = Math.max(...rows.map((r) => Math.max(r.expected_cash, r.cash_on_prior))) * 1.05;
+    const x = (v) => left + (v / max) * (W - left - right);
+    const ticks = niceTicks(max, 4);
+    let s = `<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Expected versus actual cash by payer">`;
+    for (const t of ticks) s += `<line x1="${x(t)}" x2="${x(t)}" y1="${top}" y2="${H - 20}" stroke="var(--line)"/><text x="${x(t)}" y="${H - 6}" text-anchor="middle">${money(t)}</text>`;
+    rows.forEach((r, i) => {
+      const y = top + i * rowH;
+      s += `<text class="lbl" x="${left - 10}" y="${y + 22}" text-anchor="end">${esc(r.payer)}</text>`;
+      s += `<rect x="${left}" y="${y + 6}" width="${x(r.expected_cash) - left}" height="13" rx="2" fill="var(--accent)"/>`;
+      s += `<rect x="${left}" y="${y + 22}" width="${x(r.cash_on_prior) - left}" height="13" rx="2" fill="var(--sand)"/>`;
+      const gap = Math.round((r.cash_on_prior / r.expected_cash - 1) * 100);
+      s += `<text x="${x(Math.max(r.expected_cash, r.cash_on_prior)) + 6}" y="${y + 25}" style="fill:${gap <= -10 ? "var(--bad)" : "var(--muted)"}">${gap > 0 ? "+" : ""}${gap}%</text>`;
+    });
+    $("cash-chart").innerHTML = s + "</svg>";
+  })();
+  function niceTicks(max, n) {
+    const step0 = max / n, mag = Math.pow(10, Math.floor(Math.log10(step0)));
+    const step = [1, 2, 2.5, 5, 10].map((m) => m * mag).find((s) => s >= step0);
+    const out = []; for (let v = 0; v <= max; v += step) out.push(v); return out;
+  }
+
+  // ---- Aging
+  (function () {
+    const buckets = R.buckets;
+    const payers = Object.keys(R.aging).sort();
+    let h = `<table><thead><tr><th>Payer</th>${buckets.map((b) => `<th class="n">${b}</th>`).join("")}<th class="n">Total</th></tr></thead><tbody>`;
+    const col = buckets.map(() => 0); let all = 0;
+    for (const p of payers) {
+      let tot = 0;
+      const cells = buckets.map((b, i) => { const v = (R.aging[p][b] || { net: 0 }).net; tot += v; col[i] += v; return `<td class="n">${money(v)}</td>`; });
+      all += tot;
+      h += `<tr><td>${esc(p)}</td>${cells.join("")}<td class="n">${money(tot)}</td></tr>`;
+    }
+    h += `<tr class="total"><td>Total</td>${col.map((v) => `<td class="n">${money(v)}</td>`).join("")}<td class="n">${money(all)}</td></tr>`;
+    $("aging").innerHTML = h + "</tbody></table>";
+  })();
+
+  // ---- Rate table
+  (function () {
+    const by = {}; const payers = [];
+    for (const r of R.rates) { (by[r.payer] = by[r.payer] || {})[r.loc] = r; if (!payers.includes(r.payer)) payers.push(r.payer); }
+    let h = `<thead><tr><th>Payer</th>${LOCS.map((l) => `<th class="n">${LOC[l]}</th>`).join("")}</tr></thead><tbody>`;
+    for (const p of payers) {
+      h += `<tr><td>${esc(p)}</td>`;
+      for (const l of LOCS) {
+        const r = by[p][l];
+        if (!r) { h += `<td class="cell">–</td>`; continue; }
+        const f = r.experience_factor, sure = r.experience_n >= 40;
+        const cls = !sure ? "" : f < 0.92 ? "lo" : f > 1.08 ? "hi" : "";
+        const tip = `Historical ${pct(r.historical_rate)} · recent claims ${pct(f - 1, 0)} vs. pattern (${r.experience_n} claims) · prior month ${pct(r.prior_accrual_rate)} · ${r.n} mature claims, credibility ${pct(r.credibility, 0)}`;
+        const adj = cls ? `<span class="adj" style="color:${cls === "lo" ? "var(--bad)" : "var(--good)"}">${f < 1 ? "▼" : "▲"}</span>` : "";
+        h += `<td class="cell ${cls}" title="${esc(tip)}">${pct(r.accrual_rate)}${adj}</td>`;
+      }
+      h += "</tr>";
+    }
+    $("rates").innerHTML = h + "</tbody>";
+  })();
+
+  // ---- Backtest line chart
+  (function () {
+    const rows = R.backtest;
+    const W = 1000, H = 260, l = 48, r = 34, t = 14, b = 30;
+    const vals = rows.flatMap((d) => [d.booked_rate, d.current_rate, d.collected_rate]);
+    const lo = 0, hi = Math.ceil(Math.max(...vals) * 20) / 20;
+    const x = (i) => l + (i / (rows.length - 1)) * (W - l - r);
+    const y = (v) => t + (1 - (v - lo) / (hi - lo)) * (H - t - b);
+    let s = `<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Booked rate versus current estimate by service month">`;
+    for (let v = lo; v <= hi + 1e-9; v += 0.05) s += `<line x1="${l}" x2="${W - r}" y1="${y(v)}" y2="${y(v)}" stroke="var(--line)"/><text x="${l - 8}" y="${y(v) + 4}" text-anchor="end">${pct(v, 0)}</text>`;
+    rows.forEach((d, i) => { if (i % 2 === 0 || i === rows.length - 1) s += `<text x="${x(i)}" y="${H - 8}" text-anchor="middle">${monthName(d.month)}</text>`; });
+    const line = (key, color, w, dash) => {
+      const pts = rows.map((d, i) => `${x(i).toFixed(1)},${y(d[key]).toFixed(1)}`).join(" ");
+      let p = `<polyline points="${pts}" fill="none" stroke="${color}" stroke-width="${w}" ${dash ? `stroke-dasharray="${dash}"` : ""} stroke-linejoin="round"/>`;
+      rows.forEach((d, i) => { p += `<circle cx="${x(i)}" cy="${y(d[key])}" r="${i === rows.length - 1 ? 4 : 2.5}" fill="${color}"><title>${monthName(d.month)}: ${pct(d[key])}</title></circle>`; });
+      return p;
+    };
+    s += line("collected_rate", "var(--sand)", 2, "5 4") + line("booked_rate", "var(--accent)", 2.5) + line("current_rate", "var(--ink)", 2);
+    $("backtest").innerHTML = s + "</svg>";
+  })();
+
+  // ---- Denial trend
+  (function () {
+    const months = [...new Set(R.denial_trend.map((d) => d.month))].sort();
+    const payers = [...new Set(R.denial_trend.map((d) => d.payer))].sort();
+    const get = (p, m) => R.denial_trend.find((d) => d.payer === p && d.month === m);
+    let h = `<thead><tr><th>Payer</th>${months.map((m) => `<th class="n">${monthName(m)}</th>`).join("")}<th>Leading reason, latest month</th></tr></thead><tbody>`;
+    for (const p of payers) {
+      const rows = months.map((m) => get(p, m));
+      const rates = rows.filter(Boolean).map((r) => r.denial_rate).sort((a, b) => a - b);
+      const median = rates[Math.floor(rates.length / 2)] || 0;
+      h += `<tr><td>${esc(p)}</td>` + rows.map((r) => {
+        if (!r) return `<td class="n">–</td>`;
+        const hot = r.remits >= 30 && r.denial_rate > median * 1.5 && r.denial_rate - median > 0.06;
+        return `<td class="n" style="${hot ? "background:var(--bad-soft);color:var(--bad);font-weight:600" : ""}" title="${r.denied} of ${r.remits} claims">${pct(r.denial_rate)}</td>`;
+      }).join("") + `<td>${esc((rows[rows.length - 1] || {}).top_reason || "")}</td></tr>`;
+    }
+    $("denial-trend").innerHTML = h + "</tbody>";
+  })();
+
+  // ---- Worklists
+  const lists = {
+    under: {
+      label: `Underpayments (${R.list_counts.underpayments})`,
+      note: `Paid in the last 90 days below the single case agreement rate, or far below what this payer usually allows. About ${money(F.underpayment_recovery)} recoverable. Top 40 by recovery.`,
+      cols: [["claim_id", "Claim"], ["payer", "Payer"], ["loc", "LOC"], ["paid_date", "Paid"], ["allowed", "Allowed", "m"], ["expected_allowed", "Expected", "m"], ["est_recovery", "Recovery", "m"], ["reason", "Why", "w"], ["action", "Next step", "w"]],
+      rows: R.underpayments.slice(0, 40),
+    },
+    denials: {
+      label: `Open denials (${R.list_counts.denials})`,
+      note: `Denied claims not yet overturned, soonest appeal deadline first (180 days from denial). Past-deadline claims sort last. Top 40.`,
+      cols: [["claim_id", "Claim"], ["payer", "Payer"], ["loc", "LOC"], ["denied_on", "Denied"], ["reason", "Reason", "w"], ["billed", "Billed", "m"], ["expected_recovery", "Expected", "m"], ["days_left", "Days left", "d"]],
+      rows: R.denials.slice(0, 40),
+    },
+    p2p: {
+      label: `Paid to patient (${R.list_counts.paid_to_patient})`,
+      note: `The payer mailed the check to the member. Front desk and billing need to collect it from the patient. Top 40 by amount owed.`,
+      cols: [["claim_id", "Claim"], ["patient_id", "Patient"], ["payer", "Payer"], ["payer_paid_patient_on", "Paid patient"], ["still_owed", "Still owed", "m"], ["days_outstanding", "Days out", "i"], ["expected_recovery", "Expected", "m"]],
+      rows: R.paid_to_patient.slice(0, 40),
+    },
+    match: {
+      label: `Match exceptions (${R.list_counts.match_exceptions + R.list_counts.unmatched})`,
+      note: `Remits whose claim number did not match exactly. These were matched on a normalized claim number or on member, dates and amount. ${R.unmatched.length} could not be matched at all.`,
+      cols: [["remit_claim_number", "Number on remit"], ["matched_to", "Matched to"], ["method", "How"], ["payer", "Payer"], ["payment_date", "Paid"], ["paid", "Paid amount", "m"]],
+      rows: R.match_exceptions.slice(0, 40),
+    },
+  };
+  const tabs = $("tabs");
+  for (const [key, l] of Object.entries(lists)) {
+    const b = document.createElement("button");
+    b.type = "button"; b.role = "tab"; b.id = "tab-" + key; b.textContent = l.label;
+    b.addEventListener("click", () => showList(key));
+    tabs.appendChild(b);
+  }
+  function showList(key) {
+    const l = lists[key];
+    for (const b of tabs.children) b.setAttribute("aria-selected", String(b.id === "tab-" + key));
+    $("tab-note").textContent = l.note;
+    let h = `<thead><tr>${l.cols.map(([, lab, t]) => `<th class="${t && t !== "w" ? "n" : ""}">${lab}</th>`).join("")}</tr></thead><tbody>`;
+    for (const r of l.rows) {
+      h += "<tr>" + l.cols.map(([k, , t]) => {
+        const v = r[k];
+        if (t === "m") return `<td class="n">${money(v, 0)}</td>`;
+        if (t === "i") return `<td class="n">${v}</td>`;
+        if (t === "d") return `<td class="n">${v < 0 ? `<span class="chip bad">past due</span>` : v <= 14 ? `<span class="chip warn">${v}</span>` : v}</td>`;
+        if (k === "loc") return `<td>${LOC[v] || v}</td>`;
+        return t === "w" ? `<td class="txt"><div>${esc(v)}</div></td>` : `<td>${esc(v)}</td>`;
+      }).join("") + "</tr>";
+    }
+    $("worklist").innerHTML = h + "</tbody>";
+    try { localStorage.setItem("drc-tab", key); } catch (e) {}
+  }
+  let start = "under";
+  try { const saved = localStorage.getItem("drc-tab"); if (saved && lists[saved]) start = saved; } catch (e) {}
+  showList(start);
+
+  // ---- Journal entry
+  (function () {
+    const tot = {};
+    for (const r of R.journal_entry) {
+      const t = (tot[r.Account] = tot[r.Account] || { d: 0, c: 0 });
+      t.d += Number(r.Debits || 0); t.c += Number(r.Credits || 0);
+    }
+    let h = `<table><thead><tr><th>Account</th><th class="n">Debits</th><th class="n">Credits</th></tr></thead><tbody>`;
+    let D = 0, C = 0;
+    for (const [a, t] of Object.entries(tot).sort()) { D += t.d; C += t.c; h += `<tr><td>${esc(a)}</td><td class="n">${t.d ? money(t.d, 2) : ""}</td><td class="n">${t.c ? money(t.c, 2) : ""}</td></tr>`; }
+    h += `<tr class="total"><td>Total ${Math.abs(D - C) < 0.005 ? '<span class="chip ok">balanced</span>' : '<span class="chip bad">out of balance</span>'}</td><td class="n">${money(D, 2)}</td><td class="n">${money(C, 2)}</td></tr></tbody></table>`;
+    $("je-summary").innerHTML = h;
+    $("je-toggle").textContent = `Show all ${R.journal_entry.length} lines`;
+    const cols = ["Account", "Debits", "Credits", "Class", "Location", "Description"];
+    let lines = `<table><thead><tr>${cols.map((c) => `<th class="${c === "Debits" || c === "Credits" ? "n" : ""}">${c}</th>`).join("")}</tr></thead><tbody>`;
+    for (const r of R.journal_entry) lines += "<tr>" + cols.map((c) => `<td class="${c === "Debits" || c === "Credits" ? "n" : ""}">${c === "Debits" || c === "Credits" ? (r[c] ? money(Number(r[c]), 2) : "") : esc(r[c])}</td>`).join("") + "</tr>";
+    $("je-lines").innerHTML = lines + "</tbody></table>";
+  })();
+
+  $("footer").textContent = `Close as of ${R.as_of}. ${R.counts.claims.toLocaleString()} claims and ${R.counts.remits.toLocaleString()} remits from ${R.counts.remit_files} ERA 835 files, all synthetic. No real patient information is used.`;
+})();
+</script>

@@ -1,0 +1,23 @@
+[project]
+name = "oonrev"
+version = "0.1.0"
+description = "Out-of-network revenue and collections engine for behavioral health providers"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+claude = ["anthropic"]
+dev = ["pytest"]
+
+[project.scripts]
+oonrev = "oonrev.__main__:main"
+
+[tool.setuptools]
+packages = ["oonrev"]
+
+[tool.setuptools.package-data]
+oonrev = ["dashboard_template.html"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["tests"]

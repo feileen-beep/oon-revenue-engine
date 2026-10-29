@@ -1,0 +1,645 @@
+claim_id,payer,loc,site,service_to,denied_on,carc,reason,billed,expected_recovery,appeal_deadline,days_left
+DRC1015370,Aetna,RTC,Glendale,2026-01-30,2026-04-03,197,Precertification / authorization absent,24500.0,2383.4528,2026-09-30,0
+DRC1015481,BCBS of Arizona,RTC,Scottsdale,2026-02-18,2026-04-03,16,Missing or invalid information,24500.0,1946.5063,2026-09-30,0
+DRC1015523,Other commercial,RTC,Glendale,2026-02-13,2026-04-03,197,Precertification / authorization absent,24500.0,2047.3985,2026-09-30,0
+DRC1015615,Cigna,RTC,Glendale,2026-02-09,2026-04-03,197,Precertification / authorization absent,24500.0,2222.8166,2026-09-30,0
+DRC1016137,BCBS of Arizona,RTC,Scottsdale,2026-03-14,2026-04-03,197,Precertification / authorization absent,24500.0,1946.5063,2026-09-30,0
+DRC1015466,Anthem,RTC,Glendale,2026-03-01,2026-04-03,96,Non-covered charge,17500.0,1523.1745,2026-09-30,0
+DRC1015520,Aetna,RTC,Glendale,2026-02-24,2026-04-03,197,Precertification / authorization absent,17500.0,1702.4663,2026-09-30,0
+DRC1014953,Cigna,PHP,Phoenix,2026-02-21,2026-04-03,50,Not medically necessary,9000.0,816.5449,2026-09-30,0
+DRC1015195,UnitedHealthcare,PHP,Phoenix,2026-02-16,2026-04-03,197,Precertification / authorization absent,9000.0,625.1582,2026-09-30,0
+DRC1014286,Anthem,IOP,Phoenix,2026-02-17,2026-04-03,50,Not medically necessary,4500.0,391.6734,2026-09-30,0
+DRC1014693,BCBS of Arizona,TMS,Phoenix,2025-12-24,2026-04-03,16,Missing or invalid information,3000.0,238.3477,2026-09-30,0
+DRC1015364,BCBS of Arizona,IOP,Phoenix,2026-02-12,2026-04-03,50,Not medically necessary,2700.0,214.5129,2026-09-30,0
+DRC1014966,Other commercial,IOP,Scottsdale,2026-02-14,2026-04-03,27,Coverage terminated before service,900.0,75.2106,2026-09-30,0
+DRC1015375,Aetna,RTC,Scottsdale,2026-01-23,2026-04-10,96,Non-covered charge,24500.0,2383.4528,2026-10-07,7
+DRC1015719,BCBS of Arizona,RTC,Glendale,2026-02-27,2026-04-10,50,Not medically necessary,24500.0,1946.5063,2026-10-07,7
+DRC1016329,Anthem,RTC,Glendale,2026-03-09,2026-04-10,197,Precertification / authorization absent,24500.0,2132.4442,2026-10-07,7
+DRC1016094,Cigna,RTC,Glendale,2026-03-18,2026-04-10,16,Missing or invalid information,21000.0,1905.2714,2026-10-07,7
+DRC1014398,UnitedHealthcare,PHP,Phoenix,2026-01-26,2026-04-10,50,Not medically necessary,9000.0,625.1582,2026-10-07,7
+DRC1014659,UnitedHealthcare,PHP,Phoenix,2025-12-29,2026-04-10,96,Non-covered charge,9000.0,625.1582,2026-10-07,7
+DRC1015099,UnitedHealthcare,PHP,Scottsdale,2026-02-16,2026-04-10,96,Non-covered charge,9000.0,625.1582,2026-10-07,7
+DRC1015168,UnitedHealthcare,PHP,Scottsdale,2026-02-11,2026-04-10,197,Precertification / authorization absent,9000.0,625.1582,2026-10-07,7
+DRC1015297,UnitedHealthcare,PHP,Phoenix,2026-02-15,2026-04-10,96,Non-covered charge,9000.0,625.1582,2026-10-07,7
+DRC1016527,Aetna,IOP,Scottsdale,2026-03-25,2026-04-10,50,Not medically necessary,4500.0,437.777,2026-10-07,7
+DRC1015395,Aetna,IOP,Phoenix,2026-02-27,2026-04-10,197,Precertification / authorization absent,3600.0,350.2216,2026-10-07,7
+DRC1014778,Aetna,IOP,Scottsdale,2026-03-02,2026-04-10,16,Missing or invalid information,2700.0,262.6662,2026-10-07,7
+DRC1015827,Cigna,IOP,Phoenix,2026-03-03,2026-04-10,50,Not medically necessary,2700.0,244.9635,2026-10-07,7
+DRC1014169,Other commercial,PHP,Phoenix,2026-01-14,2026-04-10,197,Precertification / authorization absent,1800.0,150.4211,2026-10-07,7
+DRC1021267,UnitedHealthcare,OP,Phoenix,2026-01-31,2026-04-10,197,Precertification / authorization absent,1750.0,121.5585,2026-10-07,7
+DRC1014840,Other commercial,RTC,Glendale,2026-01-29,2026-04-17,96,Non-covered charge,24500.0,2047.3985,2026-10-14,14
+DRC1015617,Cigna,RTC,Glendale,2026-02-23,2026-04-17,27,Coverage terminated before service,24500.0,2222.8166,2026-10-14,14
+DRC1015954,Aetna,RTC,Scottsdale,2026-03-04,2026-04-17,50,Not medically necessary,24500.0,2383.4528,2026-10-14,14
+DRC1015971,Aetna,RTC,Scottsdale,2026-03-14,2026-04-17,96,Non-covered charge,10500.0,1021.4798,2026-10-14,14
+DRC1015196,UnitedHealthcare,PHP,Phoenix,2026-02-23,2026-04-17,27,Coverage terminated before service,9000.0,625.1582,2026-10-14,14
+DRC1015344,UnitedHealthcare,PHP,Phoenix,2026-02-04,2026-04-17,50,Not medically necessary,9000.0,625.1582,2026-10-14,14
+DRC1015414,Aetna,PHP,Phoenix,2026-03-08,2026-04-17,50,Not medically necessary,9000.0,875.5541,2026-10-14,14
+DRC1015454,Other commercial,PHP,Scottsdale,2026-02-08,2026-04-17,197,Precertification / authorization absent,9000.0,752.1056,2026-10-14,14
+DRC1016344,Cigna,PHP,Phoenix,2026-03-17,2026-04-17,197,Precertification / authorization absent,9000.0,816.5449,2026-10-14,14
+DRC1016376,Other commercial,PHP,Scottsdale,2026-03-14,2026-04-17,50,Not medically necessary,9000.0,752.1056,2026-10-14,14
+DRC1015134,UnitedHealthcare,PHP,Scottsdale,2026-03-05,2026-04-17,197,Precertification / authorization absent,5400.0,375.0949,2026-10-14,14
+DRC1016282,Cigna,IOP,Glendale,2026-03-20,2026-04-17,197,Precertification / authorization absent,3600.0,326.618,2026-10-14,14
+DRC1014780,Aetna,IOP,Scottsdale,2026-03-16,2026-04-17,197,Precertification / authorization absent,2700.0,262.6662,2026-10-14,14
+DRC1015349,UnitedHealthcare,IOP,Phoenix,2026-03-11,2026-04-17,50,Not medically necessary,2700.0,187.5475,2026-10-14,14
+DRC1015485,BCBS of Arizona,PHP,Phoenix,2026-03-09,2026-04-17,50,Not medically necessary,1800.0,143.0086,2026-10-14,14
+DRC1015658,Aetna,RTC,Scottsdale,2026-02-04,2026-04-24,197,Precertification / authorization absent,24500.0,2383.4528,2026-10-21,21
+DRC1015726,UnitedHealthcare,RTC,Glendale,2026-02-13,2026-04-24,16,Missing or invalid information,24500.0,1701.8195,2026-10-21,21
+DRC1016056,Aetna,RTC,Scottsdale,2026-02-24,2026-04-24,27,Coverage terminated before service,24500.0,2383.4528,2026-10-21,21
+DRC1016100,UnitedHealthcare,RTC,Glendale,2026-03-12,2026-04-24,197,Precertification / authorization absent,24500.0,1701.8195,2026-10-21,21
+DRC1016248,Anthem,RTC,Glendale,2026-03-19,2026-04-24,96,Non-covered charge,24500.0,2132.4442,2026-10-21,21
+DRC1016434,Anthem,RTC,Glendale,2026-03-19,2026-04-24,197,Precertification / authorization absent,24500.0,2132.4442,2026-10-21,21
+DRC1015374,Aetna,RTC,Glendale,2026-02-24,2026-04-24,96,Non-covered charge,14000.0,1361.973,2026-10-21,21
+DRC1015781,UnitedHealthcare,PHP,Phoenix,2026-03-11,2026-04-24,50,Not medically necessary,9000.0,625.1582,2026-10-21,21
+DRC1015255,BCBS of Arizona,PHP,Scottsdale,2026-02-21,2026-04-24,197,Precertification / authorization absent,7200.0,572.0345,2026-10-21,21
+DRC1015041,UnitedHealthcare,IOP,Scottsdale,2026-03-23,2026-04-24,27,Coverage terminated before service,3600.0,250.0633,2026-10-21,21
+DRC1015486,BCBS of Arizona,IOP,Phoenix,2026-03-16,2026-04-24,16,Missing or invalid information,3600.0,286.0173,2026-10-21,21
+DRC1016663,Aetna,IOP,Glendale,2026-04-07,2026-04-24,197,Precertification / authorization absent,3600.0,350.2216,2026-10-21,21
+DRC1015576,BCBS of Arizona,IOP,Glendale,2026-03-14,2026-04-24,197,Precertification / authorization absent,2700.0,214.5129,2026-10-21,21
+DRC1021386,Aetna,OP,Phoenix,2026-03-31,2026-04-24,50,Not medically necessary,1750.0,170.2466,2026-10-21,21
+DRC1016114,Cigna,RTC,Scottsdale,2026-03-06,2026-05-01,27,Coverage terminated before service,24500.0,2222.8166,2026-10-28,28
+DRC1016204,Other commercial,RTC,Glendale,2026-03-24,2026-05-01,50,Not medically necessary,24500.0,2047.3985,2026-10-28,28
+DRC1016598,Cigna,RTC,Scottsdale,2026-03-28,2026-05-01,96,Non-covered charge,24500.0,2222.8166,2026-10-28,28
+DRC1016751,Aetna,RTC,Scottsdale,2026-04-03,2026-05-01,16,Missing or invalid information,24500.0,2383.4528,2026-10-28,28
+DRC1017032,Cigna,RTC,Glendale,2026-04-15,2026-05-01,197,Precertification / authorization absent,24500.0,2222.8166,2026-10-28,28
+DRC1015883,Other commercial,RTC,Scottsdale,2026-03-18,2026-05-01,50,Not medically necessary,14000.0,1169.942,2026-10-28,28
+DRC1015677,UnitedHealthcare,PHP,Scottsdale,2026-03-17,2026-05-01,96,Non-covered charge,9000.0,625.1582,2026-10-28,28
+DRC1015695,Other commercial,PHP,Scottsdale,2026-03-26,2026-05-01,197,Precertification / authorization absent,9000.0,752.1056,2026-10-28,28
+DRC1015779,UnitedHealthcare,PHP,Phoenix,2026-02-25,2026-05-01,197,Precertification / authorization absent,9000.0,625.1582,2026-10-28,28
+DRC1015856,Aetna,PHP,Phoenix,2026-03-29,2026-05-01,50,Not medically necessary,7200.0,700.4433,2026-10-28,28
+DRC1016106,Other commercial,PHP,Scottsdale,2026-03-18,2026-05-01,197,Precertification / authorization absent,7200.0,601.6845,2026-10-28,28
+DRC1015337,UnitedHealthcare,IOP,Phoenix,2026-03-19,2026-05-01,197,Precertification / authorization absent,4500.0,312.5791,2026-10-28,28
+DRC1015043,UnitedHealthcare,IOP,Scottsdale,2026-04-06,2026-05-01,50,Not medically necessary,3600.0,250.0633,2026-10-28,28
+DRC1015056,UnitedHealthcare,PHP,Phoenix,2026-02-28,2026-05-01,50,Not medically necessary,3600.0,250.0633,2026-10-28,28
+DRC1016369,BCBS of Arizona,TMS,Phoenix,2026-03-12,2026-05-01,27,Coverage terminated before service,3000.0,238.3477,2026-10-28,28
+DRC1015283,BCBS of Arizona,IOP,Phoenix,2026-03-02,2026-05-01,50,Not medically necessary,2700.0,214.5129,2026-10-28,28
+DRC1015828,Cigna,IOP,Phoenix,2026-03-10,2026-05-01,50,Not medically necessary,2700.0,244.9635,2026-10-28,28
+DRC1021361,BCBS of Arizona,OP,Phoenix,2026-03-31,2026-05-01,16,Missing or invalid information,1750.0,139.0362,2026-10-28,28
+DRC1015522,Other commercial,RTC,Glendale,2026-02-06,2026-05-08,50,Not medically necessary,24500.0,2047.3985,2026-11-04,35
+DRC1016338,Other commercial,RTC,Glendale,2026-03-31,2026-05-08,50,Not medically necessary,24500.0,2047.3985,2026-11-04,35
+DRC1016560,Aetna,RTC,Scottsdale,2026-04-03,2026-05-08,197,Precertification / authorization absent,24500.0,2383.4528,2026-11-04,35
+DRC1016506,Cigna,RTC,Glendale,2026-04-11,2026-05-08,27,Coverage terminated before service,17500.0,1587.7262,2026-11-04,35
+DRC1015750,BCBS of Arizona,RTC,Glendale,2026-03-03,2026-05-08,96,Non-covered charge,14000.0,1112.2893,2026-11-04,35
+DRC1016295,Aetna,PHP,Phoenix,2026-04-10,2026-05-08,197,Precertification / authorization absent,9000.0,875.5541,2026-11-04,35
+DRC1016427,Aetna,PHP,Phoenix,2026-03-31,2026-05-08,50,Not medically necessary,9000.0,875.5541,2026-11-04,35
+DRC1015873,Aetna,PHP,Phoenix,2026-03-30,2026-05-08,96,Non-covered charge,7200.0,700.4433,2026-11-04,35
+DRC1015419,Aetna,IOP,Phoenix,2026-04-06,2026-05-08,197,Precertification / authorization absent,3600.0,350.2216,2026-11-04,35
+DRC1015542,Other commercial,TMS,Phoenix,2026-03-06,2026-05-08,197,Precertification / authorization absent,3000.0,250.7019,2026-11-04,35
+DRC1016076,Cigna,PHP,Phoenix,2026-03-26,2026-05-08,50,Not medically necessary,1800.0,163.309,2026-11-04,35
+DRC1021310,Other commercial,OP,Phoenix,2026-02-28,2026-05-08,27,Coverage terminated before service,1400.0,116.9942,2026-11-04,35
+DRC1016156,Aetna,RTC,Glendale,2026-03-08,2026-05-15,50,Not medically necessary,24500.0,2383.4528,2026-11-11,42
+DRC1016501,UnitedHealthcare,RTC,Scottsdale,2026-04-06,2026-05-15,50,Not medically necessary,24500.0,1701.8195,2026-11-11,42
+DRC1016815,Cigna,RTC,Scottsdale,2026-04-06,2026-05-15,16,Missing or invalid information,24500.0,2222.8166,2026-11-11,42
+DRC1015171,UnitedHealthcare,PHP,Scottsdale,2026-03-04,2026-05-15,197,Precertification / authorization absent,9000.0,625.1582,2026-11-11,42
+DRC1015200,UnitedHealthcare,IOP,Phoenix,2026-03-23,2026-05-15,50,Not medically necessary,4500.0,312.5791,2026-11-11,42
+DRC1016727,BCBS of Arizona,IOP,Glendale,2026-04-02,2026-05-15,96,Non-covered charge,3600.0,286.0173,2026-11-11,42
+DRC1015508,Cigna,TMS,Phoenix,2026-03-04,2026-05-15,50,Not medically necessary,3000.0,272.1816,2026-11-11,42
+DRC1016326,Cigna,IOP,Scottsdale,2026-04-12,2026-05-15,50,Not medically necessary,2700.0,244.9635,2026-11-11,42
+DRC1015869,Aetna,RTC,Scottsdale,2026-03-07,2026-05-22,50,Not medically necessary,24500.0,2383.4528,2026-11-18,49
+DRC1016448,Other commercial,RTC,Scottsdale,2026-03-20,2026-05-22,50,Not medically necessary,24500.0,2047.3985,2026-11-18,49
+DRC1016542,UnitedHealthcare,RTC,Glendale,2026-03-26,2026-05-22,197,Precertification / authorization absent,24500.0,1701.8195,2026-11-18,49
+DRC1017155,BCBS of Arizona,RTC,Glendale,2026-04-25,2026-05-22,197,Precertification / authorization absent,24500.0,1946.5063,2026-11-18,49
+DRC1017471,Cigna,RTC,Glendale,2026-04-28,2026-05-22,50,Not medically necessary,24500.0,2222.8166,2026-11-18,49
+DRC1015624,BCBS of Arizona,PHP,Scottsdale,2026-03-03,2026-05-22,27,Coverage terminated before service,9000.0,715.0431,2026-11-18,49
+DRC1016518,Aetna,PHP,Phoenix,2026-04-06,2026-05-22,16,Missing or invalid information,9000.0,875.5541,2026-11-18,49
+DRC1016630,Cigna,PHP,Scottsdale,2026-04-13,2026-05-22,50,Not medically necessary,9000.0,816.5449,2026-11-18,49
+DRC1015235,Other commercial,IOP,Phoenix,2026-03-01,2026-05-22,197,Precertification / authorization absent,4500.0,376.0528,2026-11-18,49
+DRC1015608,BCBS of Arizona,IOP,Phoenix,2026-03-22,2026-05-22,16,Missing or invalid information,3600.0,286.0173,2026-11-18,49
+DRC1015899,Cigna,TMS,Phoenix,2026-03-07,2026-05-22,197,Precertification / authorization absent,3000.0,272.1816,2026-11-18,49
+DRC1017197,Cigna,TMS,Phoenix,2026-04-26,2026-05-22,50,Not medically necessary,3000.0,272.1816,2026-11-18,49
+DRC1017270,Anthem,TMS,Phoenix,2026-04-22,2026-05-22,197,Precertification / authorization absent,3000.0,261.1156,2026-11-18,49
+DRC1015007,BCBS of Arizona,IOP,Phoenix,2026-03-24,2026-05-22,197,Precertification / authorization absent,2700.0,214.5129,2026-11-18,49
+DRC1016084,Anthem,RTC,Scottsdale,2026-03-19,2026-05-29,50,Not medically necessary,24500.0,2132.4442,2026-11-25,56
+DRC1016544,UnitedHealthcare,RTC,Glendale,2026-04-09,2026-05-29,50,Not medically necessary,24500.0,1701.8195,2026-11-25,56
+DRC1016870,Aetna,RTC,Glendale,2026-04-29,2026-05-29,197,Precertification / authorization absent,24500.0,2383.4528,2026-11-25,56
+DRC1016970,Cigna,RTC,Scottsdale,2026-04-19,2026-05-29,96,Non-covered charge,24500.0,2222.8166,2026-11-25,56
+DRC1017129,UnitedHealthcare,RTC,Glendale,2026-04-25,2026-05-29,50,Not medically necessary,24500.0,1701.8195,2026-11-25,56
+DRC1017516,Aetna,RTC,Glendale,2026-05-04,2026-05-29,50,Not medically necessary,24500.0,2383.4528,2026-11-25,56
+DRC1016972,Cigna,RTC,Scottsdale,2026-04-29,2026-05-29,50,Not medically necessary,10500.0,952.6357,2026-11-25,56
+DRC1015436,UnitedHealthcare,PHP,Scottsdale,2026-03-11,2026-05-29,197,Precertification / authorization absent,9000.0,625.1582,2026-11-25,56
+DRC1015528,Other commercial,PHP,Scottsdale,2026-03-16,2026-05-29,197,Precertification / authorization absent,9000.0,752.1056,2026-11-25,56
+DRC1016001,Other commercial,PHP,Phoenix,2026-03-16,2026-05-29,27,Coverage terminated before service,9000.0,752.1056,2026-11-25,56
+DRC1017164,Other commercial,PHP,Phoenix,2026-05-02,2026-05-29,50,Not medically necessary,9000.0,752.1056,2026-11-25,56
+DRC1014903,Other commercial,PHP,Scottsdale,2026-02-12,2026-05-29,197,Precertification / authorization absent,5400.0,451.2633,2026-11-25,56
+DRC1015964,Aetna,IOP,Phoenix,2026-05-09,2026-05-29,96,Non-covered charge,4500.0,437.777,2026-11-25,56
+DRC1016445,Anthem,IOP,Glendale,2026-04-23,2026-05-29,50,Not medically necessary,4500.0,391.6734,2026-11-25,56
+DRC1016531,Aetna,IOP,Scottsdale,2026-04-22,2026-05-29,50,Not medically necessary,4500.0,437.777,2026-11-25,56
+DRC1015920,UnitedHealthcare,IOP,Scottsdale,2026-04-14,2026-05-29,197,Precertification / authorization absent,3600.0,250.0633,2026-11-25,56
+DRC1016553,BCBS of Arizona,TMS,Phoenix,2026-03-26,2026-05-29,197,Precertification / authorization absent,3000.0,238.3477,2026-11-25,56
+DRC1017062,Aetna,TMS,Phoenix,2026-04-29,2026-05-29,96,Non-covered charge,3000.0,291.8514,2026-11-25,56
+DRC1017271,Anthem,TMS,Phoenix,2026-04-29,2026-05-29,96,Non-covered charge,3000.0,261.1156,2026-11-25,56
+DRC1017367,Aetna,TMS,Phoenix,2026-05-01,2026-05-29,16,Missing or invalid information,3000.0,291.8514,2026-11-25,56
+DRC1016461,Aetna,IOP,Glendale,2026-04-11,2026-05-29,197,Precertification / authorization absent,2700.0,262.6662,2026-11-25,56
+DRC1021421,Aetna,OP,Phoenix,2026-04-30,2026-05-29,50,Not medically necessary,1050.0,102.148,2026-11-25,56
+DRC1021423,Aetna,OP,Phoenix,2026-04-30,2026-05-29,27,Coverage terminated before service,1050.0,102.148,2026-11-25,56
+DRC1016875,Cigna,RTC,Glendale,2026-04-29,2026-06-05,50,Not medically necessary,24500.0,2222.8166,2026-12-02,63
+DRC1017319,Other commercial,RTC,Glendale,2026-05-08,2026-06-05,197,Precertification / authorization absent,24500.0,2047.3985,2026-12-02,63
+DRC1016261,Aetna,RTC,Glendale,2026-03-24,2026-06-05,96,Non-covered charge,14000.0,1361.973,2026-12-02,63
+DRC1016357,Cigna,PHP,Scottsdale,2026-04-13,2026-06-05,16,Missing or invalid information,9000.0,816.5449,2026-12-02,63
+DRC1016907,Anthem,PHP,Scottsdale,2026-04-28,2026-06-05,197,Precertification / authorization absent,9000.0,783.3469,2026-12-02,63
+DRC1017042,Other commercial,PHP,Phoenix,2026-04-15,2026-06-05,50,Not medically necessary,9000.0,752.1056,2026-12-02,63
+DRC1016022,Aetna,PHP,Phoenix,2026-04-13,2026-06-05,16,Missing or invalid information,7200.0,700.4433,2026-12-02,63
+DRC1016738,Anthem,RTC,Scottsdale,2026-04-26,2026-06-05,50,Not medically necessary,7000.0,609.2698,2026-12-02,63
+DRC1016792,UnitedHealthcare,IOP,Scottsdale,2026-04-26,2026-06-05,50,Not medically necessary,4500.0,312.5791,2026-12-02,63
+DRC1016363,Cigna,IOP,Scottsdale,2026-05-17,2026-06-05,197,Precertification / authorization absent,900.0,81.6545,2026-12-02,63
+DRC1021450,Cigna,OP,Phoenix,2026-04-30,2026-06-05,50,Not medically necessary,700.0,63.509,2026-12-02,63
+DRC1016639,UnitedHealthcare,RTC,Glendale,2026-03-31,2026-06-12,16,Missing or invalid information,24500.0,1701.8195,2026-12-09,70
+DRC1016745,BCBS of Arizona,RTC,Scottsdale,2026-04-17,2026-06-12,50,Not medically necessary,24500.0,1946.5063,2026-12-09,70
+DRC1017217,BCBS of Arizona,RTC,Scottsdale,2026-05-12,2026-06-12,197,Precertification / authorization absent,24500.0,1946.5063,2026-12-09,70
+DRC1017241,BCBS of Arizona,RTC,Scottsdale,2026-04-29,2026-06-12,27,Coverage terminated before service,24500.0,1946.5063,2026-12-09,70
+DRC1017376,Cigna,RTC,Glendale,2026-05-16,2026-06-12,27,Coverage terminated before service,24500.0,2222.8166,2026-12-09,70
+DRC1017438,UnitedHealthcare,RTC,Glendale,2026-04-27,2026-06-12,197,Precertification / authorization absent,24500.0,1701.8195,2026-12-09,70
+DRC1017634,Cigna,RTC,Glendale,2026-05-09,2026-06-12,50,Not medically necessary,24500.0,2222.8166,2026-12-09,70
+DRC1016592,Other commercial,PHP,Phoenix,2026-04-25,2026-06-12,27,Coverage terminated before service,9000.0,752.1056,2026-12-09,70
+DRC1016680,Aetna,PHP,Phoenix,2026-04-25,2026-06-12,197,Precertification / authorization absent,9000.0,875.5541,2026-12-09,70
+DRC1016739,Anthem,PHP,Scottsdale,2026-05-03,2026-06-12,50,Not medically necessary,9000.0,783.3469,2026-12-09,70
+DRC1017163,Other commercial,PHP,Phoenix,2026-04-25,2026-06-12,197,Precertification / authorization absent,9000.0,752.1056,2026-12-09,70
+DRC1015532,Other commercial,IOP,Scottsdale,2026-04-11,2026-06-12,16,Missing or invalid information,4500.0,376.0528,2026-12-09,70
+DRC1015534,Other commercial,IOP,Scottsdale,2026-04-25,2026-06-12,50,Not medically necessary,4500.0,376.0528,2026-12-09,70
+DRC1017362,Cigna,IOP,Phoenix,2026-05-09,2026-06-12,197,Precertification / authorization absent,4500.0,408.2724,2026-12-09,70
+DRC1016993,Aetna,RTC,Scottsdale,2026-04-14,2026-06-19,27,Coverage terminated before service,24500.0,2383.4528,2026-12-16,77
+DRC1017779,Cigna,RTC,Glendale,2026-05-21,2026-06-19,197,Precertification / authorization absent,24500.0,2222.8166,2026-12-16,77
+DRC1016918,Other commercial,RTC,Scottsdale,2026-04-29,2026-06-19,50,Not medically necessary,17500.0,1462.4275,2026-12-16,77
+DRC1015683,UnitedHealthcare,IOP,Scottsdale,2026-04-23,2026-06-19,50,Not medically necessary,4500.0,312.5791,2026-12-16,77
+DRC1017834,Cigna,IOP,Scottsdale,2026-06-05,2026-06-19,197,Precertification / authorization absent,4500.0,408.2724,2026-12-16,77
+DRC1017314,BCBS of Arizona,TMS,Phoenix,2026-05-21,2026-06-19,197,Precertification / authorization absent,3000.0,238.3477,2026-12-16,77
+DRC1017366,Aetna,TMS,Phoenix,2026-04-24,2026-06-19,27,Coverage terminated before service,3000.0,291.8514,2026-12-16,77
+DRC1015832,Cigna,IOP,Phoenix,2026-04-07,2026-06-19,197,Precertification / authorization absent,2700.0,244.9635,2026-12-16,77
+DRC1016048,UnitedHealthcare,TMS,Phoenix,2026-04-04,2026-06-19,50,Not medically necessary,2400.0,166.7089,2026-12-16,77
+DRC1016270,Aetna,IOP,Scottsdale,2026-05-23,2026-06-19,50,Not medically necessary,1800.0,175.1108,2026-12-16,77
+DRC1016759,Aetna,PHP,Scottsdale,2026-05-21,2026-06-19,50,Not medically necessary,1800.0,175.1108,2026-12-16,77
+DRC1017258,Aetna,PHP,Scottsdale,2026-05-07,2026-06-19,197,Precertification / authorization absent,1800.0,175.1108,2026-12-16,77
+DRC1016984,Aetna,RTC,Scottsdale,2026-05-11,2026-06-26,197,Precertification / authorization absent,24500.0,2383.4528,2026-12-23,84
+DRC1017700,Aetna,RTC,Scottsdale,2026-05-18,2026-06-26,197,Precertification / authorization absent,24500.0,2383.4528,2026-12-23,84
+DRC1017817,BCBS of Arizona,RTC,Glendale,2026-05-22,2026-06-26,16,Missing or invalid information,24500.0,1946.5063,2026-12-23,84
+DRC1017888,Cigna,RTC,Glendale,2026-05-18,2026-06-26,50,Not medically necessary,24500.0,2222.8166,2026-12-23,84
+DRC1017984,BCBS of Arizona,RTC,Glendale,2026-05-23,2026-06-26,197,Precertification / authorization absent,24500.0,1946.5063,2026-12-23,84
+DRC1018019,UnitedHealthcare,RTC,Glendale,2026-05-25,2026-06-26,197,Precertification / authorization absent,24500.0,1701.8195,2026-12-23,84
+DRC1016268,Aetna,IOP,Scottsdale,2026-05-12,2026-06-26,50,Not medically necessary,3600.0,350.2216,2026-12-23,84
+DRC1017056,Anthem,IOP,Phoenix,2026-05-12,2026-06-26,197,Precertification / authorization absent,2700.0,235.0041,2026-12-23,84
+DRC1017192,UnitedHealthcare,IOP,Scottsdale,2026-05-17,2026-06-26,96,Non-covered charge,2700.0,187.5475,2026-12-23,84
+DRC1016587,UnitedHealthcare,RTC,Scottsdale,2026-04-25,2026-07-03,96,Non-covered charge,24500.0,1701.8195,2026-12-30,91
+DRC1017135,BCBS of Arizona,RTC,Glendale,2026-04-25,2026-07-03,50,Not medically necessary,24500.0,1946.5063,2026-12-30,91
+DRC1017344,BCBS of Arizona,RTC,Scottsdale,2026-05-08,2026-07-03,50,Not medically necessary,24500.0,1946.5063,2026-12-30,91
+DRC1017876,BCBS of Arizona,RTC,Glendale,2026-05-17,2026-07-03,27,Coverage terminated before service,24500.0,1946.5063,2026-12-30,91
+DRC1018201,Cigna,RTC,Glendale,2026-06-10,2026-07-03,197,Precertification / authorization absent,24500.0,2222.8166,2026-12-30,91
+DRC1017333,Cigna,RTC,Glendale,2026-05-05,2026-07-03,197,Precertification / authorization absent,14000.0,1270.1809,2026-12-30,91
+DRC1016897,Cigna,PHP,Phoenix,2026-05-19,2026-07-03,197,Precertification / authorization absent,9000.0,816.5449,2026-12-30,91
+DRC1017121,BCBS of Arizona,PHP,Phoenix,2026-05-19,2026-07-03,197,Precertification / authorization absent,9000.0,715.0431,2026-12-30,91
+DRC1017180,Other commercial,PHP,Scottsdale,2026-05-16,2026-07-03,197,Precertification / authorization absent,9000.0,752.1056,2026-12-30,91
+DRC1017246,BCBS of Arizona,PHP,Scottsdale,2026-06-03,2026-07-03,50,Not medically necessary,9000.0,715.0431,2026-12-30,91
+DRC1017803,Other commercial,PHP,Phoenix,2026-05-21,2026-07-03,96,Non-covered charge,9000.0,752.1056,2026-12-30,91
+DRC1017912,UnitedHealthcare,PHP,Phoenix,2026-06-02,2026-07-03,50,Not medically necessary,9000.0,625.1582,2026-12-30,91
+DRC1017500,Cigna,RTC,Glendale,2026-06-02,2026-07-03,96,Non-covered charge,7000.0,635.0905,2026-12-30,91
+DRC1016126,Cigna,IOP,Scottsdale,2026-05-25,2026-07-03,197,Precertification / authorization absent,3600.0,326.618,2026-12-30,91
+DRC1016130,Other commercial,IOP,Glendale,2026-03-06,2026-07-03,197,Precertification / authorization absent,3600.0,300.8422,2026-12-30,91
+DRC1016300,Aetna,IOP,Phoenix,2026-05-10,2026-07-03,50,Not medically necessary,3600.0,350.2216,2026-12-30,91
+DRC1016550,UnitedHealthcare,IOP,Scottsdale,2026-05-15,2026-07-03,197,Precertification / authorization absent,3600.0,250.0633,2026-12-30,91
+DRC1016658,Aetna,IOP,Scottsdale,2026-05-09,2026-07-03,96,Non-covered charge,3600.0,350.2216,2026-12-30,91
+DRC1017201,Cigna,TMS,Phoenix,2026-05-24,2026-07-03,50,Not medically necessary,3000.0,272.1816,2026-12-30,91
+DRC1017210,Cigna,TMS,Phoenix,2026-05-11,2026-07-03,197,Precertification / authorization absent,3000.0,272.1816,2026-12-30,91
+DRC1015172,UnitedHealthcare,PHP,Scottsdale,2026-03-05,2026-07-03,197,Precertification / authorization absent,1800.0,125.0316,2026-12-30,91
+DRC1016515,Cigna,IOP,Scottsdale,2026-06-02,2026-07-03,16,Missing or invalid information,900.0,81.6545,2026-12-30,91
+DRC1016700,Cigna,RTC,Glendale,2026-04-15,2026-07-10,197,Precertification / authorization absent,24500.0,2222.8166,2027-01-06,98
+DRC1017574,Cigna,RTC,Glendale,2026-05-20,2026-07-10,197,Precertification / authorization absent,24500.0,2222.8166,2027-01-06,98
+DRC1017640,UnitedHealthcare,RTC,Scottsdale,2026-05-17,2026-07-10,96,Non-covered charge,24500.0,1701.8195,2027-01-06,98
+DRC1017679,UnitedHealthcare,RTC,Glendale,2026-05-10,2026-07-10,50,Not medically necessary,24500.0,1701.8195,2027-01-06,98
+DRC1017819,BCBS of Arizona,RTC,Glendale,2026-06-05,2026-07-10,27,Coverage terminated before service,24500.0,1946.5063,2027-01-06,98
+DRC1018411,BCBS of Arizona,RTC,Glendale,2026-06-15,2026-07-10,50,Not medically necessary,24500.0,1946.5063,2027-01-06,98
+DRC1018426,Other commercial,RTC,Glendale,2026-06-16,2026-07-10,197,Precertification / authorization absent,24500.0,2047.3985,2027-01-06,98
+DRC1016570,Other commercial,RTC,Scottsdale,2026-04-20,2026-07-10,50,Not medically necessary,10500.0,877.4565,2027-01-06,98
+DRC1017862,Cigna,PHP,Phoenix,2026-05-16,2026-07-10,50,Not medically necessary,9000.0,816.5449,2027-01-06,98
+DRC1018111,Cigna,PHP,Phoenix,2026-06-07,2026-07-10,27,Coverage terminated before service,9000.0,816.5449,2027-01-06,98
+DRC1018208,BCBS of Arizona,PHP,Scottsdale,2026-06-11,2026-07-10,50,Not medically necessary,9000.0,715.0431,2027-01-06,98
+DRC1017381,Cigna,PHP,Scottsdale,2026-06-12,2026-07-10,197,Precertification / authorization absent,7200.0,653.2359,2027-01-06,98
+DRC1016967,BCBS of Arizona,IOP,Scottsdale,2026-06-16,2026-07-10,197,Precertification / authorization absent,4500.0,357.5216,2027-01-06,98
+DRC1016008,Other commercial,IOP,Phoenix,2026-04-29,2026-07-10,197,Precertification / authorization absent,3600.0,300.8422,2027-01-06,98
+DRC1017659,UnitedHealthcare,PHP,Phoenix,2026-06-15,2026-07-10,50,Not medically necessary,3600.0,250.0633,2027-01-06,98
+DRC1017223,BCBS of Arizona,PHP,Scottsdale,2026-06-11,2026-07-10,50,Not medically necessary,1800.0,143.0086,2027-01-06,98
+DRC1021514,Cigna,OP,Phoenix,2026-05-31,2026-07-10,50,Not medically necessary,1750.0,158.7726,2027-01-06,98
+DRC1016606,UnitedHealthcare,RTC,Glendale,2026-03-29,2026-07-17,96,Non-covered charge,24500.0,1701.8195,2027-01-13,105
+DRC1016933,UnitedHealthcare,RTC,Glendale,2026-05-08,2026-07-17,96,Non-covered charge,24500.0,1701.8195,2027-01-13,105
+DRC1017631,UnitedHealthcare,RTC,Scottsdale,2026-05-22,2026-07-17,197,Precertification / authorization absent,24500.0,1701.8195,2027-01-13,105
+DRC1017738,UnitedHealthcare,RTC,Scottsdale,2026-05-12,2026-07-17,197,Precertification / authorization absent,24500.0,1701.8195,2027-01-13,105
+DRC1017936,Anthem,RTC,Scottsdale,2026-06-03,2026-07-17,96,Non-covered charge,24500.0,2132.4442,2027-01-13,105
+DRC1018006,UnitedHealthcare,RTC,Scottsdale,2026-06-07,2026-07-17,27,Coverage terminated before service,24500.0,1701.8195,2027-01-13,105
+DRC1018080,Aetna,RTC,Glendale,2026-06-06,2026-07-17,197,Precertification / authorization absent,24500.0,2383.4528,2027-01-13,105
+DRC1018150,Aetna,RTC,Scottsdale,2026-06-23,2026-07-17,50,Not medically necessary,24500.0,2383.4528,2027-01-13,105
+DRC1018162,BCBS of Arizona,RTC,Scottsdale,2026-06-09,2026-07-17,16,Missing or invalid information,24500.0,1946.5063,2027-01-13,105
+DRC1018220,Aetna,RTC,Scottsdale,2026-06-20,2026-07-17,197,Precertification / authorization absent,24500.0,2383.4528,2027-01-13,105
+DRC1018315,UnitedHealthcare,RTC,Scottsdale,2026-06-08,2026-07-17,96,Non-covered charge,24500.0,1701.8195,2027-01-13,105
+DRC1016879,Cigna,PHP,Phoenix,2026-05-25,2026-07-17,50,Not medically necessary,9000.0,816.5449,2027-01-13,105
+DRC1017350,BCBS of Arizona,PHP,Phoenix,2026-06-14,2026-07-17,50,Not medically necessary,9000.0,715.0431,2027-01-13,105
+DRC1017951,BCBS of Arizona,PHP,Phoenix,2026-05-28,2026-07-17,197,Precertification / authorization absent,9000.0,715.0431,2027-01-13,105
+DRC1016922,Other commercial,PHP,Phoenix,2026-05-25,2026-07-17,16,Missing or invalid information,7200.0,601.6845,2027-01-13,105
+DRC1018018,Cigna,PHP,Phoenix,2026-06-05,2026-07-17,197,Precertification / authorization absent,7200.0,653.2359,2027-01-13,105
+DRC1017383,Cigna,IOP,Scottsdale,2026-06-26,2026-07-17,96,Non-covered charge,4500.0,408.2724,2027-01-13,105
+DRC1017124,BCBS of Arizona,IOP,Phoenix,2026-06-04,2026-07-17,50,Not medically necessary,3600.0,286.0173,2027-01-13,105
+DRC1017606,Other commercial,RTC,Glendale,2026-05-22,2026-07-17,197,Precertification / authorization absent,3500.0,292.4855,2027-01-13,105
+DRC1017963,UnitedHealthcare,TMS,Phoenix,2026-05-29,2026-07-17,96,Non-covered charge,3000.0,208.3861,2027-01-13,105
+DRC1018335,Anthem,TMS,Phoenix,2026-06-15,2026-07-17,197,Precertification / authorization absent,3000.0,261.1156,2027-01-13,105
+DRC1017101,Cigna,IOP,Scottsdale,2026-06-17,2026-07-17,197,Precertification / authorization absent,2700.0,244.9635,2027-01-13,105
+DRC1018138,Aetna,IOP,Glendale,2026-06-08,2026-07-17,27,Coverage terminated before service,2700.0,262.6662,2027-01-13,105
+DRC1016245,Cigna,IOP,Phoenix,2026-05-22,2026-07-17,197,Precertification / authorization absent,1800.0,163.309,2027-01-13,105
+DRC1017579,Cigna,PHP,Scottsdale,2026-06-15,2026-07-17,197,Precertification / authorization absent,1800.0,163.309,2027-01-13,105
+DRC1018038,Aetna,IOP,Scottsdale,2026-06-24,2026-07-17,27,Coverage terminated before service,900.0,87.5554,2027-01-13,105
+DRC1018451,BCBS of Arizona,RTC,Scottsdale,2026-06-24,2026-07-24,16,Missing or invalid information,24500.0,1946.5063,2027-01-20,112
+DRC1017656,UnitedHealthcare,RTC,Scottsdale,2026-05-29,2026-07-24,50,Not medically necessary,17500.0,1215.5854,2027-01-20,112
+DRC1017470,BCBS of Arizona,RTC,Glendale,2026-05-29,2026-07-24,197,Precertification / authorization absent,10500.0,834.217,2027-01-20,112
+DRC1017892,Cigna,RTC,Glendale,2026-06-11,2026-07-24,197,Precertification / authorization absent,10500.0,952.6357,2027-01-20,112
+DRC1017295,BCBS of Arizona,PHP,Scottsdale,2026-05-14,2026-07-24,197,Precertification / authorization absent,9000.0,715.0431,2027-01-20,112
+DRC1017577,Cigna,PHP,Scottsdale,2026-06-07,2026-07-24,197,Precertification / authorization absent,9000.0,816.5449,2027-01-20,112
+DRC1017760,Aetna,PHP,Phoenix,2026-06-24,2026-07-24,16,Missing or invalid information,9000.0,875.5541,2027-01-20,112
+DRC1017771,BCBS of Arizona,PHP,Scottsdale,2026-06-14,2026-07-24,50,Not medically necessary,9000.0,715.0431,2027-01-20,112
+DRC1018280,Cigna,PHP,Phoenix,2026-06-07,2026-07-24,96,Non-covered charge,9000.0,816.5449,2027-01-20,112
+DRC1018282,Cigna,PHP,Phoenix,2026-06-21,2026-07-24,197,Precertification / authorization absent,9000.0,816.5449,2027-01-20,112
+DRC1018329,Aetna,PHP,Scottsdale,2026-06-28,2026-07-24,50,Not medically necessary,7200.0,700.4433,2027-01-20,112
+DRC1017866,Cigna,IOP,Phoenix,2026-06-10,2026-07-24,197,Precertification / authorization absent,3600.0,326.618,2027-01-20,112
+DRC1017867,Cigna,IOP,Phoenix,2026-06-17,2026-07-24,50,Not medically necessary,3600.0,326.618,2027-01-20,112
+DRC1017868,Cigna,IOP,Phoenix,2026-06-24,2026-07-24,197,Precertification / authorization absent,3600.0,326.618,2027-01-20,112
+DRC1017965,UnitedHealthcare,TMS,Phoenix,2026-06-12,2026-07-24,197,Precertification / authorization absent,3000.0,208.3861,2027-01-20,112
+DRC1015188,Other commercial,IOP,Phoenix,2026-03-28,2026-07-24,50,Not medically necessary,2700.0,225.6317,2027-01-20,112
+DRC1017066,Aetna,TMS,Phoenix,2026-05-25,2026-07-24,197,Precertification / authorization absent,2400.0,233.4811,2027-01-20,112
+DRC1021561,Cigna,OP,Phoenix,2026-06-30,2026-07-24,50,Not medically necessary,700.0,63.509,2027-01-20,112
+DRC1018341,Cigna,RTC,Scottsdale,2026-06-09,2026-07-31,197,Precertification / authorization absent,24500.0,2222.8166,2027-01-27,119
+DRC1018478,Aetna,RTC,Scottsdale,2026-06-28,2026-07-31,27,Coverage terminated before service,24500.0,2383.4528,2027-01-27,119
+DRC1018571,Cigna,RTC,Glendale,2026-07-10,2026-07-31,197,Precertification / authorization absent,24500.0,2222.8166,2027-01-27,119
+DRC1018699,Cigna,RTC,Scottsdale,2026-07-03,2026-07-31,197,Precertification / authorization absent,24500.0,2222.8166,2027-01-27,119
+DRC1018700,Cigna,RTC,Scottsdale,2026-07-10,2026-07-31,197,Precertification / authorization absent,24500.0,2222.8166,2027-01-27,119
+DRC1018343,Cigna,RTC,Scottsdale,2026-06-20,2026-07-31,197,Precertification / authorization absent,14000.0,1270.1809,2027-01-27,119
+DRC1017547,Aetna,PHP,Phoenix,2026-06-08,2026-07-31,96,Non-covered charge,9000.0,875.5541,2027-01-27,119
+DRC1017685,UnitedHealthcare,PHP,Phoenix,2026-06-18,2026-07-31,50,Not medically necessary,9000.0,625.1582,2027-01-27,119
+DRC1017893,Cigna,PHP,Scottsdale,2026-06-18,2026-07-31,197,Precertification / authorization absent,9000.0,816.5449,2027-01-27,119
+DRC1018403,BCBS of Arizona,PHP,Phoenix,2026-07-10,2026-07-31,50,Not medically necessary,9000.0,715.0431,2027-01-27,119
+DRC1018744,Cigna,PHP,Phoenix,2026-07-13,2026-07-31,197,Precertification / authorization absent,9000.0,816.5449,2027-01-27,119
+DRC1016147,BCBS of Arizona,IOP,Scottsdale,2026-05-18,2026-07-31,197,Precertification / authorization absent,4500.0,357.5216,2027-01-27,119
+DRC1017149,Other commercial,IOP,Phoenix,2026-06-21,2026-07-31,50,Not medically necessary,4500.0,376.0528,2027-01-27,119
+DRC1017430,Cigna,IOP,Phoenix,2026-07-02,2026-07-31,197,Precertification / authorization absent,4500.0,408.2724,2027-01-27,119
+DRC1016865,BCBS of Arizona,IOP,Scottsdale,2026-06-20,2026-07-31,197,Precertification / authorization absent,3600.0,286.0173,2027-01-27,119
+DRC1017051,Other commercial,IOP,Phoenix,2026-06-13,2026-07-31,27,Coverage terminated before service,3600.0,300.8422,2027-01-27,119
+DRC1017806,Other commercial,IOP,Phoenix,2026-06-10,2026-07-31,16,Missing or invalid information,3600.0,300.8422,2027-01-27,119
+DRC1018195,Anthem,TMS,Phoenix,2026-06-16,2026-07-31,50,Not medically necessary,3000.0,261.1156,2027-01-27,119
+DRC1017624,BCBS of Arizona,IOP,Scottsdale,2026-07-12,2026-07-31,50,Not medically necessary,2700.0,214.5129,2027-01-27,119
+DRC1017672,Anthem,IOP,Scottsdale,2026-06-24,2026-07-31,50,Not medically necessary,2700.0,235.0041,2027-01-27,119
+DRC1016903,Cigna,IOP,Phoenix,2026-06-18,2026-07-31,197,Precertification / authorization absent,900.0,81.6545,2027-01-27,119
+DRC1017890,Cigna,RTC,Glendale,2026-06-01,2026-08-07,50,Not medically necessary,24500.0,2222.8166,2027-02-03,126
+DRC1017900,UnitedHealthcare,RTC,Glendale,2026-06-09,2026-08-07,50,Not medically necessary,24500.0,1701.8195,2027-02-03,126
+DRC1018128,Cigna,RTC,Scottsdale,2026-06-01,2026-08-07,197,Precertification / authorization absent,24500.0,2222.8166,2027-02-03,126
+DRC1015678,UnitedHealthcare,PHP,Scottsdale,2026-03-24,2026-08-07,197,Precertification / authorization absent,9000.0,625.1582,2027-02-03,126
+DRC1017144,Other commercial,PHP,Phoenix,2026-05-19,2026-08-07,16,Missing or invalid information,9000.0,752.1056,2027-02-03,126
+DRC1017396,UnitedHealthcare,PHP,Scottsdale,2026-06-15,2026-08-07,197,Precertification / authorization absent,9000.0,625.1582,2027-02-03,126
+DRC1017930,Other commercial,PHP,Scottsdale,2026-06-18,2026-08-07,16,Missing or invalid information,9000.0,752.1056,2027-02-03,126
+DRC1018681,BCBS of Arizona,PHP,Phoenix,2026-07-09,2026-08-07,96,Non-covered charge,9000.0,715.0431,2027-02-03,126
+DRC1017992,Other commercial,PHP,Scottsdale,2026-06-11,2026-08-07,197,Precertification / authorization absent,7200.0,601.6845,2027-02-03,126
+DRC1018283,Cigna,PHP,Phoenix,2026-06-26,2026-08-07,197,Precertification / authorization absent,7200.0,653.2359,2027-02-03,126
+DRC1017382,Cigna,IOP,Scottsdale,2026-06-19,2026-08-07,197,Precertification / authorization absent,4500.0,408.2724,2027-02-03,126
+DRC1017385,Cigna,IOP,Scottsdale,2026-07-10,2026-08-07,197,Precertification / authorization absent,4500.0,408.2724,2027-02-03,126
+DRC1018710,Other commercial,IOP,Glendale,2026-07-03,2026-08-07,50,Not medically necessary,4500.0,376.0528,2027-02-03,126
+DRC1018074,BCBS of Arizona,TMS,Phoenix,2026-06-12,2026-08-07,16,Missing or invalid information,3000.0,238.3477,2027-02-03,126
+DRC1018729,Cigna,TMS,Phoenix,2026-07-12,2026-08-07,197,Precertification / authorization absent,3000.0,272.1816,2027-02-03,126
+DRC1016576,Other commercial,IOP,Scottsdale,2026-05-27,2026-08-07,50,Not medically necessary,2700.0,225.6317,2027-02-03,126
+DRC1016925,Other commercial,IOP,Phoenix,2026-06-15,2026-08-07,50,Not medically necessary,2700.0,225.6317,2027-02-03,126
+DRC1021517,Cigna,OP,Phoenix,2026-06-30,2026-08-07,197,Precertification / authorization absent,1400.0,127.0181,2027-02-03,126
+DRC1021515,Cigna,OP,Phoenix,2026-06-30,2026-08-07,16,Missing or invalid information,1050.0,95.2636,2027-02-03,126
+DRC1021553,Anthem,OP,Phoenix,2026-06-30,2026-08-07,96,Non-covered charge,1050.0,91.3905,2027-02-03,126
+DRC1021541,Cigna,OP,Phoenix,2026-06-30,2026-08-07,96,Non-covered charge,700.0,63.509,2027-02-03,126
+DRC1017891,Cigna,RTC,Glendale,2026-06-08,2026-08-14,197,Precertification / authorization absent,24500.0,2222.8166,2027-02-10,133
+DRC1018130,Cigna,RTC,Scottsdale,2026-06-15,2026-08-14,197,Precertification / authorization absent,24500.0,2222.8166,2027-02-10,133
+DRC1018459,UnitedHealthcare,RTC,Scottsdale,2026-06-25,2026-08-14,50,Not medically necessary,24500.0,1701.8195,2027-02-10,133
+DRC1019017,UnitedHealthcare,RTC,Glendale,2026-07-18,2026-08-14,16,Missing or invalid information,24500.0,1701.8195,2027-02-10,133
+DRC1018317,UnitedHealthcare,RTC,Scottsdale,2026-06-19,2026-08-14,96,Non-covered charge,14000.0,972.4683,2027-02-10,133
+DRC1017283,UnitedHealthcare,PHP,Scottsdale,2026-06-08,2026-08-14,50,Not medically necessary,9000.0,625.1582,2027-02-10,133
+DRC1018045,BCBS of Arizona,PHP,Scottsdale,2026-07-07,2026-08-14,50,Not medically necessary,9000.0,715.0431,2027-02-10,133
+DRC1018135,Cigna,PHP,Phoenix,2026-07-17,2026-08-14,197,Precertification / authorization absent,9000.0,816.5449,2027-02-10,133
+DRC1018845,Aetna,PHP,Scottsdale,2026-07-25,2026-08-14,50,Not medically necessary,9000.0,875.5541,2027-02-10,133
+DRC1017323,Other commercial,PHP,Phoenix,2026-06-04,2026-08-14,27,Coverage terminated before service,7200.0,601.6845,2027-02-10,133
+DRC1017933,Other commercial,PHP,Scottsdale,2026-07-06,2026-08-14,27,Coverage terminated before service,5400.0,451.2633,2027-02-10,133
+DRC1017301,BCBS of Arizona,IOP,Scottsdale,2026-06-25,2026-08-14,50,Not medically necessary,4500.0,357.5216,2027-02-10,133
+DRC1017432,Cigna,IOP,Phoenix,2026-07-16,2026-08-14,197,Precertification / authorization absent,4500.0,408.2724,2027-02-10,133
+DRC1017454,BCBS of Arizona,IOP,Phoenix,2026-07-03,2026-08-14,16,Missing or invalid information,4500.0,357.5216,2027-02-10,133
+DRC1018001,BCBS of Arizona,IOP,Scottsdale,2026-05-30,2026-08-14,50,Not medically necessary,3600.0,286.0173,2027-02-10,133
+DRC1019002,Cigna,TMS,Phoenix,2026-07-16,2026-08-14,50,Not medically necessary,3000.0,272.1816,2027-02-10,133
+DRC1016229,UnitedHealthcare,IOP,Scottsdale,2026-06-04,2026-08-14,50,Not medically necessary,2700.0,187.5475,2027-02-10,133
+DRC1021558,Cigna,OP,Phoenix,2026-06-30,2026-08-14,197,Precertification / authorization absent,1750.0,158.7726,2027-02-10,133
+DRC1018558,Cigna,RTC,Glendale,2026-07-17,2026-08-21,197,Precertification / authorization absent,24500.0,2222.8166,2027-02-17,140
+DRC1018595,Cigna,RTC,Scottsdale,2026-07-06,2026-08-21,50,Not medically necessary,24500.0,2222.8166,2027-02-17,140
+DRC1018598,Cigna,RTC,Scottsdale,2026-07-27,2026-08-21,197,Precertification / authorization absent,24500.0,2222.8166,2027-02-17,140
+DRC1018643,BCBS of Arizona,RTC,Glendale,2026-07-14,2026-08-21,96,Non-covered charge,24500.0,1946.5063,2027-02-17,140
+DRC1018898,Cigna,RTC,Glendale,2026-07-13,2026-08-21,197,Precertification / authorization absent,24500.0,2222.8166,2027-02-17,140
+DRC1019155,Aetna,RTC,Glendale,2026-07-31,2026-08-21,197,Precertification / authorization absent,24500.0,2383.4528,2027-02-17,140
+DRC1019183,BCBS of Arizona,RTC,Glendale,2026-08-02,2026-08-21,50,Not medically necessary,24500.0,1946.5063,2027-02-17,140
+DRC1018401,BCBS of Arizona,RTC,Glendale,2026-06-26,2026-08-21,50,Not medically necessary,14000.0,1112.2893,2027-02-17,140
+DRC1018494,UnitedHealthcare,RTC,Scottsdale,2026-07-16,2026-08-21,50,Not medically necessary,14000.0,972.4683,2027-02-17,140
+DRC1017902,UnitedHealthcare,PHP,Phoenix,2026-06-17,2026-08-21,50,Not medically necessary,9000.0,625.1582,2027-02-17,140
+DRC1018321,Aetna,PHP,Phoenix,2026-06-29,2026-08-21,197,Precertification / authorization absent,9000.0,875.5541,2027-02-17,140
+DRC1018463,UnitedHealthcare,PHP,Scottsdale,2026-07-18,2026-08-21,50,Not medically necessary,9000.0,625.1582,2027-02-17,140
+DRC1018933,Aetna,PHP,Scottsdale,2026-07-20,2026-08-21,197,Precertification / authorization absent,9000.0,875.5541,2027-02-17,140
+DRC1018988,Cigna,PHP,Phoenix,2026-07-23,2026-08-21,16,Missing or invalid information,9000.0,816.5449,2027-02-17,140
+DRC1019158,Aetna,PHP,Scottsdale,2026-07-24,2026-08-21,50,Not medically necessary,9000.0,875.5541,2027-02-17,140
+DRC1015628,BCBS of Arizona,IOP,Scottsdale,2026-03-30,2026-08-21,50,Not medically necessary,4500.0,357.5216,2027-02-17,140
+DRC1017483,Cigna,IOP,Phoenix,2026-07-12,2026-08-21,197,Precertification / authorization absent,4500.0,408.2724,2027-02-17,140
+DRC1017072,Cigna,IOP,Glendale,2026-05-21,2026-08-21,50,Not medically necessary,3600.0,326.618,2027-02-17,140
+DRC1017929,Other commercial,RTC,Glendale,2026-06-11,2026-08-21,197,Precertification / authorization absent,3500.0,292.4855,2027-02-17,140
+DRC1017873,BCBS of Arizona,TMS,Phoenix,2026-06-13,2026-08-21,197,Precertification / authorization absent,3000.0,238.3477,2027-02-17,140
+DRC1018611,Cigna,TMS,Phoenix,2026-07-06,2026-08-21,96,Non-covered charge,3000.0,272.1816,2027-02-17,140
+DRC1016384,Other commercial,IOP,Scottsdale,2026-05-08,2026-08-21,50,Not medically necessary,2700.0,225.6317,2027-02-17,140
+DRC1016927,Other commercial,IOP,Phoenix,2026-06-29,2026-08-21,197,Precertification / authorization absent,2700.0,225.6317,2027-02-17,140
+DRC1017689,UnitedHealthcare,IOP,Phoenix,2026-07-16,2026-08-21,50,Not medically necessary,2700.0,187.5475,2027-02-17,140
+DRC1017905,UnitedHealthcare,IOP,Phoenix,2026-07-07,2026-08-21,96,Non-covered charge,2700.0,187.5475,2027-02-17,140
+DRC1018853,BCBS of Arizona,IOP,Glendale,2026-07-25,2026-08-21,197,Precertification / authorization absent,2700.0,214.5129,2027-02-17,140
+DRC1019026,Cigna,IOP,Phoenix,2026-07-25,2026-08-21,197,Precertification / authorization absent,2700.0,244.9635,2027-02-17,140
+DRC1016450,Other commercial,RTC,Scottsdale,2026-04-03,2026-08-28,197,Precertification / authorization absent,24500.0,2047.3985,2027-02-24,147
+DRC1018179,Cigna,RTC,Scottsdale,2026-06-09,2026-08-28,96,Non-covered charge,24500.0,2222.8166,2027-02-24,147
+DRC1018300,Other commercial,RTC,Scottsdale,2026-06-22,2026-08-28,197,Precertification / authorization absent,24500.0,2047.3985,2027-02-24,147
+DRC1018751,Anthem,RTC,Scottsdale,2026-07-07,2026-08-28,50,Not medically necessary,24500.0,2132.4442,2027-02-24,147
+DRC1018899,Cigna,RTC,Glendale,2026-07-20,2026-08-28,197,Precertification / authorization absent,24500.0,2222.8166,2027-02-24,147
+DRC1018912,Cigna,RTC,Scottsdale,2026-07-20,2026-08-28,197,Precertification / authorization absent,24500.0,2222.8166,2027-02-24,147
+DRC1019172,Cigna,RTC,Glendale,2026-07-26,2026-08-28,16,Missing or invalid information,24500.0,2222.8166,2027-02-24,147
+DRC1019265,Cigna,RTC,Glendale,2026-08-01,2026-08-28,50,Not medically necessary,24500.0,2222.8166,2027-02-24,147
+DRC1018872,Aetna,RTC,Glendale,2026-07-23,2026-08-28,50,Not medically necessary,14000.0,1361.973,2027-02-24,147
+DRC1018561,Cigna,PHP,Phoenix,2026-08-04,2026-08-28,197,Precertification / authorization absent,9000.0,816.5449,2027-02-24,147
+DRC1017980,Aetna,IOP,Scottsdale,2026-07-28,2026-08-28,197,Precertification / authorization absent,4500.0,437.777,2027-02-24,147
+DRC1017327,Other commercial,IOP,Phoenix,2026-07-02,2026-08-28,16,Missing or invalid information,3600.0,300.8422,2027-02-24,147
+DRC1017426,Cigna,PHP,Phoenix,2026-06-04,2026-08-28,197,Precertification / authorization absent,3600.0,326.618,2027-02-24,147
+DRC1017789,Cigna,IOP,Phoenix,2026-07-26,2026-08-28,197,Precertification / authorization absent,3600.0,326.618,2027-02-24,147
+DRC1017918,UnitedHealthcare,IOP,Phoenix,2026-07-09,2026-08-28,50,Not medically necessary,3600.0,250.0633,2027-02-24,147
+DRC1018118,Cigna,IOP,Phoenix,2026-07-22,2026-08-28,197,Precertification / authorization absent,3600.0,326.618,2027-02-24,147
+DRC1018886,BCBS of Arizona,IOP,Scottsdale,2026-07-12,2026-08-28,197,Precertification / authorization absent,3600.0,286.0173,2027-02-24,147
+DRC1018424,Aetna,TMS,Phoenix,2026-07-20,2026-08-28,50,Not medically necessary,3000.0,291.8514,2027-02-24,147
+DRC1018615,Cigna,TMS,Phoenix,2026-08-03,2026-08-28,197,Precertification / authorization absent,3000.0,272.1816,2027-02-24,147
+DRC1018119,Cigna,IOP,Phoenix,2026-07-26,2026-08-28,197,Precertification / authorization absent,1800.0,163.309,2027-02-24,147
+DRC1017387,Cigna,IOP,Scottsdale,2026-07-18,2026-08-28,197,Precertification / authorization absent,900.0,81.6545,2027-02-24,147
+DRC1018165,BCBS of Arizona,RTC,Scottsdale,2026-06-30,2026-09-04,197,Precertification / authorization absent,24500.0,1946.5063,2027-03-03,154
+DRC1018557,Cigna,RTC,Glendale,2026-07-10,2026-09-04,197,Precertification / authorization absent,24500.0,2222.8166,2027-03-03,154
+DRC1018702,UnitedHealthcare,RTC,Scottsdale,2026-07-03,2026-09-04,16,Missing or invalid information,24500.0,1701.8195,2027-03-03,154
+DRC1018785,BCBS of Arizona,RTC,Glendale,2026-07-15,2026-09-04,50,Not medically necessary,24500.0,1946.5063,2027-03-03,154
+DRC1018828,Other commercial,RTC,Scottsdale,2026-07-31,2026-09-04,50,Not medically necessary,24500.0,2047.3985,2027-03-03,154
+DRC1018913,Cigna,RTC,Scottsdale,2026-07-27,2026-09-04,197,Precertification / authorization absent,24500.0,2222.8166,2027-03-03,154
+DRC1019084,Cigna,RTC,Scottsdale,2026-07-29,2026-09-04,197,Precertification / authorization absent,24500.0,2222.8166,2027-03-03,154
+DRC1019107,BCBS of Arizona,RTC,Scottsdale,2026-07-29,2026-09-04,96,Non-covered charge,24500.0,1946.5063,2027-03-03,154
+DRC1019169,Cigna,RTC,Scottsdale,2026-08-08,2026-09-04,197,Precertification / authorization absent,24500.0,2222.8166,2027-03-03,154
+DRC1019208,Aetna,RTC,Scottsdale,2026-07-28,2026-09-04,50,Not medically necessary,24500.0,2383.4528,2027-03-03,154
+DRC1018630,Cigna,RTC,Glendale,2026-07-25,2026-09-04,197,Precertification / authorization absent,14000.0,1270.1809,2027-03-03,154
+DRC1018914,Cigna,RTC,Scottsdale,2026-07-31,2026-09-04,197,Precertification / authorization absent,14000.0,1270.1809,2027-03-03,154
+DRC1018915,Cigna,PHP,Phoenix,2026-08-07,2026-09-04,197,Precertification / authorization absent,9000.0,816.5449,2027-03-03,154
+DRC1018916,Cigna,PHP,Phoenix,2026-08-14,2026-09-04,16,Missing or invalid information,9000.0,816.5449,2027-03-03,154
+DRC1019411,Cigna,PHP,Phoenix,2026-08-18,2026-09-04,197,Precertification / authorization absent,9000.0,816.5449,2027-03-03,154
+DRC1018739,Aetna,IOP,Scottsdale,2026-08-01,2026-09-04,50,Not medically necessary,4500.0,437.777,2027-03-03,154
+DRC1018991,Cigna,IOP,Phoenix,2026-08-11,2026-09-04,197,Precertification / authorization absent,4500.0,408.2724,2027-03-03,154
+DRC1017510,Cigna,IOP,Scottsdale,2026-08-08,2026-09-04,197,Precertification / authorization absent,3600.0,326.618,2027-03-03,154
+DRC1018421,Aetna,TMS,Phoenix,2026-06-29,2026-09-04,16,Missing or invalid information,3000.0,291.8514,2027-03-03,154
+DRC1019202,Cigna,TMS,Phoenix,2026-08-03,2026-09-04,197,Precertification / authorization absent,3000.0,272.1816,2027-03-03,154
+DRC1019259,Aetna,TMS,Phoenix,2026-08-07,2026-09-04,96,Non-covered charge,3000.0,291.8514,2027-03-03,154
+DRC1019279,Cigna,TMS,Phoenix,2026-08-08,2026-09-04,197,Precertification / authorization absent,3000.0,272.1816,2027-03-03,154
+DRC1017252,BCBS of Arizona,IOP,Scottsdale,2026-07-15,2026-09-04,16,Missing or invalid information,2700.0,214.5129,2027-03-03,154
+DRC1018534,BCBS of Arizona,IOP,Scottsdale,2026-07-16,2026-09-04,50,Not medically necessary,2700.0,214.5129,2027-03-03,154
+DRC1018842,Aetna,IOP,Phoenix,2026-08-11,2026-09-04,197,Precertification / authorization absent,1800.0,175.1108,2027-03-03,154
+DRC1021613,Cigna,OP,Phoenix,2026-07-31,2026-09-04,197,Precertification / authorization absent,700.0,63.509,2027-03-03,154
+DRC1018235,UnitedHealthcare,RTC,Scottsdale,2026-06-13,2026-09-11,197,Precertification / authorization absent,24500.0,1701.8195,2027-03-10,161
+DRC1018918,UnitedHealthcare,RTC,Scottsdale,2026-07-13,2026-09-11,197,Precertification / authorization absent,24500.0,1701.8195,2027-03-10,161
+DRC1019174,Cigna,RTC,Glendale,2026-08-09,2026-09-11,197,Precertification / authorization absent,24500.0,2222.8166,2027-03-10,161
+DRC1016935,UnitedHealthcare,PHP,Scottsdale,2026-05-22,2026-09-11,96,Non-covered charge,9000.0,625.1582,2027-03-10,161
+DRC1017855,UnitedHealthcare,PHP,Scottsdale,2026-06-30,2026-09-11,50,Not medically necessary,9000.0,625.1582,2027-03-10,161
+DRC1018577,Cigna,PHP,Scottsdale,2026-08-15,2026-09-11,197,Precertification / authorization absent,9000.0,816.5449,2027-03-10,161
+DRC1018600,Cigna,PHP,Scottsdale,2026-08-04,2026-09-11,197,Precertification / authorization absent,9000.0,816.5449,2027-03-10,161
+DRC1017186,Other commercial,IOP,Scottsdale,2026-06-21,2026-09-11,50,Not medically necessary,4500.0,376.0528,2027-03-10,161
+DRC1017386,Cigna,IOP,Scottsdale,2026-07-17,2026-09-11,197,Precertification / authorization absent,4500.0,408.2724,2027-03-10,161
+DRC1019080,Other commercial,IOP,Glendale,2026-08-11,2026-09-11,50,Not medically necessary,4500.0,376.0528,2027-03-10,161
+DRC1017029,BCBS of Arizona,IOP,Scottsdale,2026-07-09,2026-09-11,50,Not medically necessary,3600.0,286.0173,2027-03-10,161
+DRC1019204,Cigna,TMS,Phoenix,2026-08-17,2026-09-11,197,Precertification / authorization absent,3000.0,272.1816,2027-03-10,161
+DRC1017674,Anthem,IOP,Scottsdale,2026-07-08,2026-09-11,197,Precertification / authorization absent,2700.0,235.0041,2027-03-10,161
+DRC1018748,Cigna,IOP,Phoenix,2026-08-04,2026-09-11,197,Precertification / authorization absent,2700.0,244.9635,2027-03-10,161
+DRC1017999,Other commercial,IOP,Scottsdale,2026-07-27,2026-09-11,16,Missing or invalid information,1800.0,150.4211,2027-03-10,161
+DRC1018272,BCBS of Arizona,PHP,Scottsdale,2026-07-18,2026-09-11,16,Missing or invalid information,1800.0,143.0086,2027-03-10,161
+DRC1018716,Other commercial,IOP,Glendale,2026-08-10,2026-09-11,50,Not medically necessary,1800.0,150.4211,2027-03-10,161
+DRC1018750,Cigna,IOP,Phoenix,2026-08-15,2026-09-11,197,Precertification / authorization absent,1800.0,163.309,2027-03-10,161
+DRC1019193,UnitedHealthcare,RTC,Glendale,2026-07-26,2026-09-18,197,Precertification / authorization absent,24500.0,1701.8195,2027-03-17,168
+DRC1019320,Other commercial,RTC,Glendale,2026-08-04,2026-09-18,50,Not medically necessary,24500.0,2047.3985,2027-03-17,168
+DRC1019369,Cigna,RTC,Scottsdale,2026-08-22,2026-09-18,197,Precertification / authorization absent,24500.0,2222.8166,2027-03-17,168
+DRC1019455,Anthem,RTC,Scottsdale,2026-08-14,2026-09-18,50,Not medically necessary,24500.0,2132.4442,2027-03-17,168
+DRC1019211,Aetna,RTC,Scottsdale,2026-08-17,2026-09-18,197,Precertification / authorization absent,21000.0,2042.9596,2027-03-17,168
+DRC1019370,Cigna,RTC,Scottsdale,2026-08-27,2026-09-18,197,Precertification / authorization absent,17500.0,1587.7262,2027-03-17,168
+DRC1018432,Other commercial,PHP,Scottsdale,2026-07-26,2026-09-18,50,Not medically necessary,9000.0,752.1056,2027-03-17,168
+DRC1018495,UnitedHealthcare,PHP,Phoenix,2026-07-23,2026-09-18,27,Coverage terminated before service,9000.0,625.1582,2027-03-17,168
+DRC1018562,Cigna,PHP,Phoenix,2026-08-11,2026-09-18,197,Precertification / authorization absent,9000.0,816.5449,2027-03-17,168
+DRC1018901,Cigna,PHP,Phoenix,2026-07-31,2026-09-18,50,Not medically necessary,9000.0,816.5449,2027-03-17,168
+DRC1019136,Aetna,PHP,Phoenix,2026-08-13,2026-09-18,50,Not medically necessary,9000.0,875.5541,2027-03-17,168
+DRC1019336,Cigna,IOP,Phoenix,2026-08-12,2026-09-18,197,Precertification / authorization absent,4500.0,408.2724,2027-03-17,168
+DRC1017326,Other commercial,IOP,Phoenix,2026-06-25,2026-09-18,27,Coverage terminated before service,3600.0,300.8422,2027-03-17,168
+DRC1017356,BCBS of Arizona,IOP,Phoenix,2026-07-22,2026-09-18,50,Not medically necessary,3600.0,286.0173,2027-03-17,168
+DRC1017509,Cigna,IOP,Scottsdale,2026-08-01,2026-09-18,197,Precertification / authorization absent,3600.0,326.618,2027-03-17,168
+DRC1018858,BCBS of Arizona,IOP,Glendale,2026-08-28,2026-09-18,197,Precertification / authorization absent,2700.0,214.5129,2027-03-17,168
+DRC1019016,Aetna,IOP,Phoenix,2026-08-11,2026-09-18,197,Precertification / authorization absent,2700.0,262.6662,2027-03-17,168
+DRC1021592,UnitedHealthcare,OP,Phoenix,2026-07-31,2026-09-18,197,Precertification / authorization absent,1050.0,72.9351,2027-03-17,168
+DRC1018514,Aetna,RTC,Glendale,2026-07-13,2026-09-25,50,Not medically necessary,24500.0,2383.4528,2027-03-24,175
+DRC1019307,Other commercial,RTC,Scottsdale,2026-08-03,2026-09-25,197,Precertification / authorization absent,24500.0,2047.3985,2027-03-24,175
+DRC1019339,Cigna,RTC,Scottsdale,2026-08-06,2026-09-25,96,Non-covered charge,24500.0,2222.8166,2027-03-24,175
+DRC1019341,Cigna,RTC,Scottsdale,2026-08-20,2026-09-25,197,Precertification / authorization absent,24500.0,2222.8166,2027-03-24,175
+DRC1019457,Anthem,RTC,Scottsdale,2026-08-28,2026-09-25,50,Not medically necessary,24500.0,2132.4442,2027-03-24,175
+DRC1019514,BCBS of Arizona,RTC,Glendale,2026-08-30,2026-09-25,16,Missing or invalid information,24500.0,1946.5063,2027-03-24,175
+DRC1018649,BCBS of Arizona,PHP,Phoenix,2026-08-22,2026-09-25,50,Not medically necessary,9000.0,715.0431,2027-03-24,175
+DRC1019088,Cigna,PHP,Phoenix,2026-08-24,2026-09-25,197,Precertification / authorization absent,9000.0,816.5449,2027-03-24,175
+DRC1018377,Aetna,PHP,Scottsdale,2026-08-09,2026-09-25,27,Coverage terminated before service,7200.0,700.4433,2027-03-24,175
+DRC1018603,Cigna,PHP,Scottsdale,2026-08-23,2026-09-25,197,Precertification / authorization absent,7200.0,653.2359,2027-03-24,175
+DRC1018964,Anthem,IOP,Phoenix,2026-08-20,2026-09-25,50,Not medically necessary,4500.0,391.6734,2027-03-24,175
+DRC1019303,Cigna,IOP,Scottsdale,2026-08-16,2026-09-25,50,Not medically necessary,4500.0,408.2724,2027-03-24,175
+DRC1017354,BCBS of Arizona,IOP,Phoenix,2026-07-08,2026-09-25,197,Precertification / authorization absent,3600.0,286.0173,2027-03-24,175
+DRC1018136,Cigna,PHP,Phoenix,2026-07-20,2026-09-25,197,Precertification / authorization absent,3600.0,326.618,2027-03-24,175
+DRC1018867,Aetna,TMS,Phoenix,2026-08-08,2026-09-25,50,Not medically necessary,3000.0,291.8514,2027-03-24,175
+DRC1019206,Cigna,TMS,Phoenix,2026-08-31,2026-09-25,197,Precertification / authorization absent,3000.0,272.1816,2027-03-24,175
+DRC1016579,Other commercial,IOP,Scottsdale,2026-06-17,2026-09-25,50,Not medically necessary,2700.0,225.6317,2027-03-24,175
+DRC1018231,Aetna,IOP,Scottsdale,2026-08-28,2026-09-25,197,Precertification / authorization absent,2700.0,262.6662,2027-03-24,175
+DRC1019572,Anthem,IOP,Glendale,2026-08-19,2026-09-25,197,Precertification / authorization absent,2700.0,235.0041,2027-03-24,175
+DRC1021607,Cigna,OP,Phoenix,2026-07-31,2026-09-25,96,Non-covered charge,1400.0,127.0181,2027-03-24,175
+DRC1018109,BCBS of Arizona,IOP,Phoenix,2026-08-13,2026-09-25,50,Not medically necessary,900.0,71.5043,2027-03-24,175
+DRC1013085,Aetna,RTC,Glendale,2025-10-05,2025-10-24,50,Not medically necessary,24500.0,2383.4528,2026-04-22,-161
+DRC1012926,Cigna,RTC,Scottsdale,2025-10-08,2025-11-07,50,Not medically necessary,14000.0,1270.1809,2026-05-06,-147
+DRC1013062,Cigna,PHP,Scottsdale,2025-10-14,2025-11-07,27,Coverage terminated before service,9000.0,816.5449,2026-05-06,-147
+DRC1013313,Cigna,PHP,Phoenix,2025-10-05,2025-11-07,197,Precertification / authorization absent,9000.0,816.5449,2026-05-06,-147
+DRC1013019,Anthem,RTC,Glendale,2025-10-01,2025-11-14,197,Precertification / authorization absent,24500.0,2132.4442,2026-05-13,-140
+DRC1013352,UnitedHealthcare,RTC,Scottsdale,2025-10-07,2025-11-14,96,Non-covered charge,24500.0,1701.8195,2026-05-13,-140
+DRC1013383,Cigna,RTC,Glendale,2025-10-09,2025-11-14,96,Non-covered charge,24500.0,2222.8166,2026-05-13,-140
+DRC1012992,UnitedHealthcare,PHP,Phoenix,2025-10-07,2025-11-14,50,Not medically necessary,9000.0,625.1582,2026-05-13,-140
+DRC1013000,Aetna,IOP,Scottsdale,2025-09-30,2025-11-14,96,Non-covered charge,4500.0,437.777,2026-05-13,-140
+DRC1013467,Cigna,TMS,Phoenix,2025-10-13,2025-11-14,96,Non-covered charge,3000.0,272.1816,2026-05-13,-140
+DRC1013170,Aetna,RTC,Scottsdale,2025-10-19,2025-11-21,50,Not medically necessary,24500.0,2383.4528,2026-05-20,-133
+DRC1013300,Aetna,RTC,Glendale,2025-10-19,2025-11-21,50,Not medically necessary,24500.0,2383.4528,2026-05-20,-133
+DRC1013340,UnitedHealthcare,RTC,Scottsdale,2025-10-28,2025-11-21,96,Non-covered charge,24500.0,1701.8195,2026-05-20,-133
+DRC1013430,UnitedHealthcare,RTC,Glendale,2025-10-18,2025-11-21,50,Not medically necessary,24500.0,1701.8195,2026-05-20,-133
+DRC1012596,BCBS of Arizona,PHP,Phoenix,2025-10-17,2025-11-21,197,Precertification / authorization absent,9000.0,715.0431,2026-05-20,-133
+DRC1012032,Aetna,IOP,Scottsdale,2025-10-09,2025-11-21,50,Not medically necessary,3600.0,350.2216,2026-05-20,-133
+DRC1012662,UnitedHealthcare,IOP,Phoenix,2025-10-01,2025-11-21,96,Non-covered charge,3600.0,250.0633,2026-05-20,-133
+DRC1012420,Cigna,IOP,Phoenix,2025-10-04,2025-11-21,197,Precertification / authorization absent,2700.0,244.9635,2026-05-20,-133
+DRC1021038,Aetna,OP,Phoenix,2025-09-30,2025-11-21,27,Coverage terminated before service,1750.0,170.2466,2026-05-20,-133
+DRC1021061,UnitedHealthcare,OP,Phoenix,2025-09-30,2025-11-21,50,Not medically necessary,1400.0,97.2468,2026-05-20,-133
+DRC1021073,UnitedHealthcare,OP,Phoenix,2025-09-30,2025-11-21,197,Precertification / authorization absent,1050.0,72.9351,2026-05-20,-133
+DRC1013096,Other commercial,RTC,Glendale,2025-10-15,2025-11-28,197,Precertification / authorization absent,24500.0,2047.3985,2026-05-27,-126
+DRC1013360,Aetna,RTC,Scottsdale,2025-10-29,2025-11-28,50,Not medically necessary,24500.0,2383.4528,2026-05-27,-126
+DRC1013361,Aetna,RTC,Scottsdale,2025-11-05,2025-11-28,50,Not medically necessary,24500.0,2383.4528,2026-05-27,-126
+DRC1012974,BCBS of Arizona,RTC,Scottsdale,2025-10-08,2025-11-28,16,Missing or invalid information,10500.0,834.217,2026-05-27,-126
+DRC1013035,BCBS of Arizona,PHP,Phoenix,2025-10-25,2025-11-28,96,Non-covered charge,9000.0,715.0431,2026-05-27,-126
+DRC1013731,BCBS of Arizona,TMS,Phoenix,2025-10-31,2025-11-28,16,Missing or invalid information,3000.0,238.3477,2026-05-27,-126
+DRC1013294,Aetna,RTC,Glendale,2025-10-19,2025-12-05,50,Not medically necessary,24500.0,2383.4528,2026-06-03,-119
+DRC1013626,UnitedHealthcare,RTC,Scottsdale,2025-11-09,2025-12-05,197,Precertification / authorization absent,24500.0,1701.8195,2026-06-03,-119
+DRC1013729,BCBS of Arizona,RTC,Glendale,2025-11-07,2025-12-05,16,Missing or invalid information,24500.0,1946.5063,2026-06-03,-119
+DRC1013825,BCBS of Arizona,RTC,Glendale,2025-11-04,2025-12-05,197,Precertification / authorization absent,24500.0,1946.5063,2026-06-03,-119
+DRC1013356,UnitedHealthcare,RTC,Scottsdale,2025-11-02,2025-12-05,27,Coverage terminated before service,17500.0,1215.5854,2026-06-03,-119
+DRC1013704,BCBS of Arizona,PHP,Phoenix,2025-11-11,2025-12-05,197,Precertification / authorization absent,9000.0,715.0431,2026-06-03,-119
+DRC1012600,BCBS of Arizona,IOP,Phoenix,2025-11-10,2025-12-05,197,Precertification / authorization absent,3600.0,286.0173,2026-06-03,-119
+DRC1012792,BCBS of Arizona,IOP,Scottsdale,2025-10-11,2025-12-05,197,Precertification / authorization absent,3600.0,286.0173,2026-06-03,-119
+DRC1013880,Aetna,PHP,Phoenix,2025-11-15,2025-12-05,197,Precertification / authorization absent,1800.0,175.1108,2026-06-03,-119
+DRC1021120,Cigna,OP,Phoenix,2025-10-31,2025-12-05,50,Not medically necessary,1750.0,158.7726,2026-06-03,-119
+DRC1013396,Other commercial,RTC,Glendale,2025-10-23,2025-12-12,16,Missing or invalid information,24500.0,2047.3985,2026-06-10,-112
+DRC1013587,Cigna,RTC,Scottsdale,2025-11-08,2025-12-12,50,Not medically necessary,24500.0,2222.8166,2026-06-10,-112
+DRC1013667,Aetna,RTC,Scottsdale,2025-10-27,2025-12-12,197,Precertification / authorization absent,24500.0,2383.4528,2026-06-10,-112
+DRC1013759,Anthem,RTC,Glendale,2025-11-10,2025-12-12,27,Coverage terminated before service,24500.0,2132.4442,2026-06-10,-112
+DRC1013819,Aetna,RTC,Scottsdale,2025-11-04,2025-12-12,50,Not medically necessary,24500.0,2383.4528,2026-06-10,-112
+DRC1013520,Cigna,PHP,Phoenix,2025-10-18,2025-12-12,50,Not medically necessary,9000.0,816.5449,2026-06-10,-112
+DRC1014033,BCBS of Arizona,PHP,Scottsdale,2025-11-15,2025-12-12,50,Not medically necessary,9000.0,715.0431,2026-06-10,-112
+DRC1012599,BCBS of Arizona,IOP,Phoenix,2025-11-03,2025-12-12,197,Precertification / authorization absent,3600.0,286.0173,2026-06-10,-112
+DRC1012747,Anthem,IOP,Phoenix,2025-10-21,2025-12-12,197,Precertification / authorization absent,3600.0,313.3387,2026-06-10,-112
+DRC1013561,Cigna,IOP,Phoenix,2025-10-28,2025-12-12,96,Non-covered charge,3600.0,326.618,2026-06-10,-112
+DRC1012873,UnitedHealthcare,PHP,Phoenix,2025-10-24,2025-12-12,16,Missing or invalid information,1800.0,125.0316,2026-06-10,-112
+DRC1013228,Other commercial,RTC,Glendale,2025-10-16,2025-12-19,50,Not medically necessary,24500.0,2047.3985,2026-06-17,-105
+DRC1012379,Other commercial,PHP,Phoenix,2025-10-08,2025-12-19,50,Not medically necessary,9000.0,752.1056,2026-06-17,-105
+DRC1013076,UnitedHealthcare,PHP,Phoenix,2025-10-26,2025-12-19,16,Missing or invalid information,7200.0,500.1266,2026-06-17,-105
+DRC1013516,Cigna,TMS,Phoenix,2025-11-19,2025-12-19,197,Precertification / authorization absent,3000.0,272.1816,2026-06-17,-105
+DRC1013621,Aetna,TMS,Phoenix,2025-11-22,2025-12-19,50,Not medically necessary,3000.0,291.8514,2026-06-17,-105
+DRC1012545,Cigna,IOP,Scottsdale,2025-11-07,2025-12-19,27,Coverage terminated before service,1800.0,163.309,2026-06-17,-105
+DRC1021021,Other commercial,OP,Phoenix,2025-09-30,2025-12-19,197,Precertification / authorization absent,700.0,58.4971,2026-06-17,-105
+DRC1013826,BCBS of Arizona,RTC,Glendale,2025-11-11,2025-12-26,197,Precertification / authorization absent,24500.0,1946.5063,2026-06-24,-98
+DRC1013217,Aetna,PHP,Scottsdale,2025-11-11,2025-12-26,50,Not medically necessary,9000.0,875.5541,2026-06-24,-98
+DRC1013747,Aetna,PHP,Scottsdale,2025-11-22,2025-12-26,197,Precertification / authorization absent,7200.0,700.4433,2026-06-24,-98
+DRC1012056,Cigna,IOP,Scottsdale,2025-10-05,2025-12-26,96,Non-covered charge,4500.0,408.2724,2026-06-24,-98
+DRC1012619,Other commercial,IOP,Scottsdale,2025-10-16,2025-12-26,197,Precertification / authorization absent,3600.0,300.8422,2026-06-24,-98
+DRC1013242,UnitedHealthcare,TMS,Phoenix,2025-10-09,2025-12-26,197,Precertification / authorization absent,3000.0,208.3861,2026-06-24,-98
+DRC1013479,BCBS of Arizona,TMS,Phoenix,2025-11-18,2025-12-26,50,Not medically necessary,3000.0,238.3477,2026-06-24,-98
+DRC1014184,BCBS of Arizona,TMS,Phoenix,2025-12-01,2025-12-26,50,Not medically necessary,3000.0,238.3477,2026-06-24,-98
+DRC1013944,BCBS of Arizona,RTC,Scottsdale,2025-11-17,2026-01-02,197,Precertification / authorization absent,24500.0,1946.5063,2026-07-01,-91
+DRC1013101,Other commercial,RTC,Scottsdale,2025-10-14,2026-01-02,197,Precertification / authorization absent,21000.0,1754.913,2026-07-01,-91
+DRC1013518,Other commercial,PHP,Scottsdale,2025-10-16,2026-01-02,27,Coverage terminated before service,9000.0,752.1056,2026-07-01,-91
+DRC1013782,Cigna,PHP,Phoenix,2025-12-11,2026-01-02,197,Precertification / authorization absent,9000.0,816.5449,2026-07-01,-91
+DRC1013792,Other commercial,PHP,Phoenix,2025-11-10,2026-01-02,16,Missing or invalid information,9000.0,752.1056,2026-07-01,-91
+DRC1013266,BCBS of Arizona,IOP,Scottsdale,2025-11-27,2026-01-02,50,Not medically necessary,4500.0,357.5216,2026-07-01,-91
+DRC1013436,UnitedHealthcare,IOP,Glendale,2025-10-25,2026-01-02,197,Precertification / authorization absent,4500.0,312.5791,2026-07-01,-91
+DRC1012921,Aetna,IOP,Phoenix,2025-12-08,2026-01-02,197,Precertification / authorization absent,2700.0,262.6662,2026-07-01,-91
+DRC1021090,Other commercial,OP,Phoenix,2025-10-31,2026-01-02,96,Non-covered charge,1050.0,87.7457,2026-07-01,-91
+DRC1013547,UnitedHealthcare,RTC,Glendale,2025-11-11,2026-01-09,16,Missing or invalid information,24500.0,1701.8195,2026-07-08,-84
+DRC1014405,Cigna,RTC,Scottsdale,2025-12-06,2026-01-09,50,Not medically necessary,24500.0,2222.8166,2026-07-08,-84
+DRC1014456,BCBS of Arizona,RTC,Glendale,2025-12-23,2026-01-09,96,Non-covered charge,24500.0,1946.5063,2026-07-08,-84
+DRC1013829,BCBS of Arizona,RTC,Glendale,2025-11-28,2026-01-09,50,Not medically necessary,10500.0,834.217,2026-07-08,-84
+DRC1013976,BCBS of Arizona,RTC,Glendale,2025-12-06,2026-01-09,96,Non-covered charge,10500.0,834.217,2026-07-08,-84
+DRC1013879,Aetna,PHP,Phoenix,2025-11-13,2026-01-09,197,Precertification / authorization absent,9000.0,875.5541,2026-07-08,-84
+DRC1012715,Aetna,IOP,Scottsdale,2025-12-06,2026-01-09,96,Non-covered charge,4500.0,437.777,2026-07-08,-84
+DRC1013026,Anthem,IOP,Phoenix,2025-11-11,2026-01-09,27,Coverage terminated before service,3600.0,313.3387,2026-07-08,-84
+DRC1013277,UnitedHealthcare,IOP,Phoenix,2025-11-16,2026-01-09,50,Not medically necessary,2700.0,187.5475,2026-07-08,-84
+DRC1021164,BCBS of Arizona,OP,Phoenix,2025-11-30,2026-01-09,96,Non-covered charge,1400.0,111.2289,2026-07-08,-84
+DRC1014287,Anthem,RTC,Glendale,2025-12-02,2026-01-16,197,Precertification / authorization absent,24500.0,2132.4442,2026-07-15,-77
+DRC1014435,Cigna,RTC,Glendale,2025-12-15,2026-01-16,50,Not medically necessary,24500.0,2222.8166,2026-07-15,-77
+DRC1014454,BCBS of Arizona,RTC,Glendale,2025-12-09,2026-01-16,50,Not medically necessary,24500.0,1946.5063,2026-07-15,-77
+DRC1013824,Aetna,RTC,Scottsdale,2025-12-07,2026-01-16,27,Coverage terminated before service,17500.0,1702.4663,2026-07-15,-77
+DRC1013551,UnitedHealthcare,PHP,Phoenix,2025-12-04,2026-01-16,27,Coverage terminated before service,9000.0,625.1582,2026-07-15,-77
+DRC1014182,Cigna,PHP,Scottsdale,2025-12-26,2026-01-16,197,Precertification / authorization absent,7200.0,653.2359,2026-07-15,-77
+DRC1013837,Aetna,IOP,Scottsdale,2025-12-20,2026-01-16,50,Not medically necessary,3600.0,350.2216,2026-07-15,-77
+DRC1014053,Cigna,PHP,Phoenix,2025-12-03,2026-01-16,96,Non-covered charge,3600.0,326.618,2026-07-15,-77
+DRC1013472,Cigna,TMS,Phoenix,2025-11-17,2026-01-16,197,Precertification / authorization absent,3000.0,272.1816,2026-07-15,-77
+DRC1012832,Other commercial,IOP,Phoenix,2025-11-15,2026-01-16,27,Coverage terminated before service,2700.0,225.6317,2026-07-15,-77
+DRC1021176,Cigna,OP,Phoenix,2025-11-30,2026-01-16,96,Non-covered charge,1750.0,158.7726,2026-07-15,-77
+DRC1014160,Other commercial,RTC,Scottsdale,2025-11-23,2026-01-23,27,Coverage terminated before service,24500.0,2047.3985,2026-07-22,-70
+DRC1013935,Cigna,PHP,Phoenix,2025-12-27,2026-01-23,16,Missing or invalid information,9000.0,816.5449,2026-07-22,-70
+DRC1013506,BCBS of Arizona,IOP,Scottsdale,2025-11-05,2026-01-23,50,Not medically necessary,3600.0,286.0173,2026-07-22,-70
+DRC1013571,Aetna,IOP,Scottsdale,2025-11-19,2026-01-23,27,Coverage terminated before service,2700.0,262.6662,2026-07-22,-70
+DRC1021183,UnitedHealthcare,OP,Phoenix,2025-11-30,2026-01-23,27,Coverage terminated before service,1750.0,121.5585,2026-07-22,-70
+DRC1013961,Aetna,RTC,Glendale,2025-11-24,2026-01-30,50,Not medically necessary,24500.0,2383.4528,2026-07-29,-63
+DRC1013987,Cigna,RTC,Glendale,2025-11-14,2026-01-30,27,Coverage terminated before service,24500.0,2222.8166,2026-07-29,-63
+DRC1014164,Other commercial,RTC,Scottsdale,2025-12-21,2026-01-30,96,Non-covered charge,24500.0,2047.3985,2026-07-29,-63
+DRC1014276,Anthem,RTC,Scottsdale,2025-12-16,2026-01-30,197,Precertification / authorization absent,24500.0,2132.4442,2026-07-29,-63
+DRC1014529,Anthem,RTC,Glendale,2026-01-06,2026-01-30,197,Precertification / authorization absent,24500.0,2132.4442,2026-07-29,-63
+DRC1014591,BCBS of Arizona,RTC,Scottsdale,2025-12-26,2026-01-30,96,Non-covered charge,24500.0,1946.5063,2026-07-29,-63
+DRC1014598,BCBS of Arizona,RTC,Glendale,2026-01-02,2026-01-30,16,Missing or invalid information,24500.0,1946.5063,2026-07-29,-63
+DRC1014011,UnitedHealthcare,PHP,Scottsdale,2025-12-07,2026-01-30,197,Precertification / authorization absent,9000.0,625.1582,2026-07-29,-63
+DRC1014497,Aetna,PHP,Scottsdale,2025-12-14,2026-01-30,197,Precertification / authorization absent,9000.0,875.5541,2026-07-29,-63
+DRC1013548,UnitedHealthcare,RTC,Glendale,2025-11-13,2026-01-30,197,Precertification / authorization absent,7000.0,486.2342,2026-07-29,-63
+DRC1012962,Aetna,IOP,Phoenix,2025-11-22,2026-01-30,50,Not medically necessary,4500.0,437.777,2026-07-29,-63
+DRC1013797,Other commercial,IOP,Phoenix,2025-12-09,2026-01-30,27,Coverage terminated before service,4500.0,376.0528,2026-07-29,-63
+DRC1013849,Aetna,RTC,Scottsdale,2025-11-12,2026-02-06,96,Non-covered charge,24500.0,2383.4528,2026-08-05,-56
+DRC1014654,Aetna,RTC,Glendale,2025-12-29,2026-02-06,96,Non-covered charge,24500.0,2383.4528,2026-08-05,-56
+DRC1014338,Other commercial,PHP,Phoenix,2026-01-15,2026-02-06,27,Coverage terminated before service,9000.0,752.1056,2026-08-05,-56
+DRC1015024,Aetna,TMS,Phoenix,2026-01-14,2026-02-06,96,Non-covered charge,3000.0,291.8514,2026-08-05,-56
+DRC1014346,BCBS of Arizona,IOP,Scottsdale,2026-01-08,2026-02-06,50,Not medically necessary,2700.0,214.5129,2026-08-05,-56
+DRC1013827,BCBS of Arizona,RTC,Glendale,2025-11-18,2026-02-13,197,Precertification / authorization absent,24500.0,1946.5063,2026-08-12,-49
+DRC1014721,UnitedHealthcare,RTC,Scottsdale,2026-01-10,2026-02-13,50,Not medically necessary,24500.0,1701.8195,2026-08-12,-49
+DRC1014005,UnitedHealthcare,PHP,Scottsdale,2026-01-05,2026-02-13,50,Not medically necessary,9000.0,625.1582,2026-08-12,-49
+DRC1014415,Anthem,PHP,Scottsdale,2025-12-27,2026-02-13,50,Not medically necessary,9000.0,783.3469,2026-08-12,-49
+DRC1014642,Aetna,PHP,Phoenix,2025-12-20,2026-02-13,16,Missing or invalid information,9000.0,875.5541,2026-08-12,-49
+DRC1014973,Aetna,PHP,Scottsdale,2026-01-06,2026-02-13,197,Precertification / authorization absent,9000.0,875.5541,2026-08-12,-49
+DRC1013606,UnitedHealthcare,IOP,Scottsdale,2025-11-24,2026-02-13,197,Precertification / authorization absent,4500.0,312.5791,2026-08-12,-49
+DRC1014029,Other commercial,IOP,Phoenix,2026-01-14,2026-02-13,197,Precertification / authorization absent,3600.0,300.8422,2026-08-12,-49
+DRC1014579,BCBS of Arizona,RTC,Scottsdale,2026-01-16,2026-02-13,96,Non-covered charge,3500.0,278.0723,2026-08-12,-49
+DRC1014657,Aetna,RTC,Glendale,2026-01-13,2026-02-13,50,Not medically necessary,3500.0,340.4933,2026-08-12,-49
+DRC1013637,UnitedHealthcare,IOP,Phoenix,2026-01-18,2026-02-13,50,Not medically necessary,2700.0,187.5475,2026-08-12,-49
+DRC1014811,Cigna,IOP,Scottsdale,2025-12-29,2026-02-13,50,Not medically necessary,2700.0,244.9635,2026-08-12,-49
+DRC1014576,BCBS of Arizona,RTC,Scottsdale,2026-01-01,2026-02-20,27,Coverage terminated before service,24500.0,1946.5063,2026-08-19,-42
+DRC1014996,BCBS of Arizona,RTC,Scottsdale,2026-01-14,2026-02-20,96,Non-covered charge,24500.0,1946.5063,2026-08-19,-42
+DRC1015095,UnitedHealthcare,RTC,Glendale,2026-01-19,2026-02-20,50,Not medically necessary,24500.0,1701.8195,2026-08-19,-42
+DRC1015111,Aetna,RTC,Scottsdale,2026-01-12,2026-02-20,197,Precertification / authorization absent,24500.0,2383.4528,2026-08-19,-42
+DRC1014166,Other commercial,PHP,Phoenix,2025-12-30,2026-02-20,27,Coverage terminated before service,9000.0,752.1056,2026-08-19,-42
+DRC1014245,Aetna,PHP,Scottsdale,2026-01-09,2026-02-20,197,Precertification / authorization absent,9000.0,875.5541,2026-08-19,-42
+DRC1014651,Cigna,TMS,Phoenix,2026-01-25,2026-02-20,50,Not medically necessary,3000.0,272.1816,2026-08-19,-42
+DRC1015027,Aetna,TMS,Phoenix,2026-02-04,2026-02-20,197,Precertification / authorization absent,3000.0,291.8514,2026-08-19,-42
+DRC1013501,BCBS of Arizona,IOP,Phoenix,2026-01-04,2026-02-20,50,Not medically necessary,2700.0,214.5129,2026-08-19,-42
+DRC1014823,Cigna,IOP,Glendale,2026-01-20,2026-02-20,50,Not medically necessary,2700.0,244.9635,2026-08-19,-42
+DRC1015461,Anthem,RTC,Glendale,2026-01-27,2026-02-27,197,Precertification / authorization absent,24500.0,2132.4442,2026-08-26,-35
+DRC1014291,Anthem,PHP,Phoenix,2025-12-28,2026-02-27,96,Non-covered charge,9000.0,783.3469,2026-08-26,-35
+DRC1014473,BCBS of Arizona,PHP,Phoenix,2026-01-18,2026-02-27,50,Not medically necessary,9000.0,715.0431,2026-08-26,-35
+DRC1014802,Cigna,PHP,Phoenix,2026-02-03,2026-02-27,16,Missing or invalid information,9000.0,816.5449,2026-08-26,-35
+DRC1014294,Anthem,IOP,Phoenix,2026-01-17,2026-02-27,50,Not medically necessary,4500.0,391.6734,2026-08-26,-35
+DRC1014311,BCBS of Arizona,IOP,Scottsdale,2026-01-14,2026-02-27,96,Non-covered charge,3600.0,286.0173,2026-08-26,-35
+DRC1014975,Aetna,PHP,Scottsdale,2026-01-16,2026-02-27,27,Coverage terminated before service,3600.0,350.2216,2026-08-26,-35
+DRC1014494,UnitedHealthcare,TMS,Phoenix,2026-01-09,2026-02-27,27,Coverage terminated before service,3000.0,208.3861,2026-08-26,-35
+DRC1014702,BCBS of Arizona,RTC,Glendale,2026-01-08,2026-03-06,50,Not medically necessary,24500.0,1946.5063,2026-09-02,-28
+DRC1015510,Aetna,RTC,Scottsdale,2026-01-29,2026-03-06,197,Precertification / authorization absent,24500.0,2383.4528,2026-09-02,-28
+DRC1015516,Aetna,RTC,Glendale,2026-01-29,2026-03-06,197,Precertification / authorization absent,24500.0,2383.4528,2026-09-02,-28
+DRC1015545,Cigna,RTC,Scottsdale,2026-02-07,2026-03-06,197,Precertification / authorization absent,24500.0,2222.8166,2026-09-02,-28
+DRC1015555,Cigna,RTC,Glendale,2026-01-31,2026-03-06,27,Coverage terminated before service,24500.0,2222.8166,2026-09-02,-28
+DRC1014933,Anthem,RTC,Scottsdale,2026-01-15,2026-03-06,96,Non-covered charge,14000.0,1218.5396,2026-09-02,-28
+DRC1014195,Aetna,PHP,Phoenix,2025-12-25,2026-03-06,197,Precertification / authorization absent,9000.0,875.5541,2026-09-02,-28
+DRC1015146,Aetna,PHP,Scottsdale,2026-01-20,2026-03-06,197,Precertification / authorization absent,9000.0,875.5541,2026-09-02,-28
+DRC1015231,Other commercial,PHP,Phoenix,2026-02-06,2026-03-06,50,Not medically necessary,9000.0,752.1056,2026-09-02,-28
+DRC1014911,Cigna,PHP,Scottsdale,2026-02-13,2026-03-06,197,Precertification / authorization absent,5400.0,489.9269,2026-09-02,-28
+DRC1014249,Aetna,IOP,Scottsdale,2026-01-31,2026-03-06,197,Precertification / authorization absent,3600.0,350.2216,2026-09-02,-28
+DRC1014536,Aetna,TMS,Phoenix,2026-01-20,2026-03-06,27,Coverage terminated before service,3000.0,291.8514,2026-09-02,-28
+DRC1015238,UnitedHealthcare,TMS,Phoenix,2026-01-23,2026-03-06,16,Missing or invalid information,3000.0,208.3861,2026-09-02,-28
+DRC1014520,UnitedHealthcare,IOP,Phoenix,2026-01-05,2026-03-06,50,Not medically necessary,2700.0,187.5475,2026-09-02,-28
+DRC1014049,Anthem,IOP,Phoenix,2026-01-10,2026-03-06,50,Not medically necessary,900.0,78.3347,2026-09-02,-28
+DRC1015165,UnitedHealthcare,RTC,Scottsdale,2026-01-21,2026-03-13,197,Precertification / authorization absent,24500.0,1701.8195,2026-09-09,-21
+DRC1014004,UnitedHealthcare,PHP,Scottsdale,2025-12-29,2026-03-13,50,Not medically necessary,9000.0,625.1582,2026-09-09,-21
+DRC1014217,Anthem,PHP,Scottsdale,2026-01-04,2026-03-13,27,Coverage terminated before service,9000.0,783.3469,2026-09-09,-21
+DRC1014358,UnitedHealthcare,PHP,Scottsdale,2026-01-14,2026-03-13,50,Not medically necessary,9000.0,625.1582,2026-09-09,-21
+DRC1014130,UnitedHealthcare,PHP,Scottsdale,2026-01-03,2026-03-13,96,Non-covered charge,7200.0,500.1266,2026-09-09,-21
+DRC1015411,Aetna,RTC,Glendale,2026-02-15,2026-03-13,50,Not medically necessary,3500.0,340.4933,2026-09-09,-21
+DRC1014122,Cigna,IOP,Scottsdale,2026-01-20,2026-03-13,197,Precertification / authorization absent,2700.0,244.9635,2026-09-09,-21
+DRC1014486,Aetna,IOP,Phoenix,2026-01-09,2026-03-13,50,Not medically necessary,2700.0,262.6662,2026-09-09,-21
+DRC1014899,Other commercial,RTC,Scottsdale,2026-01-24,2026-03-20,50,Not medically necessary,24500.0,2047.3985,2026-09-16,-14
+DRC1015377,Aetna,RTC,Scottsdale,2026-02-06,2026-03-20,197,Precertification / authorization absent,24500.0,2383.4528,2026-09-16,-14
+DRC1015544,Cigna,RTC,Scottsdale,2026-01-31,2026-03-20,96,Non-covered charge,24500.0,2222.8166,2026-09-16,-14
+DRC1015515,Aetna,RTC,Scottsdale,2026-03-01,2026-03-20,96,Non-covered charge,10500.0,1021.4798,2026-09-16,-14
+DRC1014323,Anthem,PHP,Phoenix,2026-01-31,2026-03-20,197,Precertification / authorization absent,9000.0,783.3469,2026-09-16,-14
+DRC1014775,Aetna,PHP,Scottsdale,2026-02-15,2026-03-20,96,Non-covered charge,9000.0,875.5541,2026-09-16,-14
+DRC1015182,Other commercial,PHP,Phoenix,2026-02-14,2026-03-20,27,Coverage terminated before service,9000.0,752.1056,2026-09-16,-14
+DRC1015505,Cigna,TMS,Phoenix,2026-02-11,2026-03-20,96,Non-covered charge,3000.0,272.1816,2026-09-16,-14
+DRC1014308,BCBS of Arizona,PHP,Scottsdale,2025-12-24,2026-03-20,50,Not medically necessary,1800.0,143.0086,2026-09-16,-14
+DRC1014212,Anthem,RTC,Scottsdale,2025-12-03,2026-03-27,197,Precertification / authorization absent,24500.0,2132.4442,2026-09-23,-7
+DRC1015716,BCBS of Arizona,RTC,Glendale,2026-02-06,2026-03-27,197,Precertification / authorization absent,24500.0,1946.5063,2026-09-23,-7
+DRC1015731,Cigna,RTC,Scottsdale,2026-02-13,2026-03-27,50,Not medically necessary,24500.0,2222.8166,2026-09-23,-7
+DRC1016011,Cigna,RTC,Glendale,2026-02-22,2026-03-27,50,Not medically necessary,24500.0,2222.8166,2026-09-23,-7
+DRC1014322,Anthem,PHP,Phoenix,2026-01-24,2026-03-27,197,Precertification / authorization absent,9000.0,783.3469,2026-09-23,-7
+DRC1014370,Other commercial,PHP,Scottsdale,2026-01-09,2026-03-27,16,Missing or invalid information,9000.0,752.1056,2026-09-23,-7
+DRC1014673,Cigna,PHP,Phoenix,2026-01-31,2026-03-27,50,Not medically necessary,9000.0,816.5449,2026-09-23,-7
+DRC1014920,UnitedHealthcare,PHP,Scottsdale,2026-01-17,2026-03-27,197,Precertification / authorization absent,9000.0,625.1582,2026-09-23,-7
+DRC1014935,Anthem,PHP,Phoenix,2026-01-29,2026-03-27,197,Precertification / authorization absent,9000.0,783.3469,2026-09-23,-7
+DRC1014959,Other commercial,PHP,Scottsdale,2026-01-05,2026-03-27,27,Coverage terminated before service,9000.0,752.1056,2026-09-23,-7
+DRC1014283,Anthem,IOP,Phoenix,2026-01-27,2026-03-27,96,Non-covered charge,4500.0,391.6734,2026-09-23,-7
+DRC1014939,Anthem,IOP,Phoenix,2026-02-26,2026-03-27,50,Not medically necessary,4500.0,391.6734,2026-09-23,-7
+DRC1014476,BCBS of Arizona,IOP,Phoenix,2026-02-07,2026-03-27,96,Non-covered charge,3600.0,286.0173,2026-09-23,-7
+DRC1016038,Cigna,IOP,Scottsdale,2026-03-02,2026-03-27,27,Coverage terminated before service,3600.0,326.618,2026-09-23,-7
+DRC1014760,UnitedHealthcare,IOP,Glendale,2026-01-13,2026-03-27,16,Missing or invalid information,900.0,62.5158,2026-09-23,-7
