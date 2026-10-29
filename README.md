@@ -6,7 +6,7 @@ built around the finance problems of an out-of-network residential and outpatien
 allow a fraction of billed charges, MultiPlan repricing, single case agreements, denials, and checks
 mailed to patients instead of the provider.
 
-**Live demo:** [dashboard](docs/index.html) (published with GitHub Pages from `docs/`).
+**Live demo:** [feileen-beep.github.io/oon-revenue-engine](https://feileen-beep.github.io/oon-revenue-engine/) (GitHub Pages, built from `docs/`).
 
 > All data in this repository is synthetic. Behavioral health and substance use treatment records are
 > protected by HIPAA and 42 CFR Part 2, so the engine ships with a generator that invents realistic
