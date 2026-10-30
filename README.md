@@ -70,7 +70,7 @@ drop in a claims export (CollaborateMD or any CSV), the ERA 835 files, and optio
 single case agreements. The page suggests which column holds each item and how each revenue or CPT code
 maps to a level of care; you confirm, pick the close month, and download the journal entry, memo,
 worklists and dashboard. The engine runs inside the browser with Pyodide, so the files never leave the
-computer. Try it with **Use sample export files** first.
+computer. Try it with **Use sample export files** first, or download `docs/samples/sample_export_files.zip` and drop the .zip on the page.
 
 **From the command line:** put the files in `data/` (`claims.csv`, `era/`, `patient_payments.csv`,
 `sca_contracts.csv`) in the engine's standard columns and run `python -m oonrev close`.

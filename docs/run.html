@@ -97,7 +97,7 @@ footer { font-size: .8rem; color: var(--muted); }
   <section class="panel" id="step1">
     <div class="step-head"><span class="step-n">1</span><h2>Add files</h2></div>
     <div class="drop" id="drop">
-      <p>Drag files here: CSV exports and 835 files (.835, .txt, .edi)</p>
+      <p>Drag files here: CSV exports and 835 files (.835, .txt, .edi), or a .zip holding them</p>
       <div class="btns">
         <label class="btn" for="pick-files">Choose files</label>
         <input id="pick-files" type="file" multiple hidden>
@@ -110,6 +110,7 @@ footer { font-size: .8rem; color: var(--muted); }
       <thead><tr><th>File</th><th>What it is</th><th class="n">Rows</th></tr></thead><tbody></tbody>
     </table></div>
     <p class="note" id="era-note"></p>
+    <p class="note">No files handy? <a href="samples/sample_export_files.zip" download>Download the sample export files</a> (synthetic, shaped like a CollaborateMD export) and drop the .zip here.</p>
   </section>
 
   <section class="panel off" id="step2">
@@ -163,7 +164,9 @@ footer { font-size: .8rem; color: var(--muted); }
     const manifest = await (await fetch("app/manifest.json")).json();
     py.FS.mkdirTree("/home/pyodide/oonrev");
     for (const f of manifest.files) {
-      const text = await (await fetch("app/oonrev/" + f)).text();
+      const r = await fetch("app/oonrev/" + f);
+      if (!r.ok) throw new Error(`could not fetch ${f} (${r.status})`);
+      const text = await r.text();
       py.FS.writeFile("/home/pyodide/oonrev/" + f, text);
     }
     py.FS.mkdirTree("/uploads");
@@ -181,9 +184,13 @@ footer { font-size: .8rem; color: var(--muted); }
   async function addFiles(list) {
     status("Reading files…", true, true);
     for (const file of list) {
-      const text = await file.text();
       const path = `/uploads/${++fileCounter}_${file.name.replace(/[^\w.-]/g, "_")}`;
-      py.FS.writeFile(path, text);
+      if (/\.zip$/i.test(file.name)) {
+        py.FS.writeFile(path, new Uint8Array(await file.arrayBuffer()));
+        for (const p of JSON.parse(app.unzip(path))) await addPath(p, file.name + " › " + p.split("/").pop().slice(6));
+        continue;
+      }
+      py.FS.writeFile(path, await file.text());
       await addPath(path, file.name);
     }
     render();

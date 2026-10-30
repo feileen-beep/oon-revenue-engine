@@ -10,6 +10,7 @@ import csv
 import io
 import json
 import shutil
+import zipfile
 from datetime import date, timedelta
 from pathlib import Path
 
@@ -39,6 +40,22 @@ def inspect(path: str) -> str:
     kind = max(score, key=score.get) if headers else "unknown"
     return json.dumps({"kind": kind, "headers": headers, "rows": len(rows), "guesses": guesses,
                        "preview": rows[:3]})
+
+
+def unzip(path: str) -> str:
+    """Extract an uploaded .zip next to itself and return the paths of the files inside."""
+    dest = Path(path).with_suffix("")
+    out = []
+    with zipfile.ZipFile(path) as z:
+        for info in z.infolist():
+            name = Path(info.filename)
+            if info.is_dir() or name.name.startswith(".") or "__MACOSX" in name.parts:
+                continue
+            target = dest / f"{len(out):05d}_{name.name}"
+            target.parent.mkdir(parents=True, exist_ok=True)
+            target.write_bytes(z.read(info))
+            out.append(str(target))
+    return json.dumps(out)
 
 
 def fields() -> str:

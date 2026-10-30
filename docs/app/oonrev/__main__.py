@@ -23,6 +23,8 @@ def build_site(docs: Path) -> list[str]:
     for name in files:
         shutil.copy(PACKAGE / name, target / name)
     (docs / "app" / "manifest.json").write_text(json.dumps({"files": files}, indent=1) + "\n")
+    # GitHub Pages runs Jekyll by default, which drops files starting with "_" (__init__.py).
+    (docs / ".nojekyll").write_text("")
     return files
 
 
