@@ -65,9 +65,22 @@ Python 3.10+ and no required dependencies. For the Claude-written memo, `pip ins
 
 ### Using real data
 
-`oonrev/ledger.py` expects `claims.csv` (columns as written by the generator; a CollaborateMD or Kipu
-claims export maps onto them), a folder of `.835` files, optional `patient_payments.csv`, and optional
-`sca_contracts.csv`. Run it inside the provider's own environment; patient data should never leave it.
+**In the browser (no install):** open [Run the close](https://feileen-beep.github.io/oon-revenue-engine/run.html),
+drop in a claims export (CollaborateMD or any CSV), the ERA 835 files, and optionally patient payments and
+single case agreements. The page suggests which column holds each item and how each revenue or CPT code
+maps to a level of care; you confirm, pick the close month, and download the journal entry, memo,
+worklists and dashboard. The engine runs inside the browser with Pyodide, so the files never leave the
+computer. Try it with **Use sample export files** first.
+
+**From the command line:** put the files in `data/` (`claims.csv`, `era/`, `patient_payments.csv`,
+`sca_contracts.csv`) in the engine's standard columns and run `python -m oonrev close`.
+`oonrev/importers.py` converts other layouts.
+
+Either way, keep real patient data out of this public repository. The model needs about 13 months of
+claims before the close month.
+
+After changing anything in `oonrev/`, run `python -m oonrev site` so the browser copy in `docs/app/`
+stays current (a test checks this).
 
 ## Accounting approach
 

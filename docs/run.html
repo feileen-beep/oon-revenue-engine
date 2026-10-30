@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Run the Close</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a four-step form down one column, each step a panel; results open below. */
+:root {
+  --bg: #f5f6f4; --surface: #ffffff; --ink: #18222b; --muted: #5b6770; --line: #dde1dc;
+  --accent: #2e6b5e; --accent-soft: #dcebe6; --sand: #b0723a; --bad: #b2392f; --bad-soft: #f6dedb;
+  --warn: #a8660b; --warn-soft: #f6e8cf;
+  --font-display: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-body: "Public Sans", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-data: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #12181d; --surface: #1a2228; --ink: #e5e9e6; --muted: #9aa6ad; --line: #2c373e;
+    --accent: #6fb5a3; --accent-soft: #1f3632; --sand: #d79a5f; --bad: #ec7a6e; --bad-soft: #3d2420;
+    --warn: #e0a64a; --warn-soft: #3a2f1a; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #12181d; --surface: #1a2228; --ink: #e5e9e6; --muted: #9aa6ad; --line: #2c373e;
+  --accent: #6fb5a3; --accent-soft: #1f3632; --sand: #d79a5f; --bad: #ec7a6e; --bad-soft: #3d2420;
+  --warn: #e0a64a; --warn-soft: #3a2f1a; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 15px; line-height: 1.5; }
+.page { max-width: 980px; margin: 0 auto; padding-block: 28px 64px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 22px; }
+h1, h2 { font-family: var(--font-display); font-weight: 600; margin: 0; line-height: 1.2; text-wrap: balance; }
+h1 { font-size: clamp(1.6rem, 3.4vw, 2.2rem); }
+h2 { font-size: 1.2rem; }
+p { margin: 0; }
+a { color: var(--accent); }
+.eyebrow { font-size: .74rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+.lead { color: var(--muted); max-width: 66ch; margin-top: 6px; }
+.chip { display: inline-flex; align-items: center; gap: 6px; border-radius: 999px; padding: 3px 10px; font-size: .78rem; font-weight: 600; background: var(--accent-soft); color: var(--accent); }
+.chip.warn { background: var(--warn-soft); color: var(--warn); }
+.chip.bad { background: var(--bad-soft); color: var(--bad); }
+header { display: grid; gap: 10px; }
+.status { font-size: .88rem; color: var(--muted); display: flex; align-items: center; gap: 8px; }
+.dot { width: 9px; height: 9px; border-radius: 50%; background: var(--warn); flex: none; }
+.dot.ready { background: var(--accent); }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 18px 20px; display: grid; gap: 14px; min-width: 0; }
+.step-head { display: flex; gap: 12px; align-items: baseline; }
+.step-n { font-family: var(--font-data); color: var(--muted); font-size: .9rem; }
+.panel.off { opacity: .55; }
+.drop { border: 2px dashed var(--line); border-radius: 10px; padding: 22px; text-align: center; display: grid; gap: 10px; justify-items: center; }
+.drop.over { border-color: var(--accent); background: var(--accent-soft); }
+.btns { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+button, .btn { font: inherit; font-size: .9rem; padding: 8px 14px; border-radius: 8px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; text-decoration: none; display: inline-block; }
+button.primary { background: var(--accent); color: var(--surface); border-color: var(--accent); font-weight: 600; }
+button:disabled { opacity: .5; cursor: not-allowed; }
+button:focus-visible, select:focus-visible, .btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+select { font: inherit; font-size: .88rem; padding: 5px 8px; border-radius: 6px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); max-width: 100%; }
+.scroll { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: .86rem; }
+th, td { padding: 6px 8px; text-align: left; border-bottom: 1px solid var(--line); vertical-align: middle; }
+th { font-size: .72rem; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+td.n { text-align: right; font-family: var(--font-data); font-variant-numeric: tabular-nums; }
+.req { color: var(--bad); }
+.map-card { border: 1px solid var(--line); border-radius: 8px; padding: 12px 14px; display: grid; gap: 10px; }
+.map-card h3 { margin: 0; font-size: 1rem; }
+.sample { font-size: .78rem; color: var(--muted); font-family: var(--font-data); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 260px; }
+.note { font-size: .88rem; color: var(--muted); max-width: 72ch; }
+.problems { font-size: .85rem; color: var(--bad); margin: 0; padding-left: 18px; }
+.summary { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); border: 1px solid var(--line); border-radius: 8px; }
+.summary div { padding: 10px 12px; border-left: 1px solid var(--line); display: grid; gap: 2px; min-width: 0; }
+.summary div:first-child { border-left: 0; }
+.summary b { font-family: var(--font-data); font-weight: 500; font-size: 1.1rem; }
+@media (max-width: 700px) { .summary { grid-template-columns: repeat(2, minmax(0, 1fr)); } .summary div { border-left: 0; border-top: 1px solid var(--line); } }
+iframe { width: 100%; border: 1px solid var(--line); border-radius: 10px; height: 1600px; background: var(--bg); }
+.spinner { width: 14px; height: 14px; border: 2px solid var(--line); border-top-color: var(--accent); border-radius: 50%; animation: spin 0.8s linear infinite; display: inline-block; vertical-align: -2px; }
+@keyframes spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .spinner { animation: none; } }
+footer { font-size: .8rem; color: var(--muted); }
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <div class="eyebrow">Out-of-network revenue close · <a href="./">see the demo dashboard</a></div>
+    <h1>Run the close on your own files</h1>
+    <p class="lead">Add a claims export, the ERA 835 files for the same period, and optionally patient payments and single case agreements. The engine runs inside this browser tab.</p>
+    <div><span class="chip">Your files never leave this computer</span></div>
+    <div class="status" id="status"><span class="dot" id="dot"></span><span id="status-text">Loading the engine. The first visit takes about 15 seconds.</span></div>
+  </header>
+
+  <section class="panel" id="step1">
+    <div class="step-head"><span class="step-n">1</span><h2>Add files</h2></div>
+    <div class="drop" id="drop">
+      <p>Drag files here: CSV exports and 835 files (.835, .txt, .edi)</p>
+      <div class="btns">
+        <label class="btn" for="pick-files">Choose files</label>
+        <input id="pick-files" type="file" multiple hidden>
+        <label class="btn" for="pick-folder">Choose a folder of 835s</label>
+        <input id="pick-folder" type="file" webkitdirectory multiple hidden>
+        <button type="button" id="load-sample" disabled>Use sample export files</button>
+      </div>
+    </div>
+    <div class="scroll"><table id="file-table" hidden>
+      <thead><tr><th>File</th><th>What it is</th><th class="n">Rows</th></tr></thead><tbody></tbody>
+    </table></div>
+    <p class="note" id="era-note"></p>
+  </section>
+
+  <section class="panel off" id="step2">
+    <div class="step-head"><span class="step-n">2</span><h2>Match columns</h2></div>
+    <p class="note">Pick which column in each file holds each item. The engine guessed from the column names; check the guesses. Items marked <span class="req">*</span> are required.</p>
+    <div id="mappings"></div>
+  </section>
+
+  <section class="panel off" id="step3">
+    <div class="step-head"><span class="step-n">3</span><h2>Check and run</h2></div>
+    <div class="btns" style="justify-content:flex-start"><button type="button" id="check" disabled>Check files</button></div>
+    <div id="check-result"></div>
+    <div class="btns" style="justify-content:flex-start;align-items:center" id="run-row" hidden>
+      <label for="month">Close month</label>
+      <select id="month"></select>
+      <button type="button" class="primary" id="run">Run close</button>
+    </div>
+  </section>
+
+  <section class="panel" id="results" hidden>
+    <div class="step-head"><span class="step-n">4</span><h2 id="results-title">Results</h2></div>
+    <div class="summary" id="summary"></div>
+    <div><div class="eyebrow" style="margin-bottom:6px">Download</div><div class="btns" style="justify-content:flex-start" id="downloads"></div></div>
+    <iframe id="dash" title="Dashboard for this close"></iframe>
+  </section>
+
+  <footer>The model needs about 13 months of claim history before the close month, because it learns collection rates from claims whose outcome is known. Results are estimates to review, not final entries.</footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/pyodide/v0.26.4/full/pyodide.js"></script>
+<script>
+(async function () {
+  const $ = (id) => document.getElementById(id);
+  const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  const money = (x) => { const s = x < 0 ? "-" : "", a = Math.abs(x); return s + "$" + (a >= 1e6 ? (a / 1e6).toFixed(2) + "M" : a >= 1e3 ? (a / 1e3).toFixed(0) + "K" : a.toFixed(0)); };
+  const KIND_LABEL = { claims: "Claims export", payments: "Patient payments", sca: "Single case agreements", "835": "835 remit", ignore: "Ignore" };
+  const LOCS = [["RTC", "Residential"], ["PHP", "PHP"], ["IOP", "IOP"], ["OP", "Outpatient"], ["TMS", "TMS"], ["", "Ignore"]];
+  let py, app, FIELDS;
+  const csvFiles = [];   // {path, name, info, kind}
+  const eraFiles = [];   // paths
+  let fileCounter = 0;
+
+  function status(text, ready, busy) {
+    $("status-text").innerHTML = (busy ? '<span class="spinner"></span> ' : "") + esc(text);
+    $("dot").className = "dot" + (ready ? " ready" : "");
+  }
+
+  // ---- boot Python and the package
+  try {
+    py = await loadPyodide();
+    const manifest = await (await fetch("app/manifest.json")).json();
+    py.FS.mkdirTree("/home/pyodide/oonrev");
+    for (const f of manifest.files) {
+      const text = await (await fetch("app/oonrev/" + f)).text();
+      py.FS.writeFile("/home/pyodide/oonrev/" + f, text);
+    }
+    py.FS.mkdirTree("/uploads");
+    py.runPython("import sys; sys.path.insert(0, '/home/pyodide')");
+    app = py.pyimport("oonrev.webapp");
+    FIELDS = JSON.parse(app.fields());
+    status("Ready. Add your files.", true);
+    $("load-sample").disabled = false;
+  } catch (e) {
+    status("The engine could not load: " + e.message + ". Reload the page to try again.", false);
+    return;
+  }
+
+  // ---- adding files
+  async function addFiles(list) {
+    status("Reading files…", true, true);
+    for (const file of list) {
+      const text = await file.text();
+      const path = `/uploads/${++fileCounter}_${file.name.replace(/[^\w.-]/g, "_")}`;
+      py.FS.writeFile(path, text);
+      await addPath(path, file.name);
+    }
+    render();
+    status("Ready.", true);
+  }
+  async function addPath(path, name) {
+    const info = JSON.parse(app.inspect(path));
+    if (info.kind === "835") { eraFiles.push(path); return; }
+    csvFiles.push({ path, name, info, kind: info.kind === "unknown" ? "ignore" : info.kind });
+  }
+  $("pick-files").addEventListener("change", (e) => addFiles(e.target.files));
+  $("pick-folder").addEventListener("change", (e) => addFiles(e.target.files));
+  const drop = $("drop");
+  drop.addEventListener("dragover", (e) => { e.preventDefault(); drop.classList.add("over"); });
+  drop.addEventListener("dragleave", () => drop.classList.remove("over"));
+  drop.addEventListener("drop", (e) => { e.preventDefault(); drop.classList.remove("over"); addFiles(e.dataTransfer.files); });
+  $("load-sample").addEventListener("click", async () => {
+    status("Making sample files shaped like a CollaborateMD export…", true, true);
+    await new Promise((r) => setTimeout(r, 30));
+    const s = JSON.parse(app.make_samples());
+    for (const p of s.csv) await addPath(p, p.split("/").pop() + " (sample)");
+    eraFiles.push(...s.era);
+    render();
+    status("Sample files loaded. Check the column matches below, then run.", true);
+  });
+
+  // ---- rendering steps 1 and 2
+  function render() {
+    const tb = $("file-table").querySelector("tbody");
+    $("file-table").hidden = csvFiles.length === 0;
+    tb.innerHTML = csvFiles.map((f, i) => `<tr><td>${esc(f.name)}</td><td><select id="kind-${i}" data-i="${i}">${["claims", "payments", "sca", "ignore"].map((k) => `<option value="${k}" ${k === f.kind ? "selected" : ""}>${KIND_LABEL[k]}</option>`).join("")}</select></td><td class="n">${(f.info.rows || 0).toLocaleString()}</td></tr>`).join("");
+    tb.querySelectorAll("select").forEach((s) => s.addEventListener("change", () => { csvFiles[+s.dataset.i].kind = s.value; render(); }));
+    $("era-note").textContent = eraFiles.length ? `${eraFiles.length.toLocaleString()} ERA 835 files added.` : "No 835 files yet. Without them the engine has no payments to learn from.";
+
+    const claims = csvFiles.filter((f) => f.kind === "claims");
+    $("step2").classList.toggle("off", !csvFiles.length);
+    $("step3").classList.toggle("off", !claims.length);
+    $("check").disabled = claims.length !== 1;
+    let h = claims.length > 1 ? '<p class="note"><span class="chip bad">Pick one claims file</span> Combine exports into one file, or set the extras to Ignore.</p>' : "";
+    csvFiles.forEach((f, i) => {
+      if (f.kind === "ignore") return;
+      f.mapping = f.mapping && f.mappingKind === f.kind ? f.mapping : { ...(f.info.guesses[f.kind] || {}) };
+      f.mappingKind = f.kind;
+      h += `<div class="map-card"><h3>${esc(f.name)} · ${KIND_LABEL[f.kind]}</h3><div class="scroll"><table><thead><tr><th>Item</th><th>Column in your file</th><th>First value</th></tr></thead><tbody>`;
+      for (const fd of FIELDS[f.kind]) {
+        const cur = f.mapping[fd.field] || "";
+        const first = cur && f.info.preview[0] ? f.info.preview[0][cur] : "";
+        h += `<tr><td>${esc(fd.label)}${fd.required ? ' <span class="req">*</span>' : ""}</td><td><select id="map-${i}-${fd.field}" data-i="${i}" data-field="${fd.field}"><option value="">Not in this file</option>${f.info.headers.map((hd) => `<option ${hd === cur ? "selected" : ""}>${esc(hd)}</option>`).join("")}</select></td><td><div class="sample">${esc(first)}</div></td></tr>`;
+      }
+      h += "</tbody></table></div>";
+      if (f.kind === "claims" && f.mapping.level_of_care) {
+        const vals = JSON.parse(app.loc_values(f.path, f.mapping.level_of_care));
+        f.locMap = f.locMap || Object.fromEntries(vals.map((v) => [v.value, v.guess]));
+        h += `<div class="eyebrow">Level of care for each value in “${esc(f.mapping.level_of_care)}”</div><div class="scroll"><table><thead><tr><th>Value</th><th class="n">Rows</th><th>Level of care</th></tr></thead><tbody>`;
+        vals.forEach((v, j) => {
+          h += `<tr><td>${esc(v.value || "(blank)")}</td><td class="n">${v.count.toLocaleString()}</td><td><select id="loc-${i}-${j}" data-i="${i}" data-value="${esc(v.value)}">${LOCS.map(([k, lab]) => `<option value="${k}" ${k === (f.locMap[v.value] ?? "") ? "selected" : ""}>${lab}</option>`).join("")}</select></td></tr>`;
+        });
+        h += "</tbody></table></div>";
+      }
+      h += "</div>";
+    });
+    $("mappings").innerHTML = h;
+    $("mappings").querySelectorAll("select[data-field]").forEach((s) => s.addEventListener("change", () => {
+      const f = csvFiles[+s.dataset.i];
+      if (s.value) f.mapping[s.dataset.field] = s.value; else delete f.mapping[s.dataset.field];
+      if (s.dataset.field === "level_of_care") f.locMap = null;
+      render();
+    }));
+    $("mappings").querySelectorAll("select[data-value]").forEach((s) => s.addEventListener("change", () => {
+      csvFiles[+s.dataset.i].locMap[s.dataset.value] = s.value;
+    }));
+    $("run-row").hidden = true;
+    $("check-result").innerHTML = "";
+  }
+
+  // ---- step 3
+  $("check").addEventListener("click", async () => {
+    const claims = csvFiles.find((f) => f.kind === "claims");
+    const missing = [];
+    for (const f of csvFiles.filter((x) => x.kind !== "ignore"))
+      for (const fd of FIELDS[f.kind]) if (fd.required && !f.mapping[fd.field]) missing.push(`${f.name}: ${fd.label}`);
+    if (missing.length) {
+      $("check-result").innerHTML = `<p class="note"><span class="chip bad">Missing</span> Choose a column for: ${missing.map(esc).join("; ")}.</p>`;
+      return;
+    }
+    status("Checking files…", true, true);
+    await new Promise((r) => setTimeout(r, 30));
+    const spec = {
+      claims: { path: claims.path, mapping: claims.mapping, loc_map: claims.locMap || {} },
+      payments: csvFiles.filter((f) => f.kind === "payments").map((f) => ({ path: f.path, mapping: f.mapping })),
+      sca: csvFiles.filter((f) => f.kind === "sca").map((f) => ({ path: f.path, mapping: f.mapping })),
+      era: eraFiles,
+    };
+    let r;
+    try { r = JSON.parse(app.prepare(JSON.stringify(spec))); }
+    catch (e) { $("check-result").innerHTML = `<p class="problems">${esc(e.message.split("\n").filter(Boolean).pop())}</p>`; status("Ready.", true); return; }
+    let h = `<p class="note">${r.claims.toLocaleString()} claims from ${r.first} to ${r.last}, ${r.era_files.toLocaleString()} 835 files, ${r.payments.toLocaleString()} patient payments, ${r.sca.toLocaleString()} single case agreements.</p>`;
+    if (r.problem_count) h += `<p class="note"><span class="chip warn">${r.problem_count} rows need a look</span></p><ul class="problems">${r.problems.map((p) => `<li>${esc(p)}</li>`).join("")}</ul>`;
+    if (!r.months.length) h += `<p class="note"><span class="chip bad">Not enough history</span> The claims cover ${r.first} to ${r.last}. The model needs about 13 months of claims before the close month.</p>`;
+    $("check-result").innerHTML = h;
+    $("month").innerHTML = r.months.map((m) => `<option value="${m}">${new Date(m + "T00:00").toLocaleString("en-US", { month: "long", year: "numeric" })}</option>`).join("");
+    $("run-row").hidden = !r.months.length;
+    status("Files checked. Choose the close month and run.", true);
+  });
+
+  $("run").addEventListener("click", async () => {
+    $("run").disabled = true;
+    status("Running the close. This takes about a minute in the browser…", true, true);
+    await new Promise((r) => setTimeout(r, 30));
+    let r;
+    try { r = JSON.parse(app.run($("month").value, 6)); }
+    catch (e) { status("The close stopped: " + e.message.split("\n").filter(Boolean).pop(), false); $("run").disabled = false; return; }
+    $("run").disabled = false;
+    const s = r.summary;
+    $("results").hidden = false;
+    $("results-title").textContent = r.month + " close";
+    $("summary").innerHTML = [["Net revenue", money(s.net_revenue)], ["Gross charges", money(s.gross_charges)], ["Accrual rate", (s.accrual_rate * 100).toFixed(1) + "%"], ["True-up", money(s.true_up)], ["Net AR", money(s.net_ar)]]
+      .map(([k, v]) => `<div><span class="eyebrow">${k}</span><b>${v}</b></div>`).join("");
+    const dl = $("downloads");
+    dl.innerHTML = "";
+    for (const name of r.files) {
+      const data = py.FS.readFile("/work/out/" + name);
+      const type = name.endsWith(".html") ? "text/html" : name.endsWith(".json") ? "application/json" : name.endsWith(".md") ? "text/markdown" : "text/csv";
+      const a = document.createElement("a");
+      a.className = "btn"; a.download = name; a.textContent = name;
+      a.href = URL.createObjectURL(new Blob([data], { type }));
+      dl.appendChild(a);
+    }
+    $("dash").onload = () => { try { $("dash").style.height = $("dash").contentDocument.documentElement.scrollHeight + 20 + "px"; } catch (e) {} };
+    $("dash").srcdoc = new TextDecoder().decode(py.FS.readFile("/work/out/dashboard.html"));
+    status(`Done. ${r.matched.remits.toLocaleString()} remits read${r.unmatched ? `, ${r.unmatched} could not be matched to a claim` : ""}.`, true);
+    $("results").scrollIntoView({ behavior: "smooth" });
+  });
+})();
+</script>
+</body>
+</html>

@@ -182,6 +182,13 @@ def parse_835(raw: str, source_file: str = "") -> list[ClaimPayment]:
                 units=_d(_el(seg, 5)) if _el(seg, 5) else Decimal("1"),
             )
             claim.lines.append(line)
+        elif tag == "DTM" and line is not None and _el(seg, 1) in ("472", "150", "151"):
+            # Service-line dates, used when the payer leaves out the claim-level period.
+            d = _date8(_el(seg, 2)[:8])
+            if _el(seg, 1) in ("472", "150") and (claim.service_from is None or d < claim.service_from):
+                claim.service_from = d
+            if _el(seg, 1) in ("472", "151") and (claim.service_to is None or d > claim.service_to):
+                claim.service_to = d
         elif tag == "AMT" and line is not None and _el(seg, 1) == "B6":
             line.allowed = _d(_el(seg, 2))
         elif tag == "SE":
@@ -190,9 +197,12 @@ def parse_835(raw: str, source_file: str = "") -> list[ClaimPayment]:
 
 
 def read_835_dir(folder: Path) -> list[ClaimPayment]:
+    """Read every X12 file in a folder, whatever its extension (.835, .txt, .edi, .era)."""
     out = []
-    for path in sorted(Path(folder).glob("*.835")):
-        out.extend(parse_835(path.read_text(), path.name))
+    for path in sorted(p for p in Path(folder).iterdir() if p.is_file()):
+        text = path.read_text(errors="replace")
+        if text.lstrip("\ufeff").lstrip().startswith("ISA"):
+            out.extend(parse_835(text, path.name))
     return out
 
 

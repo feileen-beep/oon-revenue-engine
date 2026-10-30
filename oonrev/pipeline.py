@@ -16,27 +16,45 @@ from .reference import BUCKET_LABELS, LOC_NAMES
 from .worklists import denial_trend, open_denials, paid_to_patient, underpayments, unmatched_remits
 
 
-def backtest(ledger: Ledger, start: date, end: date, final: CloseResult, cfg: ModelConfig) -> list[dict]:
-    """Accrual rate booked at each month's close vs. what those services look like now."""
-    rows = []
+def _next_month_end(m: date) -> date:
+    return month_end(date(m.year + (m.month == 12), m.month % 12 + 1, 1))
+
+
+def closes(ledger: Ledger, start: date, end: date, cfg: ModelConfig) -> list[CloseResult]:
+    """Run each month-end close from start to end, reusing each month's rate table as the next one's prior."""
+    out = []
     claims = list(ledger.claims.values())
     m = month_end(start)
-    prior_tables = fit(claims, prior_month_end(m), cfg)
+    prior_tables = None
     while m <= end:
-        res = run_close(ledger, m, cfg, prior_tables=prior_tables)
+        try:
+            prior_tables = prior_tables or fit(claims, prior_month_end(m), cfg)
+            res = run_close(ledger, m, cfg, prior_tables=prior_tables)
+        except ValueError:  # not enough history yet for this month
+            m = _next_month_end(m)
+            continue
         prior_tables = res.tables
+        out.append(res)
+        m = _next_month_end(m)
+    return out
+
+
+def backtest(results: list[CloseResult]) -> list[dict]:
+    """Accrual rate booked at each month's close vs. what those services look like now."""
+    final = results[-1]
+    rows = []
+    for res in results:
         new_ids = [cid for cid in res.now if cid not in res.before]
         billed = sum(res.now[c].claim.billed for c in new_ids)
         booked = sum(res.now[c].expected for c in new_ids)
         current = sum(final.now[c].expected for c in new_ids)
         collected = sum(final.now[c].collected for c in new_ids)
         open_share = sum(final.now[c].remaining for c in new_ids)
-        rows.append({"month": m.strftime("%Y-%m"), "charges": billed, "booked_rate": booked / billed,
+        rows.append({"month": res.as_of.strftime("%Y-%m"), "charges": billed, "booked_rate": booked / billed,
                      "current_rate": current / billed, "collected_rate": collected / billed,
                      "still_expected": open_share, "net_revenue": res.net_revenue,
                      "true_up": res.total("true_up"), "cash": res.total("cash"),
                      "expected_cash": res.total("expected_cash"), "cash_on_prior": res.total("cash_on_prior")})
-        m = month_end(date(m.year + (m.month == 12), m.month % 12 + 1, 1))
     return rows
 
 
@@ -57,8 +75,12 @@ def run(data_dir: Path, as_of: date, out_dir: Path, use_claude: bool = True,
     out_dir = Path(out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
     ledger = load(data_dir)
-    res = run_close(ledger, as_of, cfg)
-    prior = run_close(ledger, res.prior, cfg)
+    months_back = as_of.year * 12 + as_of.month - 1 - (max(backtest_months, 2) - 1)
+    results = closes(ledger, date(months_back // 12, months_back % 12 + 1, 1), as_of, cfg)
+    if len(results) < 2 or results[-1].as_of != month_end(as_of):
+        raise ValueError(f"not enough claim history to close {as_of:%B %Y}: the model needs claims "
+                         f"from at least 13 months before the close month")
+    res, prior = results[-1], results[-2]
 
     under = underpayments(res)
     denials = open_denials(res)
@@ -67,9 +89,7 @@ def run(data_dir: Path, as_of: date, out_dir: Path, use_claude: bool = True,
     facts = build_facts(res, under, denials, trend, prior)
     memo, memo_note = write_memo(facts, use_claude)
 
-    months_back = as_of.year * 12 + as_of.month - 1 - (backtest_months - 1)
-    bt_start = date(months_back // 12, months_back % 12 + 1, 1)
-    bt = backtest(ledger, bt_start, as_of, res, cfg)
+    bt = backtest(results)
 
     tag = as_of.strftime("%Y-%m")
     write_journal_csv(res, out_dir / f"journal_entry_{tag}.csv")

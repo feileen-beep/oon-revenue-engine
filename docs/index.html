@@ -131,7 +131,7 @@ footer { font-size: .8rem; color: var(--muted); border-top: 1px solid var(--line
       <h1 id="title">Month-end revenue close</h1>
       <p>Revenue booked at the amount expected to be collected, built from claims and 835 remits. Every figure below comes from code; Claude only writes the summary, and its numbers are checked.</p>
     </div>
-    <span class="chip warn" title="No real patient data is used">Synthetic demo data</span>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center"><a class="chip ok" id="run-link" href="run.html">Run it on your own files</a><span class="chip warn" id="data-chip">Synthetic demo data</span></div>
   </header>
 
   <div class="kpis" id="kpis"></div>
@@ -477,7 +477,11 @@ footer { font-size: .8rem; color: var(--muted); border-top: 1px solid var(--line
     $("je-lines").innerHTML = lines + "</tbody></table>";
   })();
 
-  $("footer").textContent = `Close as of ${R.as_of}. ${R.counts.claims.toLocaleString()} claims and ${R.counts.remits.toLocaleString()} remits from ${R.counts.remit_files} ERA 835 files, all synthetic. No real patient information is used.`;
+  const synthetic = R.synthetic !== false;
+  if (!synthetic || location.protocol === "about:") $("run-link").hidden = true;
+  if (!synthetic) { $("data-chip").textContent = "Built from your files"; $("data-chip").className = "chip ok"; }
+  $("footer").textContent = `Close as of ${R.as_of}. ${R.counts.claims.toLocaleString()} claims and ${R.counts.remits.toLocaleString()} remits from ${R.counts.remit_files} ERA 835 files` +
+    (synthetic ? ", all synthetic. No real patient information is used." : ". Estimates to review before posting.");
 })();
 </script>
 

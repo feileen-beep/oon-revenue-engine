@@ -14,6 +14,7 @@ from __future__ import annotations
 
 import csv
 import re
+from bisect import bisect_right
 from dataclasses import dataclass, field
 from datetime import date, timedelta
 from pathlib import Path
@@ -59,7 +60,21 @@ class Claim:
 
     def collected(self, start: date | None, end: date) -> float:
         """Cash received after `start` (exclusive) and on or before `end`."""
-        return sum(e.cash for e in self.events if (start is None or e.date > start) and e.date <= end)
+        dates, cum = self._cash_index()
+        total = cum[bisect_right(dates, end)]
+        return total - cum[bisect_right(dates, start)] if start is not None else total
+
+    def _cash_index(self):
+        # Cumulative cash by date, rebuilt only if events were added since the last call.
+        cached = self.__dict__.get("_cash_cache")
+        if cached is None or cached[0] != len(self.events):
+            evs = sorted((e for e in self.events if e.cash), key=lambda e: e.date)
+            cum = [0.0]
+            for e in evs:
+                cum.append(cum[-1] + e.cash)
+            cached = (len(self.events), [e.date for e in evs], cum)
+            self.__dict__["_cash_cache"] = cached
+        return cached[1], cached[2]
 
     def first_remit(self) -> Event | None:
         for e in self.events:
@@ -224,4 +239,29 @@ def load(data_dir: Path) -> Ledger:
     if (data_dir / "sca_contracts.csv").exists():
         with open(data_dir / "sca_contracts.csv", newline="") as f:
             sca = list(csv.DictReader(f))
+        link_sca(claims, sca)
     return Ledger(claims, remits, log, unmatched, sca)
+
+
+def link_sca(claims: dict[str, Claim], sca: list[dict]):
+    """Fill in each claim's SCA rate from the agreement list.
+
+    A claim is covered when it names the agreement, or when the agreement is for
+    the same patient and level of care and was in effect on the service date.
+    """
+    by_id = {r["sca_id"]: r for r in sca if r.get("sca_id")}
+    by_patient: dict[tuple, list] = {}
+    for r in sca:
+        by_patient.setdefault((r.get("patient_id", ""), r.get("level_of_care", "")), []).append(r)
+    for c in claims.values():
+        if c.sca_per_diem:
+            continue
+        match = by_id.get(c.sca_id) if c.sca_id else None
+        if match is None:
+            for r in by_patient.get((c.patient_id, c.loc), []):
+                start = r.get("effective_from")
+                if not start or date.fromisoformat(start) <= c.service_to:
+                    match = r
+        if match and match.get("per_diem"):
+            c.sca_id = match["sca_id"]
+            c.sca_per_diem = float(match["per_diem"])

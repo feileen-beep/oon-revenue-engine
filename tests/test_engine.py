@@ -73,3 +73,13 @@ def test_memo_numbers_are_traceable(close, ledger):
     memo = template_memo(facts)
     assert unverified_numbers(memo, facts) == []
     assert unverified_numbers(memo + "\nRevenue rose 41.7% to $9.99M.", facts) == ["41.7%", "$9.99M"]
+
+
+def test_browser_copy_is_current():
+    """docs/app/oonrev must match the package; run `python -m oonrev site` after changing it."""
+    from pathlib import Path
+    pkg = Path(__file__).parent.parent / "oonrev"
+    copy = Path(__file__).parent.parent / "docs" / "app" / "oonrev"
+    for f in pkg.iterdir():
+        if f.suffix in (".py", ".html"):
+            assert (copy / f.name).read_text() == f.read_text(), f.name

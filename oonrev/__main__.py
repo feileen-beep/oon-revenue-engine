@@ -8,6 +8,23 @@ from pathlib import Path
 
 from . import dashboard, pipeline, synth
 
+PACKAGE = Path(__file__).parent
+
+
+def build_site(docs: Path) -> list[str]:
+    """Copy the package source next to docs/run.html, which loads it into Pyodide."""
+    import json
+    import shutil
+    target = docs / "app" / "oonrev"
+    if target.exists():
+        shutil.rmtree(target)
+    target.mkdir(parents=True)
+    files = sorted(p.name for p in PACKAGE.iterdir() if p.suffix in (".py", ".html"))
+    for name in files:
+        shutil.copy(PACKAGE / name, target / name)
+    (docs / "app" / "manifest.json").write_text(json.dumps({"files": files}, indent=1) + "\n")
+    return files
+
 
 def main(argv=None):
     p = argparse.ArgumentParser(prog="oonrev", description="Out-of-network revenue and collections engine")
@@ -26,8 +43,14 @@ def main(argv=None):
     c.add_argument("--no-claude", action="store_true", help="use the template memo even if an API key is set")
     c.add_argument("--backtest-months", type=int, default=15)
 
+    s = sub.add_parser("site", help="copy the package into docs/app for the in-browser page (docs/run.html)")
+    s.add_argument("--docs", default="docs")
+
     a = p.parse_args(argv)
-    if a.cmd == "generate":
+    if a.cmd == "site":
+        files = build_site(Path(a.docs))
+        print(f"Copied {len(files)} files to {a.docs}/app/oonrev/")
+    elif a.cmd == "generate":
         stats = synth.generate(Path(a.out), seed=a.seed, as_of=date.fromisoformat(a.as_of))
         print(f"{stats['claims']:,} claims, {stats['remits']:,} remits, {stats['patient_payments']:,} patient payments, "
               f"${stats['billed']:,.0f} billed -> {a.out}/")
