@@ -25,6 +25,13 @@ def build_site(docs: Path) -> list[str]:
     (docs / "app" / "manifest.json").write_text(json.dumps({"files": files}, indent=1) + "\n")
     # GitHub Pages runs Jekyll by default, which drops files starting with "_" (__init__.py).
     (docs / ".nojekyll").write_text("")
+    # A single-file copy of the run page that works when opened straight from disk.
+    blob = json.dumps({n: (PACKAGE / n).read_text() for n in files}).replace("</", "<\\/")
+    page = (docs / "run.html").read_text()
+    marker = '<script src="https://cdn.jsdelivr.net/pyodide/'
+    assert marker in page
+    page = page.replace(marker, f"<script>window.OONREV_FILES = {blob};</script>\n{marker}", 1)
+    (docs / "run_offline.html").write_text(page)
     return files
 
 
